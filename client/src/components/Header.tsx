@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 import { goToSection } from "@/lib/sectionNav";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import logoUrl from "@assets/Logo H@2x_1758276388954.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [, setLocation] = useLocation();
+  const { t } = useTranslation();
 
   const handleSectionClick = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
@@ -27,9 +30,9 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4">
             <Link href="/over-ons" className="text-foreground hover:text-primary transition-colors" data-testid="link-about">
-              Over Ons
+              {t('nav.about')}
             </Link>
             <a 
               href="/#diensten" 
@@ -37,7 +40,7 @@ export default function Header() {
               data-testid="link-services"
               onClick={(e) => handleSectionClick(e, 'diensten')}
             >
-              Diensten
+              {t('nav.services')}
             </a>
             <a 
               href="/#registratie" 
@@ -45,11 +48,12 @@ export default function Header() {
               data-testid="link-register"
               onClick={(e) => handleSectionClick(e, 'registratie')}
             >
-              Registreren
+              {t('nav.register')}
             </a>
             <Button variant="ghost" size="default" className="font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login">
-              Inloggen
+              {t('nav.login')}
             </Button>
+            <LanguageSwitcher />
           </nav>
 
           {/* Mobile menu button */}
@@ -73,7 +77,7 @@ export default function Header() {
           <div className="md:hidden py-4 border-t" data-testid="nav-mobile">
             <div className="space-y-4">
               <Link href="/over-ons" className="block text-foreground hover:text-primary transition-colors" data-testid="link-about-mobile">
-                Over Ons
+                {t('nav.about')}
               </Link>
               <a 
                 href="/#diensten" 
@@ -81,7 +85,7 @@ export default function Header() {
                 data-testid="link-services-mobile"
                 onClick={(e) => handleSectionClick(e, 'diensten')}
               >
-                Diensten
+                {t('nav.services')}
               </a>
               <a 
                 href="/#registratie" 
@@ -89,11 +93,14 @@ export default function Header() {
                 data-testid="link-register-mobile"
                 onClick={(e) => handleSectionClick(e, 'registratie')}
               >
-                Registreren
+                {t('nav.register')}
               </a>
               <Button variant="ghost" size="default" className="w-full font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login-mobile">
-                Inloggen
+                {t('nav.login')}
               </Button>
+              <div className="pt-4">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}
