@@ -6,6 +6,7 @@ import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { MdOutlineSpeed, MdDevices, MdOutlineCircleNotifications } from "react-icons/md";
 import { PiMosqueBold } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 import mockupImage from "@assets/2_1758294099667.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -56,6 +57,7 @@ const features = [
 
 
 export default function Features() {
+  const { t } = useTranslation('landing');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
@@ -84,8 +86,7 @@ export default function Features() {
               : 'opacity-0 translate-y-8'
           }`}>
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
-              Een digitale oplossing die religieuze waarden respecteert en
-              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
+              {t('features.subtitle')}
             </p>
           </div>
         </div>
@@ -131,11 +132,11 @@ export default function Features() {
                     
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground mb-1">
-                        {feature.title}
+                        {t(`features.items.${index}.title`)}
                       </h4>
                       
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        {feature.description}
+                        {t(`features.items.${index}.description`)}
                       </p>
                     </div>
                   </div>

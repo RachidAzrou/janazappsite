@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 import heroImage from "@assets/generated_images/Islamic_architecture_hero_background_5d13e65a.png";
 
 export default function Hero() {
+  const { t } = useTranslation('landing');
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Image with Overlay */}
@@ -21,14 +24,13 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-hero-title">
-            Digitale Overlijdenszorg
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8" data-testid="text-hero-subtitle">
-            Afgestemd op mens, ritueel en realiteit
+            {t('hero.subtitle')}
           </p>
           <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto" data-testid="text-hero-description">
-            Van familie tot overheid, alles verbonden in één platform. 
-            Vereenvoudig de complexe overlijdensadministratie voor de islamitische gemeenschap.
+            {t('hero.description')}
           </p>
 
           {/* Registration Cards */}
@@ -40,10 +42,10 @@ export default function Hero() {
                   <IoPeopleOutline className="h-12 w-12 text-white mx-auto" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3" data-testid="text-citizens-title">
-                  Voor Burgers
+                  {t('hero.citizensCard.title')}
                 </h3>
                 <p className="text-white/80 mb-4" data-testid="text-citizens-description">
-                  Registreer je als familie of individu voor toegang tot onze diensten
+                  {t('hero.citizensCard.description')}
                 </p>
                 <Button 
                   variant="outline" 
@@ -51,7 +53,7 @@ export default function Hero() {
                   onClick={() => console.log('Burger registration clicked')}
                   data-testid="button-register-citizen"
                 >
-                  Registreer als Burger
+                  {t('hero.citizensCard.buttonText')}
                 </Button>
               </CardContent>
             </Card>
@@ -63,10 +65,10 @@ export default function Hero() {
                   <IoBusinessOutline className="h-12 w-12 text-white mx-auto" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3" data-testid="text-partners-title">
-                  Voor Partners
+                  {t('hero.partnersCard.title')}
                 </h3>
                 <p className="text-white/80 mb-4" data-testid="text-partners-description">
-                  Uitvaartondernemers, moskeeën en andere partners
+                  {t('hero.partnersCard.description')}
                 </p>
                 <Button 
                   variant="outline" 
@@ -74,7 +76,7 @@ export default function Hero() {
                   onClick={() => console.log('Partner registration clicked')}
                   data-testid="button-register-partner"
                 >
-                  Registreer als Partner
+                  {t('hero.partnersCard.buttonText')}
                 </Button>
               </CardContent>
             </Card>
