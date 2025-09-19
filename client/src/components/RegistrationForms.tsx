@@ -37,8 +37,7 @@ export default function RegistrationForms() {
     phone: '',
     partnerType: '',
     city: '',
-    description: '',
-    experience: ''
+    description: ''
   });
 
   const handleCitizenSubmit = async (e: React.FormEvent) => {
@@ -427,21 +426,6 @@ export default function RegistrationForms() {
                             data-testid="input-partner-city"
                           />
                         </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="experience">Ervaring met Islamitische Uitvaarten</Label>
-                        <Select value={partnerForm.experience} onValueChange={(value) => setPartnerForm(prev => ({...prev, experience: value}))}>
-                          <SelectTrigger data-testid="select-experience">
-                            <SelectValue placeholder="Selecteer ervaring" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="nieuw">Nieuw - Geen ervaring</SelectItem>
-                            <SelectItem value="beperkt">Beperkt - Enkele uitvaarten</SelectItem>
-                            <SelectItem value="ervaren">Ervaren - Meerdere jaren</SelectItem>
-                            <SelectItem value="specialist">Specialist - Islamitische focus</SelectItem>
-                          </SelectContent>
-                        </Select>
                       </div>
                       
                       <div className="space-y-2">
