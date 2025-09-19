@@ -51,5 +51,73 @@
   "terms": {
     "title": "Terms and Conditions",
     "intro": "These terms and conditions apply to the use of JanazApp services. By using our services, you agree to these terms."
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "intro": "JanazApp uses cookies to improve your experience and optimize our services. Below you will find information about how and why we use cookies.",
+    "sections": [
+      {
+        "title": "1. What are cookies?",
+        "content": "Cookies are small text files that are stored on your device when you visit our website. They help us remember your preferences and personalize your experience."
+      },
+      {
+        "title": "2. Which cookies do we use?",
+        "subsections": [
+          {
+            "title": "Essential cookies",
+            "content": "These cookies are essential for the functioning of our website and cannot be disabled. They are used for security, session management and accessibility."
+          },
+          {
+            "title": "Functional cookies",
+            "content": "These cookies remember your preferences and settings to improve your experience, such as language preferences and user interface settings."
+          },
+          {
+            "title": "Analytical cookies",
+            "content": "We use these cookies to understand how visitors use our website, so we can improve our services."
+          }
+        ]
+      },
+      {
+        "title": "3. Why do we use cookies?",
+        "list": [
+          "To securely store your login credentials",
+          "To remember your preferences and settings",
+          "To improve the performance of our website",
+          "To detect and resolve technical issues",
+          "To prevent fraudulent activities"
+        ]
+      },
+      {
+        "title": "4. Cookie management",
+        "content": "You can manage cookies through your browser settings. Please note that disabling certain cookies may limit the functionality of our website. Essential cookies cannot be disabled as they are essential for the operation of the website."
+      },
+      {
+        "title": "5. Retention period",
+        "content": "Session cookies are automatically deleted when you close your browser. Persistent cookies remain stored until they expire or are deleted by you. The retention period varies from a few hours to a maximum of one year."
+      },
+      {
+        "title": "6. Changes to this cookie policy",
+        "content": "We may update this cookie policy from time to time. Changes will be published on this page and take effect immediately."
+      },
+      {
+        "title": "7. Contact",
+        "content": "For questions about our cookie policy you can contact us at:\nEmail: info@janazapp.com\nPhone: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Last updated: January 2025"
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "At JanazApp, we prove that technology and empathy work perfectly together. We developed a digital platform that connects families, funeral directors and insurance companies, ensuring that all administrative and practical steps around a death are handled quickly and correctly.",
+    "mission": {
+      "title": "Our mission",
+      "content1": "We ensure that bereaved families experience fewer barriers. With JanazApp, families get a clear overview of documents, steps and statuses — without hassle, without ambiguities.",
+      "content2": "Professionals manage their files more efficiently, verify documents and work together in one environment."
+    },
+    "promise": {
+      "title": "Our promise",
+      "content1": "We connect technology with empathy.",
+      "content2": "JanazApp stands not only for software, but for a reliable partner at one of the most vulnerable moments in life."
+    }
   }
 }

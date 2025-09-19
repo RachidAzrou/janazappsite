@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Target, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 export default function AboutPage() {
+  const { t } = useTranslation('legal');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
@@ -36,12 +38,11 @@ export default function AboutPage() {
                   : 'opacity-0 translate-y-8'
               }`}>
                 <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8" data-testid="text-about-title">
-                  Over Ons
+                  {t('about.title')}
                 </h1>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-about-intro">
-                  Bij JanazApp bewijzen we dat technologie en empathie perfect samengaan.
-                  We ontwikkelden een digitaal platform dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbond, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld werden.
+                  {t('about.intro')}
                 </p>
               </div>
             </div>
@@ -61,16 +62,15 @@ export default function AboutPage() {
                         <Target className="h-6 w-6" />
                       </div>
                       <h2 className="text-xl lg:text-2xl font-bold text-foreground" data-testid="text-mission-title">
-                        Onze missie
+                        {t('about.mission.title')}
                       </h2>
                     </div>
                     <div className="space-y-4">
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-mission-1">
-                        We zorgen ervoor dat nabestaanden minder drempels ervaren.
-                        Met JanazApp krijgen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.
+                        {t('about.mission.content1')}
                       </p>
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-mission-2">
-                        Professionals beheren hun dossiers efficiënter, verifiëren documenten en werken samen in één omgeving.
+                        {t('about.mission.content2')}
                       </p>
                     </div>
                   </CardContent>
@@ -84,15 +84,15 @@ export default function AboutPage() {
                         <Heart className="h-6 w-6" />
                       </div>
                       <h2 className="text-xl lg:text-2xl font-bold text-foreground" data-testid="text-promise-title">
-                        Onze belofte
+                        {t('about.promise.title')}
                       </h2>
                     </div>
                     <div className="space-y-4">
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-promise-1">
-                        We koppelen technologie aan empathie.
+                        {t('about.promise.content1')}
                       </p>
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-promise-2">
-                        JanazApp staat niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven.
+                        {t('about.promise.content2')}
                       </p>
                     </div>
                   </CardContent>

@@ -51,5 +51,73 @@
   "terms": {
     "title": "Conditions Générales",
     "intro": "Ces conditions générales s'appliquent à l'utilisation des services JanazApp. En utilisant nos services, vous acceptez ces conditions."
+  },
+  "cookies": {
+    "title": "Politique des Cookies",
+    "intro": "JanazApp utilise des cookies pour améliorer votre expérience et optimiser nos services. Vous trouverez ci-dessous des informations sur comment et pourquoi nous utilisons les cookies.",
+    "sections": [
+      {
+        "title": "1. Que sont les cookies ?",
+        "content": "Les cookies sont de petits fichiers texte qui sont stockés sur votre appareil lorsque vous visitez notre site web. Ils nous aident à mémoriser vos préférences et à personnaliser votre expérience."
+      },
+      {
+        "title": "2. Quels cookies utilisons-nous ?",
+        "subsections": [
+          {
+            "title": "Cookies essentiels",
+            "content": "Ces cookies sont essentiels au fonctionnement de notre site web et ne peuvent pas être désactivés. Ils sont utilisés pour la sécurité, la gestion des sessions et l'accessibilité."
+          },
+          {
+            "title": "Cookies fonctionnels",
+            "content": "Ces cookies mémorisent vos préférences et paramètres pour améliorer votre expérience, comme les préférences linguistiques et les paramètres de l'interface utilisateur."
+          },
+          {
+            "title": "Cookies analytiques",
+            "content": "Nous utilisons ces cookies pour comprendre comment les visiteurs utilisent notre site web, afin d'améliorer nos services."
+          }
+        ]
+      },
+      {
+        "title": "3. Pourquoi utilisons-nous les cookies ?",
+        "list": [
+          "Pour stocker en sécurité vos identifiants de connexion",
+          "Pour mémoriser vos préférences et paramètres",
+          "Pour améliorer les performances de notre site web",
+          "Pour détecter et résoudre les problèmes techniques",
+          "Pour prévenir les activités frauduleuses"
+        ]
+      },
+      {
+        "title": "4. Gestion des cookies",
+        "content": "Vous pouvez gérer les cookies via les paramètres de votre navigateur. Veuillez noter que la désactivation de certains cookies peut limiter la fonctionnalité de notre site web. Les cookies essentiels ne peuvent pas être désactivés car ils sont essentiels au fonctionnement du site web."
+      },
+      {
+        "title": "5. Période de conservation",
+        "content": "Les cookies de session sont automatiquement supprimés lorsque vous fermez votre navigateur. Les cookies persistants restent stockés jusqu'à ce qu'ils expirent ou soient supprimés par vous. La période de conservation varie de quelques heures à un maximum d'un an."
+      },
+      {
+        "title": "6. Modifications de cette politique des cookies",
+        "content": "Nous pouvons mettre à jour cette politique des cookies de temps en temps. Les modifications seront publiées sur cette page et prennent effet immédiatement."
+      },
+      {
+        "title": "7. Contact",
+        "content": "Pour des questions sur notre politique des cookies, vous pouvez nous contacter à :\nE-mail : info@janazapp.com\nTéléphone : +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Dernière mise à jour : janvier 2025"
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "intro": "Chez JanazApp, nous prouvons que la technologie et l'empathie fonctionnent parfaitement ensemble. Nous avons développé une plateforme numérique qui connecte les familles, les pompes funèbres et les compagnies d'assurance, garantissant que toutes les étapes administratives et pratiques autour d'un décès sont traitées rapidement et correctement.",
+    "mission": {
+      "title": "Notre mission",
+      "content1": "Nous veillons à ce que les familles endeuillées rencontrent moins d'obstacles. Avec JanazApp, les familles obtiennent un aperçu clair des documents, des étapes et des statuts — sans tracas, sans ambiguïtés.",
+      "content2": "Les professionnels gèrent leurs dossiers plus efficacement, vérifient les documents et travaillent ensemble dans un environnement unique."
+    },
+    "promise": {
+      "title": "Notre promesse",
+      "content1": "Nous connectons la technologie avec l'empathie.",
+      "content2": "JanazApp représente non seulement un logiciel, mais aussi un partenaire fiable dans l'un des moments les plus vulnérables de la vie."
+    }
   }
 }

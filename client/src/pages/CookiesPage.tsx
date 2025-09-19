@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Cookie } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 export default function CookiesPage() {
+  const { t } = useTranslation('legal');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
@@ -40,12 +42,12 @@ export default function CookiesPage() {
                     <Cookie className="h-6 w-6" />
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-foreground" data-testid="text-cookies-title">
-                    Cookiebeleid
+                    {t('cookies.title')}
                   </h1>
                 </div>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-cookies-intro">
-                  JanazApp gebruikt cookies om uw ervaring te verbeteren en onze diensten te optimaliseren. Hieronder vindt u informatie over hoe en waarom wij cookies gebruiken.
+                  {t('cookies.intro')}
                 </p>
               </div>
             </div>
@@ -60,91 +62,76 @@ export default function CookiesPage() {
                 <CardContent className="p-8 space-y-8">
                   
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">1. Wat zijn cookies?</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.0.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u onze website bezoekt. 
-                      Ze helpen ons uw voorkeuren te onthouden en uw ervaring te personaliseren.
+                      {t('cookies.sections.0.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">2. Welke cookies gebruiken wij?</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.1.title')}</h2>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-2">Noodzakelijke cookies</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{t('cookies.sections.1.subsections.0.title')}</h3>
                         <p className="text-base leading-relaxed text-muted-foreground">
-                          Deze cookies zijn essentieel voor het functioneren van onze website en kunnen niet worden uitgeschakeld. 
-                          Ze worden gebruikt voor veiligheid, sessiemanagement en toegankelijkheid.
+                          {t('cookies.sections.1.subsections.0.content')}
                         </p>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-2">Functionele cookies</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{t('cookies.sections.1.subsections.1.title')}</h3>
                         <p className="text-base leading-relaxed text-muted-foreground">
-                          Deze cookies onthouden uw voorkeuren en instellingen om uw ervaring te verbeteren, 
-                          zoals taalvoorkeuren en gebruikersinterface-instellingen.
+                          {t('cookies.sections.1.subsections.1.content')}
                         </p>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-foreground mb-2">Analytische cookies</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{t('cookies.sections.1.subsections.2.title')}</h3>
                         <p className="text-base leading-relaxed text-muted-foreground">
-                          We gebruiken deze cookies om te begrijpen hoe bezoekers onze website gebruiken, 
-                          zodat we onze diensten kunnen verbeteren.
+                          {t('cookies.sections.1.subsections.2.content')}
                         </p>
                       </div>
                     </div>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">3. Waarom gebruiken wij cookies?</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.2.title')}</h2>
                     <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
-                      <li>• Om uw inloggegevens veilig te bewaren</li>
-                      <li>• Om uw voorkeuren en instellingen te onthouden</li>
-                      <li>• Om de prestaties van onze website te verbeteren</li>
-                      <li>• Om technische problemen op te sporen en op te lossen</li>
-                      <li>• Om frauduleuze activiteiten te voorkomen</li>
+                      {(t('cookies.sections.2.list', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                        <li key={index}>• {item}</li>
+                      ))}
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">4. Cookiebeheer</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.3.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      U kunt cookies beheren via de instellingen van uw browser. Let op dat het uitschakelen van bepaalde cookies 
-                      de functionaliteit van onze website kan beperken. Noodzakelijke cookies kunnen niet worden uitgeschakeld 
-                      omdat ze essentieel zijn voor de werking van de website.
+                      {t('cookies.sections.3.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">5. Bewaartermijn</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.4.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Sessiecookies worden automatisch verwijderd wanneer u uw browser sluit. 
-                      Permanente cookies blijven opgeslagen totdat ze verlopen of door u worden verwijderd. 
-                      De bewaartermijn varieert van enkele uren tot maximaal één jaar.
+                      {t('cookies.sections.4.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">6. Wijzigingen in dit cookiebeleid</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.5.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      We kunnen dit cookiebeleid van tijd tot tijd bijwerken. 
-                      Wijzigingen worden op deze pagina gepubliceerd en zijn onmiddellijk van kracht.
+                      {t('cookies.sections.5.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">7. Contact</h2>
-                    <p className="text-base leading-relaxed text-muted-foreground">
-                      Voor vragen over ons cookiebeleid kunt u contact opnemen via:
-                      <br />
-                      E-mail: info@janazapp.com
-                      <br />
-                      Telefoon: +32 2 123 4567
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('cookies.sections.6.title')}</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground" style={{whiteSpace: 'pre-line'}}>
+                      {t('cookies.sections.6.content')}
                     </p>
                   </section>
 
                   <div className="mt-8 p-4 bg-muted/50 rounded-md">
                     <p className="text-sm text-muted-foreground">
-                      Laatst bijgewerkt: januari 2025
+                      {t('cookies.lastUpdated')}
                     </p>
                   </div>
                   

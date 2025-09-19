@@ -51,5 +51,73 @@
   "terms": {
     "title": "Şartlar ve Koşullar",
     "intro": "Bu şartlar ve koşullar JanazApp hizmetlerinin kullanımı için geçerlidir. Hizmetlerimizi kullanarak bu şartları kabul etmiş olursunuz."
+  },
+  "cookies": {
+    "title": "Çerez Politikası",
+    "intro": "JanazApp deneyiminizi iyileştirmek ve hizmetlerimizi optimize etmek için çerezler kullanır. Çerezleri nasıl ve neden kullandığımızla ilgili bilgileri aşağıda bulabilirsiniz.",
+    "sections": [
+      {
+        "title": "1. Çerezler nedir?",
+        "content": "Çerezler, web sitemizi ziyaret ettiğinizde cihazınızda depolanan küçük metin dosyalarıdır. Tercihlerinizi hatırlamamıza ve deneyiminizi kişiselleştirmemize yardımcı olurlar."
+      },
+      {
+        "title": "2. Hangi çerezleri kullanıyoruz?",
+        "subsections": [
+          {
+            "title": "Gerekli çerezler",
+            "content": "Bu çerezler web sitemizin işlevselliği için gereklidir ve devre dışı bırakılamazlar. Güvenlik, oturum yönetimi ve erişilebilirlik için kullanılırlar."
+          },
+          {
+            "title": "İşlevsel çerezler",
+            "content": "Bu çerezler deneyiminizi iyileştirmek için tercihlerinizi ve ayarlarınızı hatırlar, örneğin dil tercihleri ve kullanıcı arayüzü ayarları."
+          },
+          {
+            "title": "Analitik çerezler",
+            "content": "Ziyaretçilerin web sitemizi nasıl kullandığını anlamak için bu çerezleri kullanıyoruz, böylece hizmetlerimizi iyileştirebiliriz."
+          }
+        ]
+      },
+      {
+        "title": "3. Çerezleri neden kullanıyoruz?",
+        "list": [
+          "Giriş bilgilerinizi güvenli bir şekilde saklamak için",
+          "Tercihlerinizi ve ayarlarınızı hatırlamak için",
+          "Web sitemizin performansını iyileştirmek için",
+          "Teknik sorunları tespit etmek ve çözmek için",
+          "Hileli faaliyetleri önlemek için"
+        ]
+      },
+      {
+        "title": "4. Çerez yönetimi",
+        "content": "Çerezleri tarayıcı ayarlarınız aracılığıyla yönetebilirsiniz. Belirli çerezleri devre dışı bırakmanın web sitemizin işlevselliğini sınırlayabileceğini unutmayın. Gerekli çerezler web sitesinin çalışması için gerekli olduğundan devre dışı bırakılamazlar."
+      },
+      {
+        "title": "5. Saklama süresi",
+        "content": "Oturum çerezleri tarayıcınızı kapattığınızda otomatik olarak silinir. Kalıcı çerezler süresi dolana veya siz silene kadar saklanır. Saklama süresi birkaç saatten maksimum bir yıla kadar değişir."
+      },
+      {
+        "title": "6. Bu çerez politikasındaki değişiklikler",
+        "content": "Bu çerez politikasını zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada yayınlanır ve derhal yürürlüğe girer."
+      },
+      {
+        "title": "7. İletişim",
+        "content": "Çerez politikamızla ilgili sorularınız için bizimle iletişime geçebilirsiniz:\nE-posta: info@janazapp.com\nTelefon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Son güncelleme: Ocak 2025"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "intro": "JanazApp'te teknoloji ve empatinin mükemmel bir uyum içinde çalıştığını kanıtlıyoruz. Aileleri, cenaze müdürlerini ve sigorta şirketlerini birbirine bağlayan dijital bir platform geliştirdik ve ölümle ilgili tüm idari ve pratik adımların hızlı ve doğru şekilde halledilmesini sağladık.",
+    "mission": {
+      "title": "Misyonumuz",
+      "content1": "Yaslı ailelerin daha az engelle karşılaşmasını sağlıyoruz. JanazApp ile aileler belgeler, adımlar ve durumlar hakkında net bir genel bakış elde ediyor — karmaşa olmadan, belirsizlik olmadan.",
+      "content2": "Profesyoneller dosyalarını daha verimli yönetiyor, belgeleri doğruluyor ve tek bir ortamda birlikte çalışıyorlar."
+    },
+    "promise": {
+      "title": "Sözümüz",
+      "content1": "Teknolojiyi empati ile birleştiriyoruz.",
+      "content2": "JanazApp sadece yazılımı değil, hayatın en savunmasız anlarından birinde güvenilir bir ortağı temsil eder."
+    }
   }
 }

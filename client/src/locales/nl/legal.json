@@ -51,5 +51,73 @@
   "terms": {
     "title": "Algemene Voorwaarden",
     "intro": "Deze algemene voorwaarden zijn van toepassing op het gebruik van de JanazApp-diensten. Door gebruik te maken van onze diensten gaat u akkoord met deze voorwaarden."
+  },
+  "cookies": {
+    "title": "Cookiebeleid",
+    "intro": "JanazApp gebruikt cookies om uw ervaring te verbeteren en onze diensten te optimaliseren. Hieronder vindt u informatie over hoe en waarom wij cookies gebruiken.",
+    "sections": [
+      {
+        "title": "1. Wat zijn cookies?",
+        "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u onze website bezoekt. Ze helpen ons uw voorkeuren te onthouden en uw ervaring te personaliseren."
+      },
+      {
+        "title": "2. Welke cookies gebruiken wij?",
+        "subsections": [
+          {
+            "title": "Noodzakelijke cookies",
+            "content": "Deze cookies zijn essentieel voor het functioneren van onze website en kunnen niet worden uitgeschakeld. Ze worden gebruikt voor veiligheid, sessiemanagement en toegankelijkheid."
+          },
+          {
+            "title": "Functionele cookies",
+            "content": "Deze cookies onthouden uw voorkeuren en instellingen om uw ervaring te verbeteren, zoals taalvoorkeuren en gebruikersinterface-instellingen."
+          },
+          {
+            "title": "Analytische cookies",
+            "content": "We gebruiken deze cookies om te begrijpen hoe bezoekers onze website gebruiken, zodat we onze diensten kunnen verbeteren."
+          }
+        ]
+      },
+      {
+        "title": "3. Waarom gebruiken wij cookies?",
+        "list": [
+          "Om uw inloggegevens veilig te bewaren",
+          "Om uw voorkeuren en instellingen te onthouden",
+          "Om de prestaties van onze website te verbeteren",
+          "Om technische problemen op te sporen en op te lossen",
+          "Om frauduleuze activiteiten te voorkomen"
+        ]
+      },
+      {
+        "title": "4. Cookiebeheer",
+        "content": "U kunt cookies beheren via de instellingen van uw browser. Let op dat het uitschakelen van bepaalde cookies de functionaliteit van onze website kan beperken. Noodzakelijke cookies kunnen niet worden uitgeschakeld omdat ze essentieel zijn voor de werking van de website."
+      },
+      {
+        "title": "5. Bewaartermijn",
+        "content": "Sessiecookies worden automatisch verwijderd wanneer u uw browser sluit. Permanente cookies blijven opgeslagen totdat ze verlopen of door u worden verwijderd. De bewaartermijn varieert van enkele uren tot maximaal één jaar."
+      },
+      {
+        "title": "6. Wijzigingen in dit cookiebeleid",
+        "content": "We kunnen dit cookiebeleid van tijd tot tijd bijwerken. Wijzigingen worden op deze pagina gepubliceerd en zijn onmiddellijk van kracht."
+      },
+      {
+        "title": "7. Contact",
+        "content": "Voor vragen over ons cookiebeleid kunt u contact opnemen via:\nE-mail: info@janazapp.com\nTelefoon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Laatst bijgewerkt: januari 2025"
+  },
+  "about": {
+    "title": "Over Ons",
+    "intro": "Bij JanazApp bewijzen we dat technologie en empathie perfect samengaan. We ontwikkelden een digitaal platform dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbond, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld werden.",
+    "mission": {
+      "title": "Onze missie",
+      "content1": "We zorgen ervoor dat nabestaanden minder drempels ervaren. Met JanazApp krijgen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.",
+      "content2": "Professionals beheren hun dossiers efficiënter, verifiëren documenten en werken samen in één omgeving."
+    },
+    "promise": {
+      "title": "Onze belofte",
+      "content1": "We koppelen technologie aan empathie.",
+      "content2": "JanazApp staat niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven."
+    }
   }
 }

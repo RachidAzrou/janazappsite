@@ -51,5 +51,73 @@
   "terms": {
     "title": "Allgemeine Geschäftsbedingungen",
     "intro": "Diese allgemeinen Geschäftsbedingungen gelten für die Nutzung der JanazApp-Dienste. Durch die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu."
+  },
+  "cookies": {
+    "title": "Cookie-Richtlinie",
+    "intro": "JanazApp verwendet Cookies, um Ihre Erfahrung zu verbessern und unsere Dienste zu optimieren. Nachfolgend finden Sie Informationen darüber, wie und warum wir Cookies verwenden.",
+    "sections": [
+      {
+        "title": "1. Was sind Cookies?",
+        "content": "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, Ihre Präferenzen zu merken und Ihre Erfahrung zu personalisieren."
+      },
+      {
+        "title": "2. Welche Cookies verwenden wir?",
+        "subsections": [
+          {
+            "title": "Notwendige Cookies",
+            "content": "Diese Cookies sind für das Funktionieren unserer Website unerlässlich und können nicht deaktiviert werden. Sie werden für Sicherheit, Sitzungsverwaltung und Barrierefreiheit verwendet."
+          },
+          {
+            "title": "Funktionale Cookies",
+            "content": "Diese Cookies merken sich Ihre Präferenzen und Einstellungen, um Ihre Erfahrung zu verbessern, wie Sprachpräferenzen und Benutzeroberflächen-Einstellungen."
+          },
+          {
+            "title": "Analytische Cookies",
+            "content": "Wir verwenden diese Cookies, um zu verstehen, wie Besucher unsere Website nutzen, damit wir unsere Dienste verbessern können."
+          }
+        ]
+      },
+      {
+        "title": "3. Warum verwenden wir Cookies?",
+        "list": [
+          "Um Ihre Anmeldedaten sicher zu speichern",
+          "Um Ihre Präferenzen und Einstellungen zu merken",
+          "Um die Leistung unserer Website zu verbessern",
+          "Um technische Probleme zu erkennen und zu lösen",
+          "Um betrügerische Aktivitäten zu verhindern"
+        ]
+      },
+      {
+        "title": "4. Cookie-Verwaltung",
+        "content": "Sie können Cookies über die Einstellungen Ihres Browsers verwalten. Bitte beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität unserer Website einschränken kann. Notwendige Cookies können nicht deaktiviert werden, da sie für den Betrieb der Website unerlässlich sind."
+      },
+      {
+        "title": "5. Aufbewahrungsdauer",
+        "content": "Sitzungs-Cookies werden automatisch gelöscht, wenn Sie Ihren Browser schließen. Persistente Cookies bleiben gespeichert, bis sie ablaufen oder von Ihnen gelöscht werden. Die Aufbewahrungsdauer variiert von einigen Stunden bis maximal einem Jahr."
+      },
+      {
+        "title": "6. Änderungen an dieser Cookie-Richtlinie",
+        "content": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht und treten sofort in Kraft."
+      },
+      {
+        "title": "7. Kontakt",
+        "content": "Für Fragen zu unserer Cookie-Richtlinie können Sie uns kontaktieren unter:\nE-Mail: info@janazapp.com\nTelefon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Zuletzt aktualisiert: Januar 2025"
+  },
+  "about": {
+    "title": "Über Uns",
+    "intro": "Bei JanazApp beweisen wir, dass Technologie und Empathie perfekt zusammenarbeiten. Wir haben eine digitale Plattform entwickelt, die Familien, Bestattungsunternehmer und Versicherungsgesellschaften verbindet und sicherstellt, dass alle administrativen und praktischen Schritte rund um einen Todesfall schnell und korrekt abgewickelt werden.",
+    "mission": {
+      "title": "Unsere Mission",
+      "content1": "Wir sorgen dafür, dass trauernde Familien weniger Hürden erleben. Mit JanazApp erhalten Familien einen klaren Überblick über Dokumente, Schritte und Status — ohne Komplikationen, ohne Unklarheiten.",
+      "content2": "Fachleute verwalten ihre Akten effizienter, verifizieren Dokumente und arbeiten in einer einzigen Umgebung zusammen."
+    },
+    "promise": {
+      "title": "Unser Versprechen",
+      "content1": "Wir verbinden Technologie mit Empathie.",
+      "content2": "JanazApp steht nicht nur für Software, sondern für einen zuverlässigen Partner in einem der verletzlichsten Momente des Lebens."
+    }
   }
 }
