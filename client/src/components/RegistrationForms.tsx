@@ -271,23 +271,29 @@ export default function RegistrationForms() {
 
             {/* Citizen Registration */}
             <TabsContent value="burger">
-              <Card className="border border-border shadow-sm bg-background overflow-hidden" data-testid="card-citizen-form">
-                <CardHeader className="p-6">
+              <Card className="border border-border shadow-md bg-background/95 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
+                <CardHeader className="p-6 bg-gradient-to-r from-primary/5 to-primary/10 border-b border-border/50">
                   <CardTitle className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
-                      <IoPeopleOutline className="h-5 w-5" />
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+                      <IoPeopleOutline className="h-6 w-6" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground">Registratie voor Burgers</h3>
+                      <p className="text-sm text-muted-foreground mt-1">Voor particulieren en families</p>
                     </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className={`p-6 ${isRTL ? 'rtl-support' : ''}`}>
+                <CardContent className={`p-8 ${isRTL ? 'rtl-support' : ''}`}>
                   <Form {...citizenForm}>
                     <form onSubmit={citizenForm.handleSubmit(handleCitizenSubmit)} className="space-y-6">
-                      <div className="space-y-6">
-                        <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
-                          <h4 className="text-xl font-semibold text-foreground mb-2">Persoonlijke Gegevens</h4>
+                      <div className="space-y-8">
+                        <div className={`pb-6 ${isRTL ? 'text-right' : 'text-center'} bg-muted/30 -mx-6 px-6 py-4 mb-6`}>
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center">
+                              <IoPeopleOutline className="h-4 w-4" />
+                            </div>
+                            <h4 className="text-xl font-semibold text-foreground">Persoonlijke Gegevens</h4>
+                          </div>
                           <p className="text-base text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
                         </div>
                         
@@ -300,7 +306,7 @@ export default function RegistrationForms() {
                                 <FormLabel>Voornaam *</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Ahmed"
+                                    placeholder="bijv. Fatima"
                                     data-testid="input-firstname"
                                     {...field}
                                   />
@@ -317,7 +323,7 @@ export default function RegistrationForms() {
                                 <FormLabel>Achternaam *</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Van der Berg"
+                                    placeholder="bijv. Benali"
                                     data-testid="input-lastname"
                                     {...field}
                                   />
@@ -337,7 +343,7 @@ export default function RegistrationForms() {
                               <FormControl>
                                 <Input
                                   type="email"
-                                  placeholder="naam@voorbeeld.nl"
+                                  placeholder="naam@example.be"
                                   data-testid="input-email"
                                   {...field}
                                 />
@@ -358,7 +364,7 @@ export default function RegistrationForms() {
                                 <FormControl>
                                   <Input
                                     type="tel"
-                                    placeholder="+31 6 12345678"
+                                    placeholder="+32 472 12 34 56"
                                     data-testid="input-phone"
                                     {...field}
                                   />
@@ -375,7 +381,7 @@ export default function RegistrationForms() {
                                 <FormLabel>Woonplaats</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Amsterdam"
+                                    placeholder="bijv. Antwerpen"
                                     data-testid="input-city"
                                     {...field}
                                   />
@@ -449,14 +455,16 @@ export default function RegistrationForms() {
                           )}
                         />
                         
-                        <Button 
-                          type="submit" 
-                          className="w-full" 
-                          disabled={citizenForm.formState.isSubmitting}
-                          data-testid="button-submit-citizen"
-                        >
-                          {citizenForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
-                        </Button>
+                        <div className="pt-4">
+                          <Button 
+                            type="submit" 
+                            className="w-full h-12 text-base font-semibold" 
+                            disabled={citizenForm.formState.isSubmitting}
+                            data-testid="button-submit-citizen"
+                          >
+                            {citizenForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
+                          </Button>
+                        </div>
                       </div>
                     </form>
                   </Form>
@@ -467,23 +475,29 @@ export default function RegistrationForms() {
             {/* Premium Partner Registration */}
             {/* Partner Registration */}
             <TabsContent value="partner">
-              <Card className="border border-border shadow-sm bg-background overflow-hidden" data-testid="card-partner-form">
-                <CardHeader className="p-6">
+              <Card className="border border-border shadow-md bg-background/95 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
+                <CardHeader className="p-6 bg-gradient-to-r from-primary/5 to-primary/10 border-b border-border/50">
                   <CardTitle className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
-                      <IoBusinessOutline className="h-5 w-5" />
+                    <div className="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
+                      <IoBusinessOutline className="h-6 w-6" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground">Registratie voor Partners</h3>
+                      <p className="text-sm text-muted-foreground mt-1">Voor professionals en organisaties</p>
                     </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className={`p-6 ${isRTL ? 'rtl-support' : ''}`}>
+                <CardContent className={`p-8 ${isRTL ? 'rtl-support' : ''}`}>
                   <Form {...partnerForm}>
                     <form onSubmit={partnerForm.handleSubmit(handlePartnerSubmit)} className="space-y-6">
-                      <div className="space-y-6">
-                        <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
-                          <h4 className="text-xl font-semibold text-foreground mb-2">Bedrijfsinformatie</h4>
+                      <div className="space-y-8">
+                        <div className={`pb-6 ${isRTL ? 'text-right' : 'text-center'} bg-muted/30 -mx-6 px-6 py-4 mb-6`}>
+                          <div className="flex items-center justify-center gap-3 mb-3">
+                            <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center">
+                              <IoBusinessOutline className="h-4 w-4" />
+                            </div>
+                            <h4 className="text-xl font-semibold text-foreground">Bedrijfsinformatie</h4>
+                          </div>
                           <p className="text-base text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
                         </div>
                         
@@ -495,7 +509,7 @@ export default function RegistrationForms() {
                               <FormLabel>Bedrijfsnaam *</FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="bijv. Uitvaart Van der Berg B.V."
+                                  placeholder="bijv. Moskee Al-Nour Antwerpen"
                                   data-testid="input-company-name"
                                   {...field}
                                 />
@@ -514,7 +528,7 @@ export default function RegistrationForms() {
                                 <FormLabel>Contactpersoon *</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="Voor- en achternaam"
+                                    placeholder="Omar El Moussaoui"
                                     data-testid="input-contact-person"
                                     {...field}
                                   />
@@ -559,7 +573,7 @@ export default function RegistrationForms() {
                               <FormControl>
                                 <Input
                                   type="email"
-                                  placeholder="contact@uwbedrijf.nl"
+                                  placeholder="info@moskee-alnour.be"
                                   data-testid="input-partner-email"
                                   {...field}
                                 />
@@ -579,7 +593,7 @@ export default function RegistrationForms() {
                                 <FormControl>
                                   <Input
                                     type="tel"
-                                    placeholder="+31 20 1234567"
+                                    placeholder="+32 3 234 56 78"
                                     data-testid="input-partner-phone"
                                     {...field}
                                   />
@@ -596,7 +610,7 @@ export default function RegistrationForms() {
                                 <FormLabel>Vestigingsplaats</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Rotterdam"
+                                    placeholder="bijv. Brussel"
                                     data-testid="input-partner-city"
                                     {...field}
                                   />
@@ -657,14 +671,16 @@ export default function RegistrationForms() {
                           )}
                         />
                         
-                        <Button 
-                          type="submit" 
-                          className="w-full" 
-                          disabled={partnerForm.formState.isSubmitting}
-                          data-testid="button-submit-partner"
-                        >
-                          {partnerForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
-                        </Button>
+                        <div className="pt-4">
+                          <Button 
+                            type="submit" 
+                            className="w-full h-12 text-base font-semibold" 
+                            disabled={partnerForm.formState.isSubmitting}
+                            data-testid="button-submit-partner"
+                          >
+                            {partnerForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
+                          </Button>
+                        </div>
                       </div>
                     </form>
                   </Form>
