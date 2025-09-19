@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import heroImage from "@assets/generated_images/Islamic_architecture_hero_background_5d13e65a.png";
-import logoImage from "@assets/JanazaApp.ai_1758310689104.png";
+import logoImage from "@assets/JanazaApp.ai_1758310618265.png";
 
 export default function Hero() {
   const { t } = useTranslation('landing');
