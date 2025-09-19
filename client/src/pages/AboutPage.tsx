@@ -40,8 +40,8 @@ export default function AboutPage() {
                 </h1>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-about-intro">
-                  Bij JanazApp hebben we bewezen dat technologie en empathie perfect samengaan.
-                  We hebben een digitaal platform ontwikkeld dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbond, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld werden.
+                  Bij JanazApp bewijzen we dat technologie en empathie perfect samengaan.
+                  We ontwikkelen een digitaal platform dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbindt, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld worden.
                 </p>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function AboutPage() {
                     </div>
                     <div className="space-y-4">
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-mission-1">
-                        We zorgden ervoor dat nabestaanden minder drempels ervaarden.
-                        Met JanazApp kregen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.
+                        We zorgen ervoor dat nabestaanden minder drempels ervaren.
+                        Met JanazApp krijgen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.
                       </p>
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-mission-2">
-                        Professionals beheerden hun dossiers efficiënter, verifieerden documenten en werkten samen in één omgeving.
+                        Professionals beheren hun dossiers efficiënter, verifiëren documenten en werken samen in één omgeving.
                       </p>
                     </div>
                   </CardContent>
@@ -89,10 +89,10 @@ export default function AboutPage() {
                     </div>
                     <div className="space-y-4">
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-promise-1">
-                        We hebben technologie gekoppeld aan empathie.
+                        We koppelen technologie aan empathie.
                       </p>
                       <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-promise-2">
-                        JanazApp stond niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven.
+                        JanazApp staat niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven.
                       </p>
                     </div>
                   </CardContent>
