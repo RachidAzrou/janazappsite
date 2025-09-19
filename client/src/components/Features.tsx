@@ -74,7 +74,6 @@ export default function Features() {
         <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-primary/4 to-primary/8 rounded-full blur-xl animate-pulse delay-500"></div>
         
         {/* Subtle Line Accents */}
-        <div className="absolute bottom-24 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
       </div>
       
       <div className="relative container mx-auto px-3 sm:px-6 lg:px-8">
