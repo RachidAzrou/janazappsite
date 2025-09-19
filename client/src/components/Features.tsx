@@ -102,10 +102,9 @@ export default function Features() {
                 return (
                   <div
                     key={index}
-                    className="flex items-start gap-4 group hover-elevate animate-in slide-in-from-right-8 duration-700 opacity-0"
+                    className="flex items-start gap-4 group hover-elevate animate-in slide-in-from-right-8 duration-700"
                     style={{ 
-                      animationDelay: `${index * 150 + 400}ms`,
-                      animationFillMode: 'both'
+                      animationDelay: `${index * 150 + 400}ms`
                     }}
                     data-testid={`feature-item-${index}`}
                   >
