@@ -43,14 +43,6 @@ export default function ProductPreview() {
           {/* Sophisticated Background Frame */}
           <div className="absolute -inset-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl blur-2xl opacity-60"></div>
           
-          <Card className="relative overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm" data-testid="card-mockup">
-            <img 
-              src={mockupImage} 
-              alt="JanazApp Dashboard Preview - Desktop en Mobiel Interface" 
-              className="w-full h-auto"
-              data-testid="img-dashboard-mockup"
-            />
-          </Card>
           
           {/* Premium Floating Feature Cards */}
           <div className="absolute -bottom-8 left-6 right-6 lg:left-12 lg:right-12 z-30">
