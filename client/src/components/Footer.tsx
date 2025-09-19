@@ -19,9 +19,9 @@ export default function Footer() {
   };
 
   return (
-    <footer ref={footerRef} className="relative bg-primary border-t border-primary-border/50" id="contact">
+    <footer ref={footerRef} className="relative border-t border-primary-border/50" id="contact" style={{ backgroundColor: 'hsl(142, 69%, 25%)' }}>
       {/* Elegant background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary to-primary/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_50%)] pointer-events-none" />
       
       <div className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-all duration-1000 ease-out ${
