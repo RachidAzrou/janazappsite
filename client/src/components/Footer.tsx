@@ -30,9 +30,9 @@ export default function Footer() {
           : 'opacity-0 translate-y-8'
       }`}>
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
+        <div className="mb-8">
           {/* Company Info */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="space-y-6">
             <div className="group">
               <img 
                 src={logoUrl} 
@@ -69,61 +69,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-6">
-            <div>
-              <h4 className="font-bold text-primary-foreground mb-6 text-lg tracking-tight" data-testid="text-links-title">
-                Snelle Links
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a 
-                    href="#over-ons" 
-                    className="group flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 py-1" 
-                    data-testid="link-about-footer"
-                  >
-                    <span className="text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">Over Ons</span>
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#diensten" 
-                    className="group flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 py-1" 
-                    data-testid="link-services-footer"
-                  >
-                    <span className="text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">Diensten</span>
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#registratie" 
-                    className="group flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 py-1" 
-                    data-testid="link-registration-footer"
-                  >
-                    <span className="text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">Registratie</span>
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#privacy" 
-                    className="group flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 py-1" 
-                    data-testid="link-privacy"
-                  >
-                    <span className="text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">Privacy</span>
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="#voorwaarden" 
-                    className="group flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 py-1" 
-                    data-testid="link-terms"
-                  >
-                    <span className="text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">Voorwaarden</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
 
         </div>
 
