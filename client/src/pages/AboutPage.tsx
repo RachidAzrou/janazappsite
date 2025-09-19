@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent } from "@/components/ui/card";
+import { Target, Heart } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -53,11 +54,16 @@ export default function AboutPage() {
             }`}>
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Mission Card */}
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden hover-elevate group">
                   <CardContent className="p-8">
-                    <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6" data-testid="text-mission-title">
-                      Onze missie
-                    </h2>
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center group-hover:bg-primary/25 group-hover:scale-105 transition-all duration-300">
+                        <Target className="h-6 w-6" />
+                      </div>
+                      <h2 className="text-2xl lg:text-3xl font-bold text-foreground" data-testid="text-mission-title">
+                        Onze missie
+                      </h2>
+                    </div>
                     <div className="space-y-4">
                       <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-1">
                         We zorgden ervoor dat nabestaanden minder drempels ervaarden.
@@ -71,11 +77,16 @@ export default function AboutPage() {
                 </Card>
 
                 {/* Promise Card */}
-                <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden hover-elevate group">
                   <CardContent className="p-8">
-                    <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6" data-testid="text-promise-title">
-                      Onze belofte
-                    </h2>
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center group-hover:bg-primary/25 group-hover:scale-105 transition-all duration-300">
+                        <Heart className="h-6 w-6" />
+                      </div>
+                      <h2 className="text-2xl lg:text-3xl font-bold text-foreground" data-testid="text-promise-title">
+                        Onze belofte
+                      </h2>
+                    </div>
                     <div className="space-y-4">
                       <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-1">
                         We hebben technologie gekoppeld aan empathie.
