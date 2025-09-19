@@ -31,7 +31,7 @@ export default function Hero() {
               className="h-72 sm:h-96 md:h-[28rem] lg:h-[32rem] w-auto mx-auto drop-shadow-lg"
             />
           </div>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 -mt-8 sm:-mt-12 md:-mt-16" data-testid="text-hero-subtitle">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 -mt-16 sm:-mt-24 md:-mt-32 lg:-mt-40" data-testid="text-hero-subtitle">
             {t('hero.subtitle')}
           </p>
           <p className="text-sm sm:text-lg text-white/80 mb-8 sm:mb-12 max-w-2xl mx-auto px-2 sm:px-0" data-testid="text-hero-description">
