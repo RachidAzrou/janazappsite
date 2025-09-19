@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
+import { goToSection } from "@/lib/sectionNav";
 import logoUrl from "@assets/Logo H@2x_1758276388954.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
+
+  const handleSectionClick = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    goToSection(sectionId, setLocation);
+    setMobileMenuOpen(false); // Close mobile menu if open
+  };
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b">
@@ -23,10 +31,20 @@ export default function Header() {
             <Link href="/over-ons" className="text-foreground hover:text-primary transition-colors" data-testid="link-about">
               Over Ons
             </Link>
-            <a href="/#diensten" className="text-foreground hover:text-primary transition-colors" data-testid="link-services">
+            <a 
+              href="/#diensten" 
+              className="text-foreground hover:text-primary transition-colors" 
+              data-testid="link-services"
+              onClick={(e) => handleSectionClick(e, 'diensten')}
+            >
               Diensten
             </a>
-            <a href="/#registratie" className="text-foreground hover:text-primary transition-colors" data-testid="link-register">
+            <a 
+              href="/#registratie" 
+              className="text-foreground hover:text-primary transition-colors" 
+              data-testid="link-register"
+              onClick={(e) => handleSectionClick(e, 'registratie')}
+            >
               Registreren
             </a>
             <Button variant="default" size="default" className="font-semibold" data-testid="button-login">
@@ -57,10 +75,20 @@ export default function Header() {
               <Link href="/over-ons" className="block text-foreground hover:text-primary transition-colors" data-testid="link-about-mobile">
                 Over Ons
               </Link>
-              <a href="/#diensten" className="block text-foreground hover:text-primary transition-colors" data-testid="link-services-mobile">
+              <a 
+                href="/#diensten" 
+                className="block text-foreground hover:text-primary transition-colors" 
+                data-testid="link-services-mobile"
+                onClick={(e) => handleSectionClick(e, 'diensten')}
+              >
                 Diensten
               </a>
-              <a href="/#registratie" className="block text-foreground hover:text-primary transition-colors" data-testid="link-register-mobile">
+              <a 
+                href="/#registratie" 
+                className="block text-foreground hover:text-primary transition-colors" 
+                data-testid="link-register-mobile"
+                onClick={(e) => handleSectionClick(e, 'registratie')}
+              >
                 Registreren
               </a>
               <Button variant="default" size="default" className="w-full font-semibold" data-testid="button-login-mobile">
