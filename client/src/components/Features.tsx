@@ -83,10 +83,11 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Platform Preview */}
-        <div className="mb-20">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1">
+        {/* Interactive Platform Showcase */}
+        <div className="mb-28">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* Mockup */}
+            <div className="lg:sticky lg:top-8">
               <Card className="overflow-hidden shadow-lg bg-gradient-to-br from-background via-muted/20 to-background">
                 <img 
                   src={mockupImage} 
@@ -96,107 +97,53 @@ export default function Features() {
               </Card>
             </div>
             
-            <div className="order-1 lg:order-2 space-y-6">
-              <div>
+            {/* Animated Features */}
+            <div className="space-y-6">
+              <div className="mb-8">
                 <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  Zie hoe JanazApp werkt
+                  Ontdek de voordelen
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Een intuïtief platform dat complexe procedures vereenvoudigt en families ondersteunt in moeilijke tijden.
+                  JanazApp transformeert complexe procedures tot eenvoudige, begeleide stappen.
                 </p>
               </div>
               
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Snelle Procedures</h4>
-                    <p className="text-sm text-muted-foreground">24-48 uur sneller dan traditionele methoden</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                    <Monitor className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Digitale Documentatie</h4>
-                    <p className="text-sm text-muted-foreground">Alle documenten veilig opgeslagen op één plek</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
-                    <Smartphone className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">24/7 Toegankelijk</h4>
-                    <p className="text-sm text-muted-foreground">Altijd en overal beschikbaar op elk apparaat</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Premium Features Grid */}
-        <div className="mb-28">
-          {/* Premium Features Cards */}
-          <div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {features.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <div
                     key={index}
-                    className="animate-in slide-in-from-bottom-8 duration-1000 opacity-0 hover-elevate"
+                    className="group animate-in slide-in-from-right-8 duration-700 opacity-0 hover-elevate"
                     style={{ 
-                      animationDelay: `${(index + 1) * 100 + 800}ms`,
+                      animationDelay: `${index * 150 + 400}ms`,
                       animationFillMode: 'both'
                     }}
-                    data-testid={`card-feature-${index}`}
+                    data-testid={`feature-item-${index}`}
                   >
-                    <Card className="relative group h-full border-0 bg-gradient-to-br from-background via-background to-muted/20 shadow-lg backdrop-blur-sm transition-all duration-500">
-                      {/* Sophisticated Border Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-primary/8 to-primary/15 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="absolute inset-[1px] bg-gradient-to-br from-background to-muted/10 rounded-xl"></div>
-                      
-                      <div className="relative p-8">
-                        <CardHeader className="p-0 pb-6">
-                          {/* Icon Layout */}
-                          <div className="mb-6">
-                            <div className="relative w-fit">
-                              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
-                                <IconComponent className="h-7 w-7" data-testid={`icon-feature-${index}`} />
-                              </div>
-                              <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
-                            </div>
-                          </div>
-                          
-                          <CardTitle className="text-xl lg:text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-500 leading-tight" data-testid={`text-feature-title-${index}`}>
-                            {feature.title}
-                          </CardTitle>
-                        </CardHeader>
-                        
-                        <CardContent className="p-0">
-                          <p className="text-muted-foreground mb-6 leading-relaxed text-base" data-testid={`text-feature-description-${index}`}>
-                            {feature.description}
-                          </p>
-                          
-                          {/* Benefit Highlight */}
-                          <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/15">
-                            <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary/20 to-primary/30 flex items-center justify-center flex-shrink-0">
-                              <CheckCircle className="w-3.5 h-3.5 text-primary" />
-                            </div>
-                            <p className="text-sm font-semibold text-primary" data-testid={`text-feature-benefit-${index}`}>
-                              {feature.benefit}
-                            </p>
-                          </div>
-                        </CardContent>
+                    <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-background via-muted/10 to-background border border-muted/20 group-hover:border-primary/20 transition-all duration-300 group-hover:shadow-lg">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/15 to-primary/8 text-primary flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                          <IconComponent className="h-6 w-6" />
+                        </div>
                       </div>
-                    </Card>
+                      
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                          {feature.title}
+                        </h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-3">
+                          {feature.description}
+                        </p>
+                        <div className="flex items-center gap-2">
+                          <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
+                            <CheckCircle className="w-2.5 h-2.5 text-primary" />
+                          </div>
+                          <span className="text-xs font-medium text-primary">
+                            {feature.benefit}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
