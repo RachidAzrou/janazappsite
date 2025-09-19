@@ -90,34 +90,10 @@ export default function Features() {
         </div>
 
         {/* Premium Features Grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-5 gap-8 lg:gap-12 mb-28">
-          {/* Elegant Dashboard Preview */}
-          <div className="xl:col-span-2 animate-in slide-in-from-left duration-1000 delay-600 ease-out">
-            <div className="sticky top-8 z-30">
-              <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background to-muted/30 backdrop-blur-sm">
-                <CardContent className="p-6 lg:p-8">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl"></div>
-                    <img 
-                      src="/attached_assets/image_1758288626690.png"
-                      alt="JanazApp Platform Preview - Dashboard Interface"
-                      className="relative w-full h-auto rounded-xl shadow-lg"
-                      data-testid="img-platform-preview"
-                    />
-                  </div>
-                  <div className="mt-6 text-center">
-                    <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30 font-medium">
-                      Live Platform Preview
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-          
+        <div className="mb-28">
           {/* Premium Features Cards */}
-          <div className="xl:col-span-3">
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {features.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
