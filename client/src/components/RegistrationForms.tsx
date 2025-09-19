@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
 import { AlertCircle, Users, Building2, Phone, CheckCircle2, ArrowRight } from "lucide-react";
+import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 
 export default function RegistrationForms() {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
@@ -194,7 +195,7 @@ export default function RegistrationForms() {
                 <CardHeader className="p-6">
                   <CardTitle className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
-                      <Users className="h-5 w-5" />
+                      <IoPeopleOutline className="h-5 w-5" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground">Registratie voor Burgers</h3>
@@ -334,7 +335,7 @@ export default function RegistrationForms() {
                 <CardHeader className="p-6">
                   <CardTitle className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
-                      <Building2 className="h-5 w-5" />
+                      <IoBusinessOutline className="h-5 w-5" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground">Registratie voor Partners</h3>
