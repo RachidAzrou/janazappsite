@@ -48,7 +48,6 @@ export default function ProductPreview() {
               <div className="relative">
                 {/* Premium Image Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-muted/20 to-muted/40">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 z-10"></div>
                   <img 
                     src={mockupImage} 
                     alt="JanazApp Dashboard Preview - Desktop en Mobiel Interface" 
