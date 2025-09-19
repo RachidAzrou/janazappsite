@@ -41,7 +41,7 @@ export default function AboutPage() {
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-about-intro">
                   Bij JanazApp bewijzen we dat technologie en empathie perfect samengaan.
-                  We ontwikkelen een digitaal platform dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbindt, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld worden.
+                  We ontwikkelden een digitaal platform dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbond, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld werden.
                 </p>
               </div>
             </div>
