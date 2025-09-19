@@ -47,7 +47,7 @@ export default function Header() {
             >
               Registreren
             </a>
-            <Button variant="default" size="default" className="font-semibold" data-testid="button-login">
+            <Button variant="ghost" size="default" className="font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login">
               Inloggen
             </Button>
           </nav>
@@ -91,7 +91,7 @@ export default function Header() {
               >
                 Registreren
               </a>
-              <Button variant="default" size="default" className="w-full font-semibold" data-testid="button-login-mobile">
+              <Button variant="ghost" size="default" className="w-full font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login-mobile">
                 Inloggen
               </Button>
             </div>
