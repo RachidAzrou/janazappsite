@@ -233,10 +233,7 @@ export default function RegistrationForms() {
               Registratie
             </h2>
             <p className="text-sm sm:text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0" data-testid="text-registration-subtitle">
-              {/* TODO: Add translation for subtitle text */}
-              Een digitale oplossing die
-              <span className="text-foreground font-medium"> religieuze waarden respecteert</span> en
-              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
+              Registreer jezelf voor toegang tot onze diensten en persoonlijke ondersteuning
             </p>
           </div>
         </div>
