@@ -91,13 +91,13 @@ export default function Footer() {
               >
                 Privacy
               </Link>
-              <a 
-                href="#cookies" 
+              <Link 
+                href="/cookies" 
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
                 data-testid="link-cookies"
               >
                 Cookies
-              </a>
+              </Link>
               <a 
                 href="#toegankelijkheid" 
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
