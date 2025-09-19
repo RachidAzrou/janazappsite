@@ -146,11 +146,6 @@ export default function RegistrationForms() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
         <div className="text-center mb-20 lg:mb-28">
-          <div className="animate-in slide-in-from-bottom-4 duration-1000 ease-out">
-            <Badge variant="outline" className="mb-8 px-6 py-3 bg-gradient-to-r from-primary/12 to-primary/8 text-primary border-primary/30 text-sm font-semibold tracking-wide shadow-lg" data-testid="badge-registration-label">
-              Word Onderdeel van Ons Netwerk
-            </Badge>
-          </div>
           <div className="animate-in slide-in-from-bottom-8 duration-1000 delay-400 ease-out">
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light mb-8" data-testid="text-registration-subtitle">
               Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
