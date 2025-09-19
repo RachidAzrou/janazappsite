@@ -553,7 +553,6 @@ export default function RegistrationForms() {
                                     <SelectItem value="uitvaartondernemer">Uitvaartondernemer - Volledige uitvaartdiensten</SelectItem>
                                     <SelectItem value="moskee">Moskee - Religieuze begeleiding</SelectItem>
                                     <SelectItem value="verzekeraar">Verzekeraar - Uitvaartverzekeringen</SelectItem>
-                                    <SelectItem value="gemeente">Gemeente - Burgerlijke stand</SelectItem>
                                     <SelectItem value="wasplaats">Wasplaats - Rituele wassing</SelectItem>
                                     <SelectItem value="andere">Andere - Gerelateerde diensten</SelectItem>
                                   </SelectContent>
