@@ -74,11 +74,6 @@ export default function Features() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
         <div className="text-center mb-24 lg:mb-32">
-          <div className="animate-in slide-in-from-bottom-4 duration-900 ease-out">
-            <Badge variant="secondary" className="mb-8 px-6 py-2 bg-gradient-to-r from-primary/15 to-primary/10 text-primary border-primary/25 text-sm font-medium tracking-wide" data-testid="badge-section-label">
-              Premium Service Voordelen
-            </Badge>
-          </div>
           <div className="animate-in slide-in-from-bottom-6 duration-900 delay-200 ease-out">
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent leading-tight tracking-tight" data-testid="text-features-title">
               Waarom Kiezen voor
