@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -76,8 +78,8 @@
   --chart-4: 27 87% 35%;
   --chart-5: 270 95% 35%;
 
-  --font-sans: Open Sans, sans-serif;
-  --font-serif: Georgia, serif;
+  --font-sans: Open Sans, 'Noto Sans Arabic', sans-serif;
+  --font-serif: Georgia, 'Noto Naskh Arabic', serif;
   --font-mono: Menlo, monospace;
   --radius: .5rem; /* 8px */
   --shadow-2xs: 0px 2px 0px 0px hsl(220 13% 91% / 0.00);
@@ -240,6 +242,39 @@
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
+  }
+
+  /* RTL support utilities for Arabic text */
+  .rtl-support {
+    direction: rtl;
+  }
+  
+  .rtl-support input {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  .rtl-support textarea {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  .rtl-support .select-trigger {
+    direction: rtl;
+  }
+  
+  .rtl-support label {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  .rtl-support .checkbox-wrapper {
+    flex-direction: row-reverse;
+  }
+  
+  .rtl-support .checkbox-wrapper .checkbox-label {
+    text-align: right;
+    direction: rtl;
   }
 
   /* Staggered animations for feature cards */

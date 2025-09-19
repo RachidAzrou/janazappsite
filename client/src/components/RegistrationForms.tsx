@@ -20,6 +20,7 @@ export default function RegistrationForms() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [acceptPrivacyCitizen, setAcceptPrivacyCitizen] = useState(false);
   const [acceptPrivacyPartner, setAcceptPrivacyPartner] = useState(false);
+  const [isRTL, setIsRTL] = useState(false);
 
   const [citizenForm, setCitizenForm] = useState({
     firstName: '',
@@ -39,6 +40,12 @@ export default function RegistrationForms() {
     city: '',
     description: ''
   });
+
+  // Update RTL state when language changes
+  const handleCitizenLanguageChange = (value: string) => {
+    setCitizenForm(prev => ({...prev, preferredLanguage: value}));
+    setIsRTL(value === 'arabisch');
+  };
 
   const handleCitizenSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -191,10 +198,10 @@ export default function RegistrationForms() {
                     </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className={`p-6 ${isRTL ? 'rtl-support' : ''}`}>
                   <form onSubmit={handleCitizenSubmit} className="space-y-6">
                     <div className="space-y-6">
-                      <div className="text-center pb-4">
+                      <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
                         <h4 className="text-xl font-semibold text-foreground mb-2">Persoonlijke Gegevens</h4>
                         <p className="text-base text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
                       </div>
@@ -264,8 +271,8 @@ export default function RegistrationForms() {
                       
                       <div className="space-y-2">
                         <Label htmlFor="language">Gewenste Taal voor Communicatie</Label>
-                        <Select value={citizenForm.preferredLanguage} onValueChange={(value) => setCitizenForm(prev => ({...prev, preferredLanguage: value}))}>
-                          <SelectTrigger data-testid="select-language">
+                        <Select value={citizenForm.preferredLanguage} onValueChange={handleCitizenLanguageChange}>
+                          <SelectTrigger data-testid="select-language" className={isRTL ? 'select-trigger' : ''}>
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
@@ -281,7 +288,7 @@ export default function RegistrationForms() {
                       
                       <Separator />
                       
-                      <div className="flex items-start space-x-2">
+                      <div className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
                         <Checkbox 
                           id="privacy" 
                           checked={acceptPrivacyCitizen}
@@ -289,7 +296,7 @@ export default function RegistrationForms() {
                           data-testid="checkbox-privacy"
                         />
                         <div className="space-y-1 leading-none">
-                          <Label htmlFor="privacy" className="text-sm">
+                          <Label htmlFor="privacy" className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
                             Ik ga akkoord met de{" "}
                             <a href="/privacy" className="text-primary hover:underline">
                               privacyverklaring
@@ -333,10 +340,10 @@ export default function RegistrationForms() {
                     </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className={`p-6 ${isRTL ? 'rtl-support' : ''}`}>
                   <form onSubmit={handlePartnerSubmit} className="space-y-6">
                     <div className="space-y-6">
-                      <div className="text-center pb-4">
+                      <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
                         <h4 className="text-xl font-semibold text-foreground mb-2">Bedrijfsinformatie</h4>
                         <p className="text-base text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
                       </div>
@@ -368,7 +375,7 @@ export default function RegistrationForms() {
                         <div className="space-y-2">
                           <Label htmlFor="partnerType">Type Partner *</Label>
                           <Select value={partnerForm.partnerType} onValueChange={(value) => setPartnerForm(prev => ({...prev, partnerType: value}))} required>
-                            <SelectTrigger data-testid="select-partner-type">
+                            <SelectTrigger data-testid="select-partner-type" className={isRTL ? 'select-trigger' : ''}>
                               <SelectValue placeholder="Selecteer type" />
                             </SelectTrigger>
                             <SelectContent>
@@ -434,7 +441,7 @@ export default function RegistrationForms() {
                       
                       <Separator />
                       
-                      <div className="flex items-start space-x-2">
+                      <div className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
                         <Checkbox 
                           id="partnerPrivacy" 
                           checked={acceptPrivacyPartner}
@@ -442,7 +449,7 @@ export default function RegistrationForms() {
                           data-testid="checkbox-partner-privacy"
                         />
                         <div className="space-y-1 leading-none">
-                          <Label htmlFor="partnerPrivacy" className="text-sm">
+                          <Label htmlFor="partnerPrivacy" className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
                             Ik ga akkoord met de{" "}
                             <a href="/privacy" className="text-primary hover:underline">
                               privacyverklaring
