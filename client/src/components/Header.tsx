@@ -20,12 +20,12 @@ export default function Header() {
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto pl-2 pr-4 sm:pl-3 sm:pr-6 lg:pl-4 lg:pr-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <img src={logoUrl} alt="JanazApp" className="h-7 sm:h-8 w-auto cursor-pointer" data-testid="img-logo" />
+              <img src={logoUrl} alt="JanazApp" className="h-10 sm:h-12 w-auto cursor-pointer" data-testid="img-logo" />
             </Link>
           </div>
 
