@@ -440,18 +440,6 @@ export default function RegistrationForms() {
                         />
                       </div>
                       
-                      <div className="bg-muted/50 p-4 rounded-lg">
-                        <div className="flex items-start gap-2">
-                          <AlertCircle className="h-4 w-4 text-primary mt-0.5" />
-                          <div className="text-sm">
-                            <p className="font-medium text-foreground mb-1">Verificatie Vereist</p>
-                            <p className="text-muted-foreground">
-                              Na registratie verifiëren we uw bedrijfsgegevens voordat uw account wordt geactiveerd.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      
                       <Separator />
                       
                       <div className="flex items-start space-x-2">
