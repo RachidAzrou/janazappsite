@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import logoUrl from "@assets/Logo H@2x_1758276388954.png";
+import logoUrl from "@assets/W - Logo H_1758297667612.png";
 
 export default function Footer() {
   const { ref: footerRef, isVisible: footerVisible } = useScrollAnimation();
