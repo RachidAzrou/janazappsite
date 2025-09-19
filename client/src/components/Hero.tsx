@@ -28,7 +28,7 @@ export default function Hero() {
             <img 
               src={logoImage} 
               alt="JanazApp Logo" 
-              className="h-20 sm:h-24 md:h-32 lg:h-40 w-auto mx-auto drop-shadow-lg brightness-0 invert"
+              className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto mx-auto drop-shadow-lg brightness-0 invert"
             />
           </div>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8" data-testid="text-hero-subtitle">
