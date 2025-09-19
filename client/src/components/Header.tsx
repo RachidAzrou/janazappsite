@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { goToSection } from "@/lib/sectionNav";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import logoUrl from "@assets/Logo H@2x_1758276388954.png";
+import logoUrl from "@assets/Logo Icon@2x_1758311227966.png";
 
 export default function Header() {
   const { t } = useTranslation('header');
