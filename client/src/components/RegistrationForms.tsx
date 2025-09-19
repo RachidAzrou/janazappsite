@@ -280,6 +280,8 @@ export default function RegistrationForms() {
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="nederlands">Nederlands</SelectItem>
+                            <SelectItem value="engels">English</SelectItem>
+                            <SelectItem value="duits">Deutsch (Duits)</SelectItem>
                             <SelectItem value="arabisch">العربية (Arabisch)</SelectItem>
                             <SelectItem value="turks">Türkçe (Turks)</SelectItem>
                             <SelectItem value="frans">Français (Frans)</SelectItem>
