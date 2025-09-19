@@ -122,12 +122,12 @@ export const isRTL = (language: string): boolean => {
   return ['ar'].includes(language);
 };
 
-// Available languages with their display names and flags
+// Available languages with their display names and country codes
 export const languages = [
-  { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+  { code: 'nl', name: 'Nederlands', countryCode: 'NL' },
+  { code: 'fr', name: 'Français', countryCode: 'FR' },
+  { code: 'en', name: 'English', countryCode: 'EN' },
+  { code: 'de', name: 'Deutsch', countryCode: 'DE' },
+  { code: 'ar', name: 'العربية', countryCode: 'AR' },
+  { code: 'tr', name: 'Türkçe', countryCode: 'TR' },
 ] as const;

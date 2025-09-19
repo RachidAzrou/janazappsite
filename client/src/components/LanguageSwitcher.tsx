@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
           data-testid="button-language-switcher"
         >
           <Globe className="h-4 w-4" />
-          <span className="text-lg">{currentLanguage.flag}</span>
+          <span className="text-xs font-bold tracking-wider">{currentLanguage.countryCode}</span>
           <span className="hidden sm:inline">{currentLanguage.name}</span>
         </Button>
       </DropdownMenuTrigger>
@@ -60,7 +60,7 @@ export default function LanguageSwitcher() {
             }`}
             data-testid={`menu-item-language-${language.code}`}
           >
-            <span className="text-lg">{language.flag}</span>
+            <span className="text-xs font-bold tracking-wider text-muted-foreground">{language.countryCode}</span>
             <span className="flex-1">{language.name}</span>
             {i18n.language === language.code && (
               <div className="w-2 h-2 rounded-full bg-primary" />

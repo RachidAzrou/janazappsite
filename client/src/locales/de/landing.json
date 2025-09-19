@@ -14,6 +14,16 @@
       "buttonText": "Als Partner registrieren"
     }
   },
+  "footer": {
+    "description": "JanazApp digitalisiert die Bestattungsbetreuung für die islamische Gemeinschaft in Westeuropa. Unsere Plattform verbindet Familien, Bestattungsunternehmen, Moscheen und Regierungsinstitutionen.",
+    "address": "Antwerpen, België",
+    "email": "info@janazapp.com",
+    "phone": "+32 2 123 4567",
+    "copyright": "© 2025 JanazApp. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "terms": "Allgemeine Geschäftsbedingungen"
+  },
   "features": {
     "subtitle": "Eine digitale Lösung, die religiöse Werte respektiert und komplexe Prozesse vereinfacht",
     "items": [
