@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -35,14 +34,9 @@ export default function PrivacyPage() {
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
               }`}>
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center">
-                    <Shield className="h-6 w-6" />
-                  </div>
-                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground" data-testid="text-privacy-title">
-                    Privacybeleid
-                  </h1>
-                </div>
+                <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-8" data-testid="text-privacy-title">
+                  Privacybeleid
+                </h1>
                 
                 <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-privacy-intro">
                   Uw privacy is van het grootste belang voor JanazApp. Dit beleid beschrijft hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.
