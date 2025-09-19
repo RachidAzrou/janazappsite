@@ -427,7 +427,7 @@ export default function RegistrationForms() {
                           control={citizenForm.control}
                           name="acceptPrivacy"
                           render={({ field }) => (
-                            <FormItem className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
+                            <FormItem className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3 checkbox-wrapper' : 'space-x-3'}`}>
                               <FormControl>
                                 <Checkbox 
                                   checked={field.value}
@@ -435,7 +435,7 @@ export default function RegistrationForms() {
                                   data-testid="checkbox-privacy"
                                 />
                               </FormControl>
-                              <div className="space-y-1 leading-none">
+                              <div className="space-y-1 leading-relaxed">
                                 <FormLabel className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
                                   Ik ga akkoord met de{" "}
                                   <a href="/privacy" className="text-primary hover:underline">
@@ -646,7 +646,7 @@ export default function RegistrationForms() {
                           control={partnerForm.control}
                           name="acceptPrivacy"
                           render={({ field }) => (
-                            <FormItem className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
+                            <FormItem className={`flex items-center ${isRTL ? 'space-x-reverse space-x-3 checkbox-wrapper' : 'space-x-3'}`}>
                               <FormControl>
                                 <Checkbox 
                                   checked={field.value}
@@ -654,7 +654,7 @@ export default function RegistrationForms() {
                                   data-testid="checkbox-partner-privacy"
                                 />
                               </FormControl>
-                              <div className="space-y-1 leading-none">
+                              <div className="space-y-1 leading-relaxed">
                                 <FormLabel className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
                                   Ik ga akkoord met de{" "}
                                   <a href="/privacy" className="text-primary hover:underline">
