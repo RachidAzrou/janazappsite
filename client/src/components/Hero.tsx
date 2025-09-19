@@ -24,11 +24,11 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-4 sm:mb-6" data-testid="logo-hero">
+          <div className="mb-1 sm:mb-2" data-testid="logo-hero">
             <img 
               src={logoImage} 
               alt="JanazApp Logo" 
-              className="h-40 sm:h-52 md:h-64 lg:h-72 w-auto mx-auto drop-shadow-lg"
+              className="h-48 sm:h-60 md:h-72 lg:h-80 w-auto mx-auto drop-shadow-lg"
             />
           </div>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8" data-testid="text-hero-subtitle">
