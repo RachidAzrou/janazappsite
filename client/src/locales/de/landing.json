@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Digitale Bestattungsbetreuung",
+    "subtitle": "Abgestimmt auf Mensch, Ritual und Realität",
+    "description": "Von Familie bis Regierung, alles verbunden in einer Plattform. Vereinfachen Sie die komplexe Sterbeadministration für die islamische Gemeinschaft.",
+    "citizensCard": {
+      "title": "Für Bürger",
+      "description": "Registrieren Sie sich als Familie oder Einzelperson für den Zugang zu unseren Dienstleistungen",
+      "buttonText": "Als Bürger registrieren"
+    },
+    "partnersCard": {
+      "title": "Für Partner",
+      "description": "Bestattungsunternehmer, Moscheen und andere Partner",
+      "buttonText": "Als Partner registrieren"
+    }
+  },
+  "footer": {
+    "description": "JanazApp digitalisiert die Bestattungsbetreuung für die islamische Gemeinschaft in Westeuropa. Unsere Plattform verbindet Familien, Bestattungsunternehmen, Moscheen und Regierungsinstitutionen.",
+    "address": "Antwerpen, Belgien",
+    "email": "info@janazapp.com",
+    "phone": "+32 2 123 4567",
+    "copyright": "© 2025 JanazApp. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies",
+    "terms": "Allgemeine Geschäftsbedingungen"
+  },
+  "registration": {
+    "subtitle": "Registrieren Sie sich für den Zugang zu unseren Dienstleistungen und persönliche Unterstützung"
+  },
+  "features": {
+    "subtitle": "Eine digitale Lösung, die religiöse Werte respektiert und komplexe Prozesse vereinfacht",
+    "items": [
+      {
+        "title": "Schnelle Verfahren",
+        "kicker": "24-48 Stunden schneller",
+        "description": "Reduzieren Sie Wartezeiten durch optimierte digitale Prozesse.",
+        "benefit": "Keine verpassten Fristen mehr"
+      },
+      {
+        "title": "Digitale Dokumentation",
+        "kicker": "Alles an einem Ort",
+        "description": "Von Sterbeurkunde bis Laissez-passer, vollständig organisiert.",
+        "benefit": "Keine verlorenen Dokumente"
+      },
+      {
+        "title": "Sicher & Zuverlässig",
+        "kicker": "DSGVO-konform",
+        "description": "Moderne Verschlüsselung und vollständiger Datenschutz.",
+        "benefit": "Ihre Daten sind sicher"
+      },
+      {
+        "title": "Kulturbewusst",
+        "kicker": "Islamisch ausgerichtet",
+        "description": "Unter Berücksichtigung religiöser Anforderungen und Traditionen.",
+        "benefit": "Respektvolle Behandlung"
+      },
+      {
+        "title": "Rückführung",
+        "kicker": "Rückführung möglich",
+        "description": "Unterstützung bei konsularischen Verfahren und Rückführung.",
+        "benefit": "Ins Herkunftsland"
+      },
+      {
+        "title": "Transparenter Fortschritt",
+        "kicker": "Echtzeitaktualisierungen",
+        "description": "Immer über den Status der Verfahren informiert.",
+        "benefit": "Keine Ungewissheit mehr"
+      }
+    ]
+  }
+}

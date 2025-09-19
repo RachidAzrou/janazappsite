@@ -1,0 +1,204 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp digitaliseert de overlijdenszorg voor de islamitische gemeenschap in West-Europa. Ons platform verbindt families, uitvaartondernemers, moskeeën en overheidsinstellingen.",
+    "contact": {
+      "address": "Antwerpen, België",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. Alle rechten voorbehouden.",
+    "links": {
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "terms": "Algemene Voorwaarden"
+    }
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "intro": "Uw privacy is van het grootste belang voor JanazApp. Dit beleid beschrijft hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
+    "sections": [
+      {
+        "title": "1. Gegevensverzameling",
+        "content": "Wij verzamelen alleen de gegevens die noodzakelijk zijn voor het verlenen van onze diensten in de overlijdenszorg. Dit omvat persoonlijke informatie van nabestaanden, uitvaartondernemers en andere betrokken partijen."
+      },
+      {
+        "title": "2. Gebruik van gegevens",
+        "content": "Uw gegevens worden uitsluitend gebruikt voor het faciliteren van overlijdensprocedures, het coördineren tussen verschillende partijen en het naleven van wettelijke verplichtingen."
+      },
+      {
+        "title": "3. Beveiliging",
+        "content": "Wij implementeren moderne beveiligingsmaatregelen om uw persoonlijke gegevens te beschermen tegen ongeoorloofde toegang, wijziging of openbaarmaking. Alle gegevens worden geëncrypteerd opgeslagen."
+      },
+      {
+        "title": "4. Delen van gegevens",
+        "content": "Gegevens worden alleen gedeeld met partijen die direct betrokken zijn bij de overlijdensprocedure, zoals uitvaartondernemers, moskeeën en overheidsinstanties, en alleen met uw expliciete toestemming."
+      },
+      {
+        "title": "5. Uw rechten",
+        "content": "U heeft het recht om uw gegevens in te zien, te corrigeren of te laten verwijderen. Neem contact met ons op via info@janazapp.com voor vragen over uw privacy."
+      },
+      {
+        "title": "6. GDPR-compliance",
+        "content": "JanazApp voldoet volledig aan de Algemene Verordening Gegevensbescherming (AVG/GDPR). Wij respecteren uw privacy en hanteren strenge procedures voor gegevensbescherming."
+      },
+      {
+        "title": "7. Contact",
+        "content": "Voor vragen over dit privacybeleid kunt u contact opnemen via:\nE-mail: info@janazapp.com\nTelefoon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Laatst bijgewerkt: januari 2025"
+  },
+  "terms": {
+    "title": "Algemene Voorwaarden",
+    "intro": "Deze algemene voorwaarden zijn van toepassing op het gebruik van de JanazApp-diensten. Door gebruik te maken van onze diensten gaat u akkoord met deze voorwaarden.",
+    "sections": {
+      "definitions": {
+        "title": "1. Definities",
+        "janazapp": "de aanbieder van het digitale platform voor overlijdenszorg.",
+        "user": "iedere natuurlijke persoon of rechtspersoon die gebruikmaakt van JanazApp.",
+        "partner": "ondernemers, verzekeraars of andere partners die zich via JanazApp aansluiten.",
+        "services": "alle (digitale) functionaliteiten die via het platform beschikbaar worden gesteld."
+      },
+      "applicability": {
+        "title": "2. Toepasselijkheid",
+        "content": "Deze voorwaarden zijn van toepassing op elk gebruik van JanazApp, zowel door particulieren (families) als door partners (uitvaartondernemers, verzekeraars)."
+      },
+      "janazappServices": {
+        "title": "3. Diensten van JanazApp",
+        "items": [
+          "JanazApp biedt een digitaal platform voor overlijdenszorg, waarmee families, ondernemers en verzekeraars met elkaar worden verbonden.",
+          "JanazApp levert geen uitvaartdiensten zelf, maar faciliteert de communicatie en samenwerking tussen betrokken partijen.",
+          "JanazApp kan functionaliteiten toevoegen, wijzigen of verwijderen."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Gebruik van het platform",
+        "items": [
+          "De gebruiker is verplicht om juiste en actuele gegevens te verstrekken.",
+          "Het is niet toegestaan het platform te gebruiken voor illegale, misleidende of schadelijke doeleinden.",
+          "Accounts zijn persoonlijk en mogen niet worden gedeeld zonder toestemming van JanazApp."
+        ]
+      },
+      "payments": {
+        "title": "5. Vergoedingen en betalingen",
+        "items": [
+          "Voor families is het gebruik van JanazApp kosteloos.",
+          "Partners (ondernemers en verzekeraars) kunnen kosten verschuldigd zijn conform een aparte overeenkomst of abonnementsmodel.",
+          "Alle bedragen zijn exclusief btw, tenzij anders vermeld."
+        ]
+      },
+      "privacy": {
+        "title": "6. Privacy en gegevensbescherming",
+        "items": [
+          "JanazApp verwerkt persoonsgegevens in overeenstemming met de Privacyverklaring en de AVG/GDPR.",
+          "Gebruikers blijven verantwoordelijk voor de juistheid van de gegevens die zij aanleveren."
+        ]
+      },
+      "liability": {
+        "title": "7. Aansprakelijkheid",
+        "items": [
+          "JanazApp is niet aansprakelijk voor directe of indirecte schade die voortvloeit uit het gebruik van het platform, tenzij sprake is van opzet of grove nalatigheid.",
+          "JanazApp is niet verantwoordelijk voor de dienstverlening van uitvaartondernemers, verzekeraars of andere externe partijen die via het platform actief zijn.",
+          "De totale aansprakelijkheid van JanazApp is in alle gevallen beperkt tot het bedrag dat de gebruiker in de laatste 12 maanden aan JanazApp heeft betaald (indien van toepassing)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Intellectuele eigendom",
+        "items": [
+          "Alle rechten van intellectuele eigendom op het platform, de software, logo's en content berusten bij JanazApp.",
+          "Het is niet toegestaan zonder toestemming materialen van JanazApp te kopiëren, verspreiden of openbaar te maken."
+        ]
+      },
+      "termination": {
+        "title": "9. Duur en beëindiging",
+        "items": [
+          "Gebruikers kunnen hun account op elk moment beëindigen.",
+          "JanazApp kan de toegang tot het platform beëindigen bij misbruik of overtreding van deze voorwaarden."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Overmacht",
+        "content": "JanazApp is niet verplicht om verplichtingen na te komen indien dit onmogelijk is door overmacht, zoals storingen in internetverbinding, stroomuitval, of overheidsmaatregelen."
+      },
+      "law": {
+        "title": "11. Toepasselijk recht en geschillen",
+        "items": [
+          "Op deze voorwaarden is uitsluitend Nederlands recht van toepassing.",
+          "Geschillen zullen worden voorgelegd aan de bevoegde rechter in het arrondissement waar JanazApp gevestigd is."
+        ]
+      },
+      "changes": {
+        "title": "12. Wijzigingen",
+        "content": "JanazApp kan deze algemene voorwaarden wijzigen. De meest actuele versie staat altijd op de website."
+      }
+    }
+  },
+  "cookies": {
+    "title": "Cookiebeleid",
+    "intro": "JanazApp gebruikt cookies om uw ervaring te verbeteren en onze diensten te optimaliseren. Hieronder vindt u informatie over hoe en waarom wij cookies gebruiken.",
+    "sections": [
+      {
+        "title": "1. Wat zijn cookies?",
+        "content": "Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u onze website bezoekt. Ze helpen ons uw voorkeuren te onthouden en uw ervaring te personaliseren."
+      },
+      {
+        "title": "2. Welke cookies gebruiken wij?",
+        "subsections": [
+          {
+            "title": "Noodzakelijke cookies",
+            "content": "Deze cookies zijn essentieel voor het functioneren van onze website en kunnen niet worden uitgeschakeld. Ze worden gebruikt voor veiligheid, sessiemanagement en toegankelijkheid."
+          },
+          {
+            "title": "Functionele cookies",
+            "content": "Deze cookies onthouden uw voorkeuren en instellingen om uw ervaring te verbeteren, zoals taalvoorkeuren en gebruikersinterface-instellingen."
+          },
+          {
+            "title": "Analytische cookies",
+            "content": "We gebruiken deze cookies om te begrijpen hoe bezoekers onze website gebruiken, zodat we onze diensten kunnen verbeteren."
+          }
+        ]
+      },
+      {
+        "title": "3. Waarom gebruiken wij cookies?",
+        "list": [
+          "Om uw inloggegevens veilig te bewaren",
+          "Om uw voorkeuren en instellingen te onthouden",
+          "Om de prestaties van onze website te verbeteren",
+          "Om technische problemen op te sporen en op te lossen",
+          "Om frauduleuze activiteiten te voorkomen"
+        ]
+      },
+      {
+        "title": "4. Cookiebeheer",
+        "content": "U kunt cookies beheren via de instellingen van uw browser. Let op dat het uitschakelen van bepaalde cookies de functionaliteit van onze website kan beperken. Noodzakelijke cookies kunnen niet worden uitgeschakeld omdat ze essentieel zijn voor de werking van de website."
+      },
+      {
+        "title": "5. Bewaartermijn",
+        "content": "Sessiecookies worden automatisch verwijderd wanneer u uw browser sluit. Permanente cookies blijven opgeslagen totdat ze verlopen of door u worden verwijderd. De bewaartermijn varieert van enkele uren tot maximaal één jaar."
+      },
+      {
+        "title": "6. Wijzigingen in dit cookiebeleid",
+        "content": "We kunnen dit cookiebeleid van tijd tot tijd bijwerken. Wijzigingen worden op deze pagina gepubliceerd en zijn onmiddellijk van kracht."
+      },
+      {
+        "title": "7. Contact",
+        "content": "Voor vragen over ons cookiebeleid kunt u contact opnemen via:\nE-mail: info@janazapp.com\nTelefoon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Laatst bijgewerkt: januari 2025"
+  },
+  "about": {
+    "title": "Over Ons",
+    "intro": "Bij JanazApp bewijzen we dat technologie en empathie perfect samengaan. We ontwikkelden een digitaal platform dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbond, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld werden.",
+    "mission": {
+      "title": "Onze missie",
+      "content1": "We zorgen ervoor dat nabestaanden minder drempels ervaren. Met JanazApp krijgen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.",
+      "content2": "Professionals beheren hun dossiers efficiënter, verifiëren documenten en werken samen in één omgeving."
+    },
+    "promise": {
+      "title": "Onze belofte",
+      "content1": "We koppelen technologie aan empathie.",
+      "content2": "JanazApp staat niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven."
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Digitale Overlijdenszorg",
+    "subtitle": "Afgestemd op mens, ritueel en realiteit",
+    "description": "Vereenvoudig de complexe overlijdensadministratie voor de islamitische gemeenschap. Van familie tot overheid, alles verbonden in één platform.",
+    "citizensCard": {
+      "title": "Voor Burgers",
+      "description": "Registreer je als familie of individu voor toegang tot onze diensten",
+      "buttonText": "Registreer als Burger"
+    },
+    "partnersCard": {
+      "title": "Voor Partners",
+      "description": "Uitvaartondernemers, moskeeën en andere partners",
+      "buttonText": "Registreer als Partner"
+    }
+  },
+  "footer": {
+    "description": "JanazApp digitaliseert de overlijdenszorg voor de islamitische gemeenschap in West-Europa. Ons platform verbindt families, uitvaartondernemers, moskeeën en overheidsinstellingen.",
+    "address": "Antwerpen, België",
+    "email": "info@janazapp.com",
+    "phone": "+32 2 123 4567",
+    "copyright": "© 2025 JanazApp. Alle rechten voorbehouden.",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Algemene Voorwaarden"
+  },
+  "registration": {
+    "subtitle": "Registreer jezelf voor toegang tot onze diensten en persoonlijke ondersteuning"
+  },
+  "features": {
+    "subtitle": "Een digitale oplossing die religieuze waarden respecteert en complexe processen vereenvoudigt",
+    "items": [
+      {
+        "title": "Snelle Procedures",
+        "kicker": "24-48 uur sneller",
+        "description": "Verminder wachttijden door gestroomlijnde digitale processen.",
+        "benefit": "Geen gemiste termijnen meer"
+      },
+      {
+        "title": "Digitale Documentatie",
+        "kicker": "Alles op één plek",
+        "description": "Van overlijdensakte tot laissez-passer, volledig georganiseerd.",
+        "benefit": "Geen verdwaalde documenten"
+      },
+      {
+        "title": "Veilig & Betrouwbaar",
+        "kicker": "GDPR compliant",
+        "description": "Moderne encryptie en volledige privacy-bescherming.",
+        "benefit": "Uw gegevens zijn veilig"
+      },
+      {
+        "title": "Cultureel Bewust",
+        "kicker": "Islamitisch gericht",
+        "description": "Rekening houdend met religieuze vereisten en tradities.",
+        "benefit": "Respectvolle behandeling"
+      },
+      {
+        "title": "Repatriëring",
+        "kicker": "Repatriëring mogelijk",
+        "description": "Ondersteuning voor consulaire procedures en repatriëring.",
+        "benefit": "Naar land van herkomst"
+      },
+      {
+        "title": "Transparante Voortgang",
+        "kicker": "Real-time updates",
+        "description": "Altijd op de hoogte van de status van procedures.",
+        "benefit": "Geen onzekerheid meer"
+      }
+    ]
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp digitalisiert die Bestattungsbetreuung für die islamische Gemeinschaft in Westeuropa. Unsere Plattform verbindet Familien, Bestattungsunternehmer, Moscheen und Regierungsinstitutionen.",
+    "contact": {
+      "address": "Antwerpen, Belgien",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutz",
+      "cookies": "Cookies",
+      "terms": "Allgemeine Geschäftsbedingungen"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": "Ihre Privatsphäre ist für JanazApp von größter Bedeutung. Diese Richtlinie beschreibt, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.",
+    "sections": [
+      {
+        "title": "1. Datensammlung",
+        "content": "Wir sammeln nur Daten, die für die Bereitstellung unserer Bestattungsdienstleistungen erforderlich sind. Dazu gehören persönliche Informationen von trauernden Familien, Bestattungsunternehmern und anderen beteiligten Parteien."
+      },
+      {
+        "title": "2. Datenverwendung",
+        "content": "Ihre Daten werden ausschließlich zur Erleichterung von Sterbeverfahren, zur Koordinierung zwischen verschiedenen Parteien und zur Erfüllung gesetzlicher Verpflichtungen verwendet."
+      },
+      {
+        "title": "3. Sicherheit",
+        "content": "Wir implementieren moderne Sicherheitsmaßnahmen zum Schutz Ihrer persönlichen Daten vor unbefugtem Zugriff, Änderung oder Offenlegung. Alle Daten werden verschlüsselt gespeichert."
+      },
+      {
+        "title": "4. Datenweitergabe",
+        "content": "Daten werden nur mit Parteien geteilt, die direkt am Sterbeverfahren beteiligt sind, wie Bestattungsunternehmer, Moscheen und Regierungsbehörden, und nur mit Ihrer ausdrücklichen Zustimmung."
+      },
+      {
+        "title": "5. Ihre Rechte",
+        "content": "Sie haben das Recht, Ihre Daten einzusehen, zu korrigieren oder zu löschen. Kontaktieren Sie uns unter info@janazapp.com für Fragen zu Ihrer Privatsphäre."
+      },
+      {
+        "title": "6. DSGVO-Konformität",
+        "content": "JanazApp entspricht vollständig der Datenschutz-Grundverordnung (DSGVO). Wir respektieren Ihre Privatsphäre und halten strenge Datenschutzverfahren ein."
+      },
+      {
+        "title": "7. Kontakt",
+        "content": "Für Fragen zu dieser Datenschutzerklärung können Sie uns kontaktieren unter:\nE-Mail: info@janazapp.com\nTelefon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Zuletzt aktualisiert: Januar 2025"
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "intro": "Diese allgemeinen Geschäftsbedingungen gelten für die Nutzung der JanazApp-Dienste. Durch die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu.",
+    "sections": {
+      "definitions": {
+        "title": "1. Definitionen",
+        "janazapp": "der Anbieter der digitalen Plattform für Bestattungsbetreuung.",
+        "user": "jede natürliche oder juristische Person, die JanazApp nutzt.",
+        "partner": "Unternehmer, Versicherer oder andere Partner, die sich über JanazApp anschließen.",
+        "services": "alle (digitalen) Funktionalitäten, die über die Plattform bereitgestellt werden."
+      },
+      "applicability": {
+        "title": "2. Anwendbarkeit",
+        "content": "Diese Bedingungen gelten für jede Nutzung von JanazApp, sowohl durch Privatpersonen (Familien) als auch durch Partner (Bestattungsunternehmer, Versicherer)."
+      },
+      "janazappServices": {
+        "title": "3. JanazApp-Dienste",
+        "items": [
+          "JanazApp bietet eine digitale Plattform für Bestattungsbetreuung, die Familien, Unternehmer und Versicherer miteinander verbindet.",
+          "JanazApp erbringt keine Bestattungsdienstleistungen selbst, sondern erleichtert die Kommunikation und Zusammenarbeit zwischen beteiligten Parteien.",
+          "JanazApp kann Funktionalitäten hinzufügen, ändern oder entfernen."
+        ]
+      },
+      "platformUse": {
+        "title": "4. Nutzung der Plattform",
+        "items": [
+          "Der Nutzer ist verpflichtet, richtige und aktuelle Angaben zu machen.",
+          "Es ist nicht gestattet, die Plattform für illegale, irreführende oder schädliche Zwecke zu nutzen.",
+          "Accounts sind persönlich und dürfen nicht ohne Erlaubnis von JanazApp geteilt werden."
+        ]
+      },
+      "payments": {
+        "title": "5. Vergütungen und Zahlungen",
+        "items": [
+          "Für Familien ist die Nutzung von JanazApp kostenlos.",
+          "Partner (Unternehmer und Versicherer) können Kosten gemäß einer separaten Vereinbarung oder einem Abonnementmodell schulden.",
+          "Alle Beträge sind exklusive Mehrwertsteuer, sofern nicht anders angegeben."
+        ]
+      },
+      "privacy": {
+        "title": "6. Datenschutz und Datenschutz",
+        "items": [
+          "JanazApp verarbeitet personenbezogene Daten in Übereinstimmung mit der Datenschutzerklärung und der DSGVO.",
+          "Benutzer bleiben für die Richtigkeit der von ihnen bereitgestellten Daten verantwortlich."
+        ]
+      },
+      "liability": {
+        "title": "7. Haftung",
+        "items": [
+          "JanazApp haftet nicht für direkte oder indirekte Schäden, die aus der Nutzung der Plattform resultieren, es sei denn, es liegt Vorsatz oder grobe Fahrlässigkeit vor.",
+          "JanazApp ist nicht verantwortlich für die Dienstleistungen von Bestattungsunternehmern, Versicherern oder anderen externen Parteien, die über die Plattform aktiv sind.",
+          "Die Gesamthaftung von JanazApp ist in allen Fällen auf den Betrag begrenzt, den der Nutzer in den letzten 12 Monaten an JanazApp gezahlt hat (falls zutreffend)."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "8. Geistiges Eigentum",
+        "items": [
+          "Alle Rechte des geistigen Eigentums an der Plattform, der Software, den Logos und Inhalten liegen bei JanazApp.",
+          "Es ist nicht gestattet, ohne Erlaubnis Materialien von JanazApp zu kopieren, zu verbreiten oder zu veröffentlichen."
+        ]
+      },
+      "termination": {
+        "title": "9. Laufzeit und Beendigung",
+        "items": [
+          "Benutzer können ihr Konto jederzeit beenden.",
+          "JanazApp kann den Zugang zur Plattform bei Missbrauch oder Verstoß gegen diese Bedingungen beenden."
+        ]
+      },
+      "forceMajeure": {
+        "title": "10. Höhere Gewalt",
+        "content": "JanazApp ist nicht verpflichtet, Verpflichtungen zu erfüllen, wenn dies aufgrund höherer Gewalt unmöglich ist, wie Internetverbindungsstörungen, Stromausfälle oder Regierungsmaßnahmen."
+      },
+      "law": {
+        "title": "11. Anwendbares Recht und Streitigkeiten",
+        "items": [
+          "Für diese Bedingungen gilt ausschließlich niederländisches Recht.",
+          "Streitigkeiten werden dem zuständigen Gericht im Bezirk vorgelegt, in dem JanazApp ansässig ist."
+        ]
+      },
+      "changes": {
+        "title": "12. Änderungen",
+        "content": "JanazApp kann diese allgemeinen Geschäftsbedingungen ändern. Die aktuellste Version ist immer auf der Website verfügbar."
+      }
+    }
+  },
+  "cookies": {
+    "title": "Cookie-Richtlinie",
+    "intro": "JanazApp verwendet Cookies, um Ihre Erfahrung zu verbessern und unsere Dienste zu optimieren. Nachfolgend finden Sie Informationen darüber, wie und warum wir Cookies verwenden.",
+    "sections": [
+      {
+        "title": "1. Was sind Cookies?",
+        "content": "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, Ihre Präferenzen zu merken und Ihre Erfahrung zu personalisieren."
+      },
+      {
+        "title": "2. Welche Cookies verwenden wir?",
+        "subsections": [
+          {
+            "title": "Notwendige Cookies",
+            "content": "Diese Cookies sind für das Funktionieren unserer Website unerlässlich und können nicht deaktiviert werden. Sie werden für Sicherheit, Sitzungsverwaltung und Barrierefreiheit verwendet."
+          },
+          {
+            "title": "Funktionale Cookies",
+            "content": "Diese Cookies merken sich Ihre Präferenzen und Einstellungen, um Ihre Erfahrung zu verbessern, wie Sprachpräferenzen und Benutzeroberflächen-Einstellungen."
+          },
+          {
+            "title": "Analytische Cookies",
+            "content": "Wir verwenden diese Cookies, um zu verstehen, wie Besucher unsere Website nutzen, damit wir unsere Dienste verbessern können."
+          }
+        ]
+      },
+      {
+        "title": "3. Warum verwenden wir Cookies?",
+        "list": [
+          "Um Ihre Anmeldedaten sicher zu speichern",
+          "Um Ihre Präferenzen und Einstellungen zu merken",
+          "Um die Leistung unserer Website zu verbessern",
+          "Um technische Probleme zu erkennen und zu lösen",
+          "Um betrügerische Aktivitäten zu verhindern"
+        ]
+      },
+      {
+        "title": "4. Cookie-Verwaltung",
+        "content": "Sie können Cookies über die Einstellungen Ihres Browsers verwalten. Bitte beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität unserer Website einschränken kann. Notwendige Cookies können nicht deaktiviert werden, da sie für den Betrieb der Website unerlässlich sind."
+      },
+      {
+        "title": "5. Aufbewahrungsdauer",
+        "content": "Sitzungs-Cookies werden automatisch gelöscht, wenn Sie Ihren Browser schließen. Persistente Cookies bleiben gespeichert, bis sie ablaufen oder von Ihnen gelöscht werden. Die Aufbewahrungsdauer variiert von einigen Stunden bis maximal einem Jahr."
+      },
+      {
+        "title": "6. Änderungen an dieser Cookie-Richtlinie",
+        "content": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite veröffentlicht und treten sofort in Kraft."
+      },
+      {
+        "title": "7. Kontakt",
+        "content": "Für Fragen zu unserer Cookie-Richtlinie können Sie uns kontaktieren unter:\nE-Mail: info@janazapp.com\nTelefon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Zuletzt aktualisiert: Januar 2025"
+  },
+  "about": {
+    "title": "Über Uns",
+    "intro": "Bei JanazApp beweisen wir, dass Technologie und Empathie perfekt zusammenarbeiten. Wir haben eine digitale Plattform entwickelt, die Familien, Bestattungsunternehmer und Versicherungsgesellschaften verbindet und sicherstellt, dass alle administrativen und praktischen Schritte rund um einen Todesfall schnell und korrekt abgewickelt werden.",
+    "mission": {
+      "title": "Unsere Mission",
+      "content1": "Wir sorgen dafür, dass trauernde Familien weniger Hürden erleben. Mit JanazApp erhalten Familien einen klaren Überblick über Dokumente, Schritte und Status — ohne Komplikationen, ohne Unklarheiten.",
+      "content2": "Fachleute verwalten ihre Akten effizienter, verifizieren Dokumente und arbeiten in einer einzigen Umgebung zusammen."
+    },
+    "promise": {
+      "title": "Unser Versprechen",
+      "content1": "Wir verbinden Technologie mit Empathie.",
+      "content2": "JanazApp steht nicht nur für Software, sondern für einen zuverlässigen Partner in einem der verletzlichsten Momente des Lebens."
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Dijital Cenaze Bakımı",
+    "subtitle": "İnsana, ritüele ve gerçekliğe uygun",
+    "description": "Aileden hükümete kadar her şey tek platformda bağlı. İslam topluluğu için karmaşık ölüm idaresini basitleştirin.",
+    "citizensCard": {
+      "title": "Vatandaşlar İçin",
+      "description": "Hizmetlerimize erişim için aile veya birey olarak kaydolun",
+      "buttonText": "Vatandaş Olarak Kayıt Ol"
+    },
+    "partnersCard": {
+      "title": "Ortaklar İçin",
+      "description": "Cenaze müdürleri, camiler ve diğer ortaklar",
+      "buttonText": "Ortak Olarak Kayıt Ol"
+    }
+  },
+  "footer": {
+    "description": "JanazApp, Batı Avrupa'daki İslam topluluğu için cenaze bakımını dijitalleştirir. Platformumuz aileleri, cenaze müdürlerini, camileri ve devlet kurumlarını birbirine bağlar.",
+    "address": "Anvers, Belçika",
+    "email": "info@janazapp.com",
+    "phone": "+32 2 123 4567",
+    "copyright": "© 2025 JanazApp. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik",
+    "cookies": "Çerezler",
+    "terms": "Şartlar ve Koşullar"
+  },
+  "registration": {
+    "subtitle": "Hizmetlerimize erişim ve kişisel destek için kendinizi kaydedin"
+  },
+  "features": {
+    "subtitle": "Dini değerlere saygı gösteren ve karmaşık süreçleri basitleştiren dijital bir çözüm",
+    "items": [
+      {
+        "title": "Hızlı İşlemler",
+        "kicker": "24-48 saat daha hızlı",
+        "description": "Düzenli dijital süreçlerle bekleme sürelerini azaltın.",
+        "benefit": "Artık kaçırılan son tarih yok"
+      },
+      {
+        "title": "Dijital Dokümantasyon",
+        "kicker": "Her şey tek yerde",
+        "description": "Ölüm belgesinden laissez-passer'e kadar, tamamen organize.",
+        "benefit": "Artık kayıp belge yok"
+      },
+      {
+        "title": "Güvenli ve Güvenilir",
+        "kicker": "GDPR uyumlu",
+        "description": "Modern şifreleme ve tam gizlilik koruması.",
+        "benefit": "Verileriniz güvende"
+      },
+      {
+        "title": "Kültürel Bilinç",
+        "kicker": "İslami odaklı",
+        "description": "Dini gereksinimler ve gelenekleri dikkate alarak.",
+        "benefit": "Saygılı muamele"
+      },
+      {
+        "title": "Repatriasyon",
+        "kicker": "Repatriasyon mümkün",
+        "description": "Konsolosluk işlemleri ve repatriasyon desteği.",
+        "benefit": "Menşe ülkeye"
+      },
+      {
+        "title": "Şeffaf İlerleme",
+        "kicker": "Gerçek zamanlı güncellemeler",
+        "description": "İşlemlerin durumu hakkında her zaman bilgilendin.",
+        "benefit": "Artık belirsizlik yok"
+      }
+    ]
+  }
+}
