@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent } from "@/components/ui/card";
+import { TiDocumentText } from "react-icons/ti";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -34,9 +35,14 @@ export default function TermsPage() {
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
               }`}>
-                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8" data-testid="text-terms-title">
-                  Algemene Voorwaarden
-                </h1>
+                <div className="flex items-center justify-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center">
+                    <TiDocumentText className="h-6 w-6" />
+                  </div>
+                  <h1 className="text-3xl lg:text-4xl font-bold text-foreground" data-testid="text-terms-title">
+                    Algemene Voorwaarden
+                  </h1>
+                </div>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-terms-intro">
                   Deze algemene voorwaarden zijn van toepassing op het gebruik van JanazApp en regelen de rechten en plichten van alle betrokken partijen.
