@@ -65,6 +65,19 @@ export default function Features() {
     <section ref={sectionRef} className="relative py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern serene-surface serene-gradient serene-pattern" id="diensten">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Bewegende groene animaties */}
+        <div className="floating-orbs">
+          <div className="orb orb-1"></div>
+          <div className="orb orb-2"></div>
+          <div className="orb orb-3"></div>
+          <div className="orb orb-4"></div>
+        </div>
+        <div className="aurora-waves">
+          <div className="wave wave-1"></div>
+          <div className="wave wave-2"></div>
+          <div className="wave wave-3"></div>
+        </div>
+        
         {/* Sophisticated Grid Pattern */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(var(--primary))_0.5px,_transparent_0.5px)] bg-[length:24px_24px] opacity-[0.15] animate-pulse"></div>
         

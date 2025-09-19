@@ -882,8 +882,10 @@
   /* Accessibility: Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
     .serene-gradient::before,
-    .serene-pattern::after {
-      animation: none;
+    .serene-pattern::after,
+    .floating-orbs > *,
+    .aurora-waves > * {
+      animation: none !important;
     }
     
     .serene-gradient::before {
@@ -894,5 +896,180 @@
         hsl(var(--muted) / 0.04) 100%
       );
     }
+  }
+
+  /* ======================================
+   * BEWEGENDE GROENE ANIMATIE ELEMENTEN
+   * ====================================== */
+
+  /* Zwevende groene orbs animaties */
+  @keyframes float-up-down {
+    0%, 100% { 
+      transform: translateY(0px) scale(1);
+      opacity: 0.4;
+    }
+    25% { 
+      transform: translateY(-20px) scale(1.1);
+      opacity: 0.7;
+    }
+    50% { 
+      transform: translateY(-40px) scale(1.2);
+      opacity: 0.9;
+    }
+    75% { 
+      transform: translateY(-20px) scale(1.1);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes float-diagonal {
+    0% { 
+      transform: translate(0px, 0px) rotate(0deg);
+      opacity: 0.3;
+    }
+    25% { 
+      transform: translate(15px, -25px) rotate(90deg);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: translate(30px, -50px) rotate(180deg);
+      opacity: 0.8;
+    }
+    75% { 
+      transform: translate(15px, -25px) rotate(270deg);
+      opacity: 0.6;
+    }
+    100% { 
+      transform: translate(0px, 0px) rotate(360deg);
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes aurora-flow {
+    0% { 
+      transform: translateX(-100%) scaleY(1);
+      opacity: 0;
+    }
+    10% { 
+      opacity: 0.4;
+    }
+    50% { 
+      transform: translateX(0%) scaleY(1.5);
+      opacity: 0.8;
+    }
+    90% { 
+      opacity: 0.4;
+    }
+    100% { 
+      transform: translateX(100%) scaleY(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      transform: scale(1);
+      opacity: 0.5;
+      filter: blur(10px);
+    }
+    50% { 
+      transform: scale(1.8);
+      opacity: 0.8;
+      filter: blur(20px);
+    }
+  }
+
+  /* Zwevende orbs container */
+  .floating-orbs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .floating-orbs .orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+      hsl(var(--primary) / 0.6) 0%, 
+      hsl(var(--primary) / 0.3) 40%, 
+      hsl(var(--primary) / 0.1) 70%,
+      transparent 100%
+    );
+    filter: blur(8px);
+  }
+
+  .floating-orbs .orb-1 {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 15%;
+    animation: float-up-down 8s ease-in-out infinite;
+  }
+
+  .floating-orbs .orb-2 {
+    width: 40px;
+    height: 40px;
+    top: 60%;
+    right: 20%;
+    animation: float-diagonal 12s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+
+  .floating-orbs .orb-3 {
+    width: 80px;
+    height: 80px;
+    bottom: 30%;
+    left: 60%;
+    animation: pulse-glow 10s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+
+  .floating-orbs .orb-4 {
+    width: 35px;
+    height: 35px;
+    top: 40%;
+    left: 80%;
+    animation: float-up-down 15s ease-in-out infinite;
+    animation-delay: -6s;
+  }
+
+  /* Aurora wave effecten */
+  .aurora-waves {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .aurora-waves .wave {
+    position: absolute;
+    width: 200%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+      transparent 0%,
+      hsl(var(--primary) / 0.4) 20%,
+      hsl(var(--primary) / 0.8) 50%,
+      hsl(var(--primary) / 0.4) 80%,
+      transparent 100%
+    );
+    filter: blur(2px);
+  }
+
+  .aurora-waves .wave-1 {
+    top: 25%;
+    animation: aurora-flow 18s linear infinite;
+  }
+
+  .aurora-waves .wave-2 {
+    top: 50%;
+    animation: aurora-flow 22s linear infinite;
+    animation-delay: -8s;
+  }
+
+  .aurora-waves .wave-3 {
+    bottom: 30%;
+    animation: aurora-flow 16s linear infinite;
+    animation-delay: -12s;
   }
 }

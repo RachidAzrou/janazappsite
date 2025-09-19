@@ -140,6 +140,18 @@ export default function RegistrationForms() {
     return (
       <section className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern serene-surface serene-gradient serene-pattern" id="registratie">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Bewegende groene animaties */}
+          <div className="floating-orbs">
+            <div className="orb orb-1"></div>
+            <div className="orb orb-2"></div>
+            <div className="orb orb-3"></div>
+            <div className="orb orb-4"></div>
+          </div>
+          <div className="aurora-waves">
+            <div className="wave wave-1"></div>
+            <div className="wave wave-2"></div>
+            <div className="wave wave-3"></div>
+          </div>
         </div>
         
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -219,6 +231,18 @@ export default function RegistrationForms() {
     <section ref={sectionRef} className="relative py-8 sm:py-12 lg:py-16 bg-background overflow-hidden islamic-pattern serene-surface serene-gradient serene-pattern" id="registratie">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Bewegende groene animaties */}
+        <div className="floating-orbs">
+          <div className="orb orb-1"></div>
+          <div className="orb orb-2"></div>
+          <div className="orb orb-3"></div>
+          <div className="orb orb-4"></div>
+        </div>
+        <div className="aurora-waves">
+          <div className="wave wave-1"></div>
+          <div className="wave wave-2"></div>
+          <div className="wave wave-3"></div>
+        </div>
       </div>
       
       <div className="relative container mx-auto px-3 sm:px-6 lg:px-8">
