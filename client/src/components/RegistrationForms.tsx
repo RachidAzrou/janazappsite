@@ -231,7 +231,8 @@ export default function RegistrationForms() {
           }`}>
             <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-registration-subtitle">
               {/* TODO: Add translation for subtitle text */}
-              Een digitale oplossing die religieuze waarden respecteert en
+              Een digitale oplossing die
+              <span className="text-foreground font-medium"> religieuze waarden respecteert</span> en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
           </div>
