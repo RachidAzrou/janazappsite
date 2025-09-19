@@ -3,12 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
-import { useTranslation } from "react-i18next";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import logoUrl from "@assets/W - Logo H_1758297667612.png";
 
 export default function Footer() {
-  const { t } = useTranslation();
   const { ref: footerRef, isVisible: footerVisible } = useScrollAnimation();
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,7 +45,8 @@ export default function Footer() {
             <div className="grid md:grid-cols-3 gap-8 items-start">
               <div>
                 <p className="text-primary-foreground/90 leading-relaxed text-base" data-testid="text-company-description">
-                  {t('footer.description')}
+                  JanazApp digitaliseert de overlijdenszorg voor de islamitische gemeenschap in West-Europa. 
+                  Ons platform verbindt families, uitvaartondernemers, moskeeën en overheidsinstellingen.
                 </p>
               </div>
               <div className="space-y-3 md:col-start-3">
@@ -55,7 +54,7 @@ export default function Footer() {
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
                     <MapPin className="h-4 w-4 text-primary-foreground" />
                   </div>
-                  <span data-testid="text-address" className="font-medium">{t('footer.location')}</span>
+                  <span data-testid="text-address" className="font-medium">Antwerpen, België</span>
                 </div>
                 <div className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
@@ -82,7 +81,7 @@ export default function Footer() {
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
             <div className="text-sm text-primary-foreground/80 font-medium" data-testid="text-copyright">
-              © 2025 JanazApp. {t('footer.allRights')}
+              © 2025 JanazApp. Alle rechten voorbehouden.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
               <Link 
