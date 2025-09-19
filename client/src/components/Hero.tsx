@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 import heroImage from "@assets/generated_images/Islamic_architecture_hero_background_5d13e65a.png";
 
-export default function Hero() {
+interface HeroProps {
+  isVisible?: boolean;
+}
+
+export default function Hero({ isVisible = true }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Image with Overlay */}
@@ -18,7 +23,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.div 
+        className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        initial={{ opacity: 0, y: 12 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-hero-title">
             Digitale Overlijdenszorg
@@ -80,7 +90,7 @@ export default function Hero() {
             </Card>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
