@@ -24,7 +24,7 @@ export default function Footer() {
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="group">
@@ -119,65 +119,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Contact & Support */}
-          <div className="space-y-6">
-            <div>
-              <h4 className="font-bold text-foreground mb-6 text-lg tracking-tight" data-testid="text-support-title">
-                Contact & Support
-              </h4>
-              <div className="space-y-4">
-                <Button 
-                  variant="outline" 
-                  size="default" 
-                  className="w-full justify-start group transition-all duration-200"
-                  onClick={() => handleContactClick('chat')}
-                  data-testid="button-live-chat"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center transition-colors duration-200">
-                      <MessageCircle className="h-4 w-4 text-primary" />
-                    </div>
-                    <span className="font-medium">Live Chat Support</span>
-                  </div>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="default" 
-                  className="w-full justify-start group transition-all duration-200"
-                  onClick={() => handleContactClick('emergency')}
-                  data-testid="button-emergency"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-destructive/10 group-hover:bg-destructive/20 flex items-center justify-center transition-colors duration-200">
-                      <Phone className="h-4 w-4 text-destructive" />
-                    </div>
-                    <span className="font-medium">24/7 Noodlijn</span>
-                  </div>
-                </Button>
-                
-                {/* Newsletter Signup */}
-                <div className="pt-2">
-                  <h5 className="font-semibold text-foreground mb-3 text-sm">Newsletter</h5>
-                  <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                    <Input 
-                      type="email" 
-                      placeholder="E-mail voor updates" 
-                      className="border-muted-foreground/20 focus:border-primary transition-colors duration-200"
-                      data-testid="input-newsletter"
-                    />
-                    <Button 
-                      type="submit" 
-                      size="default" 
-                      className="w-full bg-gradient-to-r from-primary to-primary/80 transition-all duration-200" 
-                      data-testid="button-newsletter"
-                    >
-                      <span className="font-medium">Inschrijven</span>
-                    </Button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="relative">
