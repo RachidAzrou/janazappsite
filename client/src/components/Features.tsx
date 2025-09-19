@@ -83,51 +83,56 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Platform Preview */}
-        <div className="mb-16">
-          <div className="max-w-4xl mx-auto">
+        {/* Platform Preview with Features */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Mockup Links */}
+          <div>
             <img 
               src={mockupImage} 
               alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
               className="w-full h-auto"
             />
           </div>
-        </div>
 
-        {/* Clean Features Grid */}
-        <div>
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Waarom JanazApp?
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ontdek hoe onze digitale oplossing islamitische begrafenisprocessen vereenvoudigt
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center group hover-elevate"
-                  data-testid={`feature-item-${index}`}
-                >
-                  <div className="w-16 h-16 rounded-md bg-muted text-muted-foreground mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
-                    <IconComponent className="h-8 w-8" />
+          {/* Features Rechts */}
+          <div>
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Waarom JanazApp?
+              </h3>
+              <p className="text-muted-foreground">
+                Ontdek hoe onze digitale oplossing islamitische begrafenisprocessen vereenvoudigt
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 group hover-elevate"
+                    data-testid={`feature-item-${index}`}
+                  >
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-md bg-muted text-muted-foreground flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
+                        <IconComponent className="h-6 w-6" />
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-foreground mb-1">
+                        {feature.title}
+                      </h4>
+                      
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                  
-                  <h4 className="font-semibold text-foreground mb-2">
-                    {feature.title}
-                  </h4>
-                  
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
