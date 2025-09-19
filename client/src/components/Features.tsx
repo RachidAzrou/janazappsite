@@ -75,15 +75,15 @@ export default function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="animate-in slide-in-from-bottom-8 duration-700 delay-500 grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <div
                 key={index}
-                className="animate-in slide-in-from-bottom-12 duration-700 hover:scale-105 transition-all"
+                className="animate-in slide-in-from-bottom-12 duration-700 hover:scale-105 transition-all opacity-0"
                 style={{ 
-                  animationDelay: `${(index + 1) * 150}ms`,
+                  animationDelay: `${(index + 1) * 150 + 800}ms`, // Start after grid container
                   animationFillMode: 'both'
                 }}
                 data-testid={`card-feature-${index}`}
