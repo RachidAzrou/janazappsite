@@ -1,11 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Globe, CheckCircle } from "lucide-react";
+import { Globe, CheckCircle, Monitor, Smartphone, Clock } from "lucide-react";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { MdOutlineSpeed, MdDevices, MdOutlineCircleNotifications } from "react-icons/md";
 import { PiMosqueBold } from "react-icons/pi";
+import mockupImage from "@assets/2_1758294099667.png";
 
 const features = [
   {
@@ -79,6 +80,64 @@ export default function Features() {
               Een digitale oplossing die religieuze waarden respecteert en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
+          </div>
+        </div>
+
+        {/* Platform Preview */}
+        <div className="mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <Card className="overflow-hidden shadow-lg bg-gradient-to-br from-background via-muted/20 to-background">
+                <img 
+                  src={mockupImage} 
+                  alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
+                  className="w-full h-auto"
+                />
+              </Card>
+            </div>
+            
+            <div className="order-1 lg:order-2 space-y-6">
+              <div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                  Zie hoe JanazApp werkt
+                </h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Een intuïtief platform dat complexe procedures vereenvoudigt en families ondersteunt in moeilijke tijden.
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <Clock className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Snelle Procedures</h4>
+                    <p className="text-sm text-muted-foreground">24-48 uur sneller dan traditionele methoden</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <Monitor className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Digitale Documentatie</h4>
+                    <p className="text-sm text-muted-foreground">Alle documenten veilig opgeslagen op één plek</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <Smartphone className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">24/7 Toegankelijk</h4>
+                    <p className="text-sm text-muted-foreground">Altijd en overal beschikbaar op elk apparaat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
