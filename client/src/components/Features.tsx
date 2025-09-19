@@ -83,103 +83,53 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Immersive Platform Experience */}
-        <div className="relative">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            {/* Central Mockup with Floating Features */}
-            <div className="lg:col-span-7 relative">
-              {/* Main Mockup Container */}
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-700"></div>
-                <Card className="relative overflow-hidden shadow-2xl bg-gradient-to-br from-background via-muted/30 to-background transform transition-all duration-700 group-hover:scale-[1.02]">
-                  <img 
-                    src={mockupImage} 
-                    alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
-                    className="w-full h-auto"
-                  />
-                </Card>
-              </div>
-              
-              {/* Floating Feature Highlights */}
-              <div className="absolute -right-4 top-16 lg:block hidden animate-in slide-in-from-right-8 duration-1000 delay-1000 opacity-0" style={{ animationFillMode: 'both' }}>
-                <div className="bg-background/95 backdrop-blur-md rounded-2xl shadow-xl border border-primary/20 p-4 max-w-56">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
-                      <MdOutlineSpeed className="h-4 w-4" />
-                    </div>
-                    <span className="font-semibold text-sm text-foreground">24-48 uur sneller</span>
+        {/* Platform Preview */}
+        <div className="mb-16">
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden shadow-lg bg-gradient-to-br from-background via-muted/20 to-background">
+              <img 
+                src={mockupImage} 
+                alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
+                className="w-full h-auto"
+              />
+            </Card>
+          </div>
+        </div>
+
+        {/* Clean Features Grid */}
+        <div>
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Waarom JanazApp?
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Ontdek hoe onze digitale oplossing islamitische begrafenisprocessen vereenvoudigt
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div
+                  key={index}
+                  className="text-center group hover-elevate"
+                  data-testid={`feature-item-${index}`}
+                >
+                  <div className="w-16 h-16 rounded-md bg-muted text-muted-foreground mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
+                    <IconComponent className="h-8 w-8" />
                   </div>
-                  <p className="text-xs text-muted-foreground">Gestroomlijnde digitale processen</p>
+                  
+                  <h4 className="font-semibold text-foreground mb-2">
+                    {feature.title}
+                  </h4>
+                  
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-              </div>
-              
-              <div className="absolute -left-8 bottom-20 lg:block hidden animate-in slide-in-from-left-8 duration-1000 delay-1200 opacity-0" style={{ animationFillMode: 'both' }}>
-                <div className="bg-background/95 backdrop-blur-md rounded-2xl shadow-xl border border-primary/20 p-4 max-w-52">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
-                      <AiOutlineSafetyCertificate className="h-4 w-4" />
-                    </div>
-                    <span className="font-semibold text-sm text-foreground">GDPR Compliant</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground">Uw gegevens zijn veilig</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Interactive Features Column */}
-            <div className="lg:col-span-5 space-y-4">
-              <div className="mb-8 animate-in slide-in-from-bottom-8 duration-800 delay-300 opacity-0" style={{ animationFillMode: 'both' }}>
-                <h3 className="text-3xl font-bold text-foreground mb-4">
-                  Waarom JanazApp?
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Ontdek hoe onze moderne oplossing islamitische begrafenisprocessen revolutioneert.
-                </p>
-              </div>
-              
-              <div className="space-y-3">
-                {features.map((feature, index) => {
-                  const IconComponent = feature.icon;
-                  return (
-                    <div
-                      key={index}
-                      className="group cursor-pointer"
-                      data-testid={`feature-item-${index}`}
-                    >
-                      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-background via-muted/20 to-background border border-muted/30 p-5 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-lg group-hover:-translate-y-1 hover-elevate">
-                        {/* Animated background on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-primary/12 to-primary/8 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        
-                        <div className="relative flex items-start gap-4">
-                          <div className="flex-shrink-0">
-                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                              <IconComponent className="h-6 w-6" />
-                            </div>
-                          </div>
-                          
-                          <div className="flex-1 min-w-0">
-                            <h4 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                              {feature.title}
-                            </h4>
-                            <p className="text-muted-foreground leading-relaxed mb-3">
-                              {feature.description}
-                            </p>
-                            <div className="flex items-center gap-2">
-                              <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
-                                <CheckCircle className="w-2.5 h-2.5 text-primary" />
-                              </div>
-                              <span className="text-sm font-medium text-primary">
-                                {feature.benefit}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
