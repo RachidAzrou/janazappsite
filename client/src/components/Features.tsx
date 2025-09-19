@@ -51,141 +51,156 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="relative py-20 bg-gradient-to-br from-muted/30 via-muted/20 to-background overflow-hidden" id="diensten">
-      {/* Dynamic Background Pattern */}
+    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="diensten">
+      {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Animated Grid */}
-        <div className="absolute inset-0 bg-grid-white/10 bg-grid-16 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] animate-grid-breathe"></div>
+        {/* Sophisticated Grid Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(var(--primary))_0.5px,_transparent_0.5px)] bg-[length:24px_24px] opacity-[0.15] animate-pulse"></div>
         
-        {/* Floating Orbs */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-float-slow"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-primary/7 rounded-full blur-lg animate-float-reverse"></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-primary/3 rounded-full blur-2xl animate-float-slow delay-1000"></div>
-        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-primary/8 rounded-full blur-md animate-float-reverse delay-500"></div>
+        {/* Elegant Geometric Shapes */}
+        <div className="absolute top-16 left-8 w-64 h-64 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl animate-pulse opacity-70"></div>
+        <div className="absolute bottom-32 right-12 w-48 h-48 bg-gradient-to-tl from-primary/6 to-primary/2 rounded-full blur-2xl animate-pulse delay-1000 opacity-80"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-primary/4 to-primary/8 rounded-full blur-xl animate-pulse delay-500"></div>
         
-        {/* Animated Gradient Lines */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-slide-right"></div>
-        <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent animate-slide-left delay-700"></div>
-        <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-slide-right delay-1400"></div>
-        
-        {/* Pulsing Dots */}
-        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-primary/40 rounded-full animate-pulse-soft"></div>
-        <div className="absolute top-3/4 left-1/3 w-1.5 h-1.5 bg-primary/30 rounded-full animate-pulse-soft delay-300"></div>
-        <div className="absolute top-1/2 right-1/6 w-1 h-1 bg-primary/50 rounded-full animate-pulse-soft delay-600"></div>
+        {/* Subtle Line Accents */}
+        <div className="absolute top-24 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+        <div className="absolute bottom-24 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
       </div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary border-primary/20" data-testid="badge-section-label">
-              Onze Voordelen
+        {/* Premium Header Section */}
+        <div className="text-center mb-24 lg:mb-32">
+          <div className="animate-in slide-in-from-bottom-4 duration-900 ease-out">
+            <Badge variant="secondary" className="mb-8 px-6 py-2 bg-gradient-to-r from-primary/15 to-primary/10 text-primary border-primary/25 text-sm font-medium tracking-wide" data-testid="badge-section-label">
+              Premium Service Voordelen
             </Badge>
           </div>
-          <div className="animate-in slide-in-from-bottom-6 duration-700 delay-150">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text" data-testid="text-features-title">
-              Waarom Kiezen voor JanazApp?
+          <div className="animate-in slide-in-from-bottom-6 duration-900 delay-200 ease-out">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent leading-tight tracking-tight" data-testid="text-features-title">
+              Waarom Kiezen voor
+              <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">JanazApp?</span>
             </h2>
           </div>
-          <div className="animate-in slide-in-from-bottom-8 duration-700 delay-300">
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-features-subtitle">
-              Digitale oplossing die respecteert en vereenvoudigt
+          <div className="animate-in slide-in-from-bottom-8 duration-900 delay-400 ease-out">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
+              Een digitale oplossing die religieuze waarden respecteert en
+              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-12 mb-20">
-          {/* Dashboard Preview */}
-          <div className="xl:col-span-1 animate-in slide-in-from-left duration-700 delay-400">
-            <div className="sticky top-8">
-              <Card className="overflow-hidden border-0 shadow-xl bg-background/80 backdrop-blur">
-                <CardContent className="p-4">
-                  <img 
-                    src="/attached_assets/image_1758288626690.png"
-                    alt="JanazApp Platform Preview - Dashboard Interface"
-                    className="w-full h-auto rounded-lg"
-                    data-testid="img-platform-preview"
-                  />
+        {/* Premium Features Grid */}
+        <div className="grid grid-cols-1 xl:grid-cols-5 gap-8 lg:gap-12 mb-28">
+          {/* Elegant Dashboard Preview */}
+          <div className="xl:col-span-2 animate-in slide-in-from-left duration-1000 delay-600 ease-out">
+            <div className="sticky top-8 z-30">
+              <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background to-muted/30 backdrop-blur-sm">
+                <CardContent className="p-6 lg:p-8">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl"></div>
+                    <img 
+                      src="/attached_assets/image_1758288626690.png"
+                      alt="JanazApp Platform Preview - Dashboard Interface"
+                      className="relative w-full h-auto rounded-xl shadow-lg"
+                      data-testid="img-platform-preview"
+                    />
+                  </div>
+                  <div className="mt-6 text-center">
+                    <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30 font-medium">
+                      Live Platform Preview
+                    </Badge>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
           
-          {/* Features Cards */}
+          {/* Premium Features Cards */}
           <div className="xl:col-span-3">
-            <div className="animate-in slide-in-from-bottom-8 duration-700 delay-500 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div
-                key={index}
-                className="animate-in slide-in-from-bottom-12 duration-700 hover:scale-105 transition-all opacity-0"
-                style={{ 
-                  animationDelay: `${(index + 1) * 150 + 800}ms`, // Start after grid container
-                  animationFillMode: 'both'
-                }}
-                data-testid={`card-feature-${index}`}
-              >
-                <Card className="relative group h-full border-0 bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-lg hover:shadow-xl transition-all duration-300">
-                  {/* Gradient Border */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute inset-[1px] bg-background/95 rounded-lg"></div>
-                  
-                  <div className="relative p-6">
-                    <CardHeader className="p-0 pb-4">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="relative">
-                          <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
-                            <IconComponent className="h-6 w-6" data-testid={`icon-feature-${index}`} />
+                const IconComponent = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="animate-in slide-in-from-bottom-8 duration-1000 opacity-0 hover-elevate"
+                    style={{ 
+                      animationDelay: `${(index + 1) * 100 + 800}ms`,
+                      animationFillMode: 'both'
+                    }}
+                    data-testid={`card-feature-${index}`}
+                  >
+                    <Card className="relative group h-full border-0 bg-gradient-to-br from-background via-background to-muted/20 shadow-lg backdrop-blur-sm transition-all duration-500">
+                      {/* Sophisticated Border Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/15 via-primary/8 to-primary/15 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-[1px] bg-gradient-to-br from-background to-muted/10 rounded-xl"></div>
+                      
+                      <div className="relative p-8">
+                        <CardHeader className="p-0 pb-6">
+                          {/* Icon and Badge Layout */}
+                          <div className="flex items-start justify-between mb-6">
+                            <div className="relative">
+                              <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
+                                <IconComponent className="h-7 w-7" data-testid={`icon-feature-${index}`} />
+                              </div>
+                              <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
+                            </div>
+                            <Badge 
+                              variant="outline" 
+                              className="text-xs bg-gradient-to-r from-primary/10 to-primary/5 border-primary/25 text-primary px-4 py-1.5 font-medium tracking-wide" 
+                              data-testid={`badge-feature-${index}`}
+                            >
+                              {feature.kicker}
+                            </Badge>
                           </div>
-                          <div className="absolute inset-0 rounded-xl bg-primary/20 blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                        </div>
-                        <Badge 
-                          variant="outline" 
-                          className="text-xs bg-accent/30 border-primary/30 text-primary px-3 py-1" 
-                          data-testid={`badge-feature-${index}`}
-                        >
-                          {feature.kicker}
-                        </Badge>
+                          
+                          <CardTitle className="text-xl lg:text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-500 leading-tight" data-testid={`text-feature-title-${index}`}>
+                            {feature.title}
+                          </CardTitle>
+                        </CardHeader>
+                        
+                        <CardContent className="p-0">
+                          <p className="text-muted-foreground mb-6 leading-relaxed text-base" data-testid={`text-feature-description-${index}`}>
+                            {feature.description}
+                          </p>
+                          
+                          {/* Benefit Highlight */}
+                          <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/15">
+                            <div className="w-6 h-6 rounded-full bg-gradient-to-r from-primary/20 to-primary/30 flex items-center justify-center flex-shrink-0">
+                              <CheckCircle className="w-3.5 h-3.5 text-primary" />
+                            </div>
+                            <p className="text-sm font-semibold text-primary" data-testid={`text-feature-benefit-${index}`}>
+                              {feature.benefit}
+                            </p>
+                          </div>
+                        </CardContent>
                       </div>
-                      <CardTitle className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300" data-testid={`text-feature-title-${index}`}>
-                        {feature.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0">
-                      <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3" data-testid={`text-feature-description-${index}`}>
-                        {feature.description}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
-                          <CheckCircle className="w-2.5 h-2.5 text-primary" />
-                        </div>
-                        <p className="text-sm font-medium text-primary" data-testid={`text-feature-benefit-${index}`}>
-                          {feature.benefit}
-                        </p>
-                      </div>
-                    </CardContent>
+                    </Card>
                   </div>
-                </Card>
-              </div>
-            );
-          })}
+                );
+              })}
             </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center animate-in slide-in-from-bottom-8 duration-700 delay-1000">
-          <div className="inline-flex items-center gap-2 p-1 bg-gradient-to-r from-primary/10 to-primary/5 rounded-full">
-            <Button 
-              variant="ghost" 
-              className="gap-2 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              onClick={() => console.log('Learn more about process clicked')}
-              data-testid="button-learn-process"
-            >
-              <ExternalLink className="h-4 w-4" />
-              Bekijk het Complete Proces
-            </Button>
+        {/* Premium Call to Action */}
+        <div className="text-center animate-in slide-in-from-bottom-8 duration-1000 delay-1200 ease-out">
+          <div className="inline-flex flex-col items-center gap-6">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20 rounded-full blur-lg animate-pulse opacity-60"></div>
+              <Button 
+                size="lg"
+                className="relative gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-semibold text-lg shadow-xl transition-all duration-500 border-0"
+                onClick={() => console.log('Learn more about process clicked')}
+                data-testid="button-learn-process"
+              >
+                <ExternalLink className="h-5 w-5" />
+                Ontdek het Complete Proces
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground font-medium tracking-wide">
+              Bekijk hoe we complexe procedures vereenvoudigen
+            </p>
           </div>
         </div>
       </div>
