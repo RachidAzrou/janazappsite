@@ -64,7 +64,7 @@ export default function TermsPage() {
                     <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
                       <p><strong>JanazApp:</strong> de aanbieder van het digitale platform voor overlijdenszorg.</p>
                       <p><strong>Gebruiker:</strong> iedere natuurlijke persoon of rechtspersoon die gebruikmaakt van JanazApp.</p>
-                      <p><strong>Partner:</strong> ondernemers of verzekeraars die zich via JanazApp aansluiten.</p>
+                      <p><strong>Partner:</strong> ondernemers, verzekeraars of andere partners die zich via JanazApp aansluiten.</p>
                       <p><strong>Diensten:</strong> alle (digitale) functionaliteiten die via het platform beschikbaar worden gesteld.</p>
                     </div>
                   </section>
