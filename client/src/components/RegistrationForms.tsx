@@ -151,12 +151,6 @@ export default function RegistrationForms() {
               Word Onderdeel van Ons Netwerk
             </Badge>
           </div>
-          <div className="animate-in slide-in-from-bottom-6 duration-1000 delay-200 ease-out">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent leading-tight tracking-tight" data-testid="text-registration-title">
-              Start Uw
-              <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mt-2">Digitale Reis</span>
-            </h2>
-          </div>
           <div className="animate-in slide-in-from-bottom-8 duration-1000 delay-400 ease-out">
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light mb-8" data-testid="text-registration-subtitle">
               Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
