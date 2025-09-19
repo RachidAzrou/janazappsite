@@ -60,7 +60,7 @@ export default function Features() {
   const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="diensten">
+    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern" id="diensten">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Sophisticated Grid Pattern */}

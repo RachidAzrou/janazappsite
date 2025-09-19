@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <footer ref={footerRef} className="relative bg-gradient-to-br from-background via-muted/30 to-accent/20 border-t border-border/50 backdrop-blur-sm" id="contact">
+    <footer ref={footerRef} className="relative bg-gradient-to-br from-background via-muted/30 to-accent/20 border-t border-border/50 backdrop-blur-sm islamic-pattern" id="contact">
       {/* Elegant background pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.1),transparent_50%)] pointer-events-none" />

@@ -91,7 +91,7 @@ export default function RegistrationForms() {
 
   if (showSuccess) {
     return (
-      <section className="relative py-28 lg:py-36 bg-gradient-to-br from-primary/5 via-background to-primary/10 overflow-hidden" id="registratie">
+      <section className="relative py-28 lg:py-36 bg-gradient-to-br from-primary/5 via-background to-primary/10 overflow-hidden islamic-pattern" id="registratie">
         {/* Premium Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-16 left-12 w-64 h-64 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl animate-pulse opacity-70"></div>
@@ -134,7 +134,7 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="registratie">
+    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern" id="registratie">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Refined Grid Pattern */}
