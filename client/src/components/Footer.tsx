@@ -24,13 +24,13 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.1),transparent_50%)] pointer-events-none" />
       
-      <div className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 transition-all duration-1000 ease-out ${
+      <div className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-all duration-1000 ease-out ${
         footerVisible 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-8'
       }`}>
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="group">

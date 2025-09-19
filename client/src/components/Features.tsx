@@ -60,7 +60,7 @@ export default function Features() {
   const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern" id="diensten">
+    <section ref={sectionRef} className="relative py-12 lg:py-16 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern" id="diensten">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Sophisticated Grid Pattern */}
@@ -78,7 +78,7 @@ export default function Features() {
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
-        <div className="text-center mb-24 lg:mb-32">
+        <div className="text-center mb-12 lg:mb-16">
           <div className={`transition-all duration-1000 ease-out ${
             sectionVisible 
               ? 'opacity-100 translate-y-0' 
