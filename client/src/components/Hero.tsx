@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Building2 } from "lucide-react";
+import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import heroImage from "@assets/generated_images/Islamic_architecture_hero_background_5d13e65a.png";
 
 export default function Hero() {
@@ -37,7 +37,7 @@ export default function Hero() {
             <Card className="bg-white/10 backdrop-blur-md border-white/20 hover-elevate" data-testid="card-citizens">
               <CardContent className="p-6 text-center">
                 <div className="mb-4">
-                  <Users className="h-12 w-12 text-white mx-auto" />
+                  <IoPeopleOutline className="h-12 w-12 text-white mx-auto" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3" data-testid="text-citizens-title">
                   Voor Burgers
@@ -60,7 +60,7 @@ export default function Hero() {
             <Card className="bg-white/10 backdrop-blur-md border-white/20 hover-elevate" data-testid="card-partners">
               <CardContent className="p-6 text-center">
                 <div className="mb-4">
-                  <Building2 className="h-12 w-12 text-white mx-auto" />
+                  <IoBusinessOutline className="h-12 w-12 text-white mx-auto" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3" data-testid="text-partners-title">
                   Voor Partners
