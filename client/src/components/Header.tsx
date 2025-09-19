@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
 import logoUrl from "@assets/Logo H@2x_1758276388954.png";
 
 export default function Header() {
@@ -17,9 +18,9 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/over-ons" className="text-foreground hover:text-primary transition-colors" data-testid="link-about">
+            <Link href="/over-ons" className="text-foreground hover:text-primary transition-colors" data-testid="link-about">
               Over Ons
-            </a>
+            </Link>
             <a href="#diensten" className="text-foreground hover:text-primary transition-colors" data-testid="link-services">
               Diensten
             </a>
@@ -51,9 +52,9 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t" data-testid="nav-mobile">
             <div className="space-y-4">
-              <a href="/over-ons" className="block text-foreground hover:text-primary transition-colors" data-testid="link-about-mobile">
+              <Link href="/over-ons" className="block text-foreground hover:text-primary transition-colors" data-testid="link-about-mobile">
                 Over Ons
-              </a>
+              </Link>
               <a href="#diensten" className="block text-foreground hover:text-primary transition-colors" data-testid="link-services-mobile">
                 Diensten
               </a>
