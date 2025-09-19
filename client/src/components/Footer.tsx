@@ -98,6 +98,13 @@ export default function Footer() {
               >
                 Cookies
               </Link>
+              <Link 
+                href="/algemene-voorwaarden" 
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
+                data-testid="link-terms"
+              >
+                Algemene Voorwaarden
+              </Link>
             </div>
           </div>
         </div>
