@@ -41,30 +41,6 @@ export default function ProductPreview() {
               worden getransformeerd tot 
               <span className="text-primary font-semibold"> overzichtelijke, begeleide stappen</span>
             </p>
-            
-            {/* Premium Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6">
-              <Button 
-                size="lg"
-                className="gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-semibold text-lg shadow-xl transition-all duration-500 border-0"
-                onClick={handleDemoClick}
-                data-testid="button-request-demo"
-              >
-                <Monitor className="h-5 w-5" />
-                Vraag Live Demo Aan
-              </Button>
-              
-              <Button 
-                variant="outline"
-                size="lg"
-                className="gap-3 px-8 py-4 rounded-full bg-background/80 backdrop-blur border-primary/30 text-primary font-semibold text-lg shadow-lg transition-all duration-500"
-                onClick={handleVideoClick}
-                data-testid="button-watch-video"
-              >
-                <PlayCircle className="h-5 w-5" />
-                Bekijk Video Tour
-              </Button>
-            </div>
           </div>
         </div>
 
