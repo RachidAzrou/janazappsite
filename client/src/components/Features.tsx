@@ -74,12 +74,6 @@ export default function Features() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
         <div className="text-center mb-24 lg:mb-32">
-          <div className="animate-in slide-in-from-bottom-6 duration-900 delay-200 ease-out">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent leading-tight tracking-tight" data-testid="text-features-title">
-              Waarom Kiezen voor
-              <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">JanazApp?</span>
-            </h2>
-          </div>
           <div className="animate-in slide-in-from-bottom-8 duration-900 delay-400 ease-out">
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
               Een digitale oplossing die religieuze waarden respecteert en
