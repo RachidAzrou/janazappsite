@@ -191,20 +191,17 @@ export default function RegistrationForms() {
             {/* Citizen Registration */}
             <TabsContent value="burger">
               <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
-                <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 p-8">
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-lg">
-                        <Users className="h-7 w-7" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-foreground">Registratie voor Burgers</h3>
-                        <p className="text-sm text-muted-foreground mt-1">Begin uw digitale reis met JanazApp</p>
-                      </div>
+                <CardHeader className="p-6">
+                  <CardTitle className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
+                      <Users className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">Registratie voor Burgers</h3>
                     </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <form onSubmit={handleCitizenSubmit} className="space-y-8">
                     <div className="space-y-8">
                       <div className="text-center pb-4">
@@ -334,20 +331,17 @@ export default function RegistrationForms() {
             {/* Partner Registration */}
             <TabsContent value="partner">
               <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
-                <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 p-8">
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-lg">
-                        <Building2 className="h-7 w-7" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-foreground">Registratie voor Partners</h3>
-                        <p className="text-sm text-muted-foreground mt-1">Word onderdeel van ons professionele netwerk</p>
-                      </div>
+                <CardHeader className="p-6">
+                  <CardTitle className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
+                      <Building2 className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-foreground">Registratie voor Partners</h3>
                     </div>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <form onSubmit={handlePartnerSubmit} className="space-y-8">
                     <div className="space-y-8">
                       <div className="text-center pb-4">
