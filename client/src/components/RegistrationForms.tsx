@@ -135,42 +135,45 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section className="relative py-28 lg:py-36 bg-gradient-to-b from-muted/20 via-background to-muted/30 overflow-hidden" id="registratie">
-      {/* Premium Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-8 w-72 h-72 bg-gradient-to-br from-primary/6 to-primary/2 rounded-full blur-3xl animate-pulse opacity-70"></div>
-        <div className="absolute bottom-20 right-12 w-56 h-56 bg-gradient-to-tl from-primary/4 to-primary/8 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/3 w-40 h-40 bg-gradient-to-r from-primary/3 to-primary/6 rounded-full blur-xl animate-pulse delay-500"></div>
+    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="registratie">
+      {/* Subtle Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Refined Grid Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(var(--primary))_0.5px,_transparent_0.5px)] bg-[length:24px_24px] opacity-[0.15] animate-pulse"></div>
+        
+        {/* Elegant Geometric Shapes */}
+        <div className="absolute top-16 left-8 w-64 h-64 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl animate-pulse opacity-70"></div>
+        <div className="absolute bottom-32 right-12 w-48 h-48 bg-gradient-to-tl from-primary/6 to-primary/2 rounded-full blur-2xl animate-pulse delay-1000 opacity-80"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-primary/4 to-primary/8 rounded-full blur-xl animate-pulse delay-500"></div>
       </div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Premium Header Section */}
-        <div className="text-center mb-20 lg:mb-28">
-          <div className="animate-in slide-in-from-bottom-8 duration-1000 delay-400 ease-out">
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light mb-8" data-testid="text-registration-subtitle">
+        {/* Header Section */}
+        <div className="text-center mb-24 lg:mb-32">
+          <div className="animate-in slide-in-from-bottom-8 duration-900 delay-400 ease-out">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-registration-subtitle">
               Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
           </div>
         </div>
 
-        {/* Premium Form Container */}
+        {/* Form Container */}
         <div className="max-w-5xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-600 ease-out">
           <Tabs defaultValue="burger" className="w-full">
-            {/* Elegant Tab Navigation */}
+            {/* Tab Navigation */}
             <div className="relative mb-12">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-lg"></div>
-              <TabsList className="relative grid w-full grid-cols-2 h-auto p-2 bg-gradient-to-r from-background via-muted/20 to-background border-0 shadow-xl rounded-2xl backdrop-blur-sm">
+              <TabsList className="grid w-full grid-cols-2 h-auto p-2 bg-gradient-to-br from-background via-background to-muted/20 border-0 shadow-lg rounded-2xl backdrop-blur-sm">
                 <TabsTrigger 
                   value="burger" 
                   className="group flex flex-col items-center gap-3 p-6 rounded-xl transition-all duration-500 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/15 data-[state=active]:to-primary/10 data-[state=active]:shadow-lg" 
                   data-testid="tab-citizen"
                 >
                   <div className="relative">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-md">
-                      <Users className="h-6 w-6" />
+                    <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
+                      <Users className="h-7 w-7" />
                     </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                   </div>
                   <div className="text-center">
                     <div className="font-bold text-lg">Burger</div>
@@ -183,10 +186,10 @@ export default function RegistrationForms() {
                   data-testid="tab-partner"
                 >
                   <div className="relative">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-md">
-                      <Building2 className="h-6 w-6" />
+                    <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
+                      <Building2 className="h-7 w-7" />
                     </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                   </div>
                   <div className="text-center">
                     <div className="font-bold text-lg">Partner</div>
@@ -196,21 +199,21 @@ export default function RegistrationForms() {
               </TabsList>
             </div>
 
-            {/* Premium Citizen Registration */}
+            {/* Citizen Registration */}
             <TabsContent value="burger">
-              <Card className="border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
                 <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 p-8">
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary shadow-lg">
-                        <Users className="h-6 w-6" />
+                      <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-lg">
+                        <Users className="h-7 w-7" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-foreground">Registratie voor Burgers</h3>
                         <p className="text-sm text-muted-foreground mt-1">Begin uw digitale reis met JanazApp</p>
                       </div>
                     </div>
-                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/30 text-primary px-4 py-2 text-sm font-semibold">
+                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/25 text-primary px-4 py-1.5 text-sm font-medium">
                       Stap {citizenStep} van 2
                     </Badge>
                   </CardTitle>
@@ -381,20 +384,21 @@ export default function RegistrationForms() {
             </TabsContent>
 
             {/* Premium Partner Registration */}
+            {/* Partner Registration */}
             <TabsContent value="partner">
-              <Card className="border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
                 <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 p-8">
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary shadow-lg">
-                        <Building2 className="h-6 w-6" />
+                      <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-lg">
+                        <Building2 className="h-7 w-7" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-foreground">Registratie voor Partners</h3>
                         <p className="text-sm text-muted-foreground mt-1">Word onderdeel van ons professionele netwerk</p>
                       </div>
                     </div>
-                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/30 text-primary px-4 py-2 text-sm font-semibold">
+                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/25 text-primary px-4 py-1.5 text-sm font-medium">
                       Stap {partnerStep} van 2
                     </Badge>
                   </CardTitle>
