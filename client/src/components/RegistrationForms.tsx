@@ -16,46 +16,52 @@ import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useTranslation } from "react-i18next";
 
-// Zod validation schemas
-const citizenFormSchema = z.object({
-  firstName: z.string().min(1, "Voornaam is verplicht").min(2, "Voornaam moet minstens 2 karakters bevatten"),
-  lastName: z.string().min(1, "Achternaam is verplicht").min(2, "Achternaam moet minstens 2 karakters bevatten"),
-  email: z.string().min(1, "E-mailadres is verplicht").email("Vul een geldig e-mailadres in"),
+// Zod validation schemas - using function to access translations
+const createCitizenFormSchema = (t: any) => z.object({
+  firstName: z.string().min(1, t('validation.firstNameRequired')).min(2, t('validation.firstNameMinLength')),
+  lastName: z.string().min(1, t('validation.lastNameRequired')).min(2, t('validation.lastNameMinLength')),
+  email: z.string().min(1, t('validation.emailRequired')).email(t('validation.emailInvalid')),
   phone: z.string().optional().refine((val) => !val || /^[\+]?[0-9\-\s\(\)]{10,}$/.test(val), {
-    message: "Vul een geldig telefoonnummer in (bijv. +31 6 12345678)"
+    message: t('validation.phoneInvalid')
   }),
   city: z.string().optional(),
-  preferredLanguage: z.string().min(1, "Selecteer een gewenste taal"),
+  preferredLanguage: z.string().min(1, t('validation.languageRequired')),
   acceptPrivacy: z.boolean().refine(val => val === true, {
-    message: "U moet akkoord gaan met de privacyverklaring om door te gaan"
+    message: t('validation.privacyRequired')
   })
 });
 
-const partnerFormSchema = z.object({
-  companyName: z.string().min(1, "Bedrijfsnaam is verplicht").min(2, "Bedrijfsnaam moet minstens 2 karakters bevatten"),
-  contactPerson: z.string().min(1, "Contactpersoon is verplicht").min(2, "Contactpersoon moet minstens 2 karakters bevatten"),
-  email: z.string().min(1, "E-mailadres is verplicht").email("Vul een geldig e-mailadres in"),
+const createPartnerFormSchema = (t: any) => z.object({
+  companyName: z.string().min(1, t('validation.companyNameRequired')).min(2, t('validation.companyNameMinLength')),
+  contactPerson: z.string().min(1, t('validation.contactPersonRequired')).min(2, t('validation.contactPersonMinLength')),
+  email: z.string().min(1, t('validation.emailRequired')).email(t('validation.emailInvalid')),
   phone: z.string().optional().refine((val) => !val || /^[\+]?[0-9\-\s\(\)]{10,}$/.test(val), {
-    message: "Vul een geldig telefoonnummer in (bijv. +31 20 1234567)"
+    message: t('validation.phoneInvalidPartner')
   }),
-  partnerType: z.string().min(1, "Selecteer het type partner"),
+  partnerType: z.string().min(1, t('validation.partnerTypeRequired')),
   city: z.string().optional(),
   description: z.string().optional(),
   acceptPrivacy: z.boolean().refine(val => val === true, {
-    message: "U moet akkoord gaan met de privacyverklaring om door te gaan"
+    message: t('validation.privacyRequired')
   })
 });
 
-type CitizenFormData = z.infer<typeof citizenFormSchema>;
-type PartnerFormData = z.infer<typeof partnerFormSchema>;
+type CitizenFormData = z.infer<ReturnType<typeof createCitizenFormSchema>>;
+type PartnerFormData = z.infer<ReturnType<typeof createPartnerFormSchema>>;
 
 export default function RegistrationForms() {
+  const { t } = useTranslation('forms');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isRTL, setIsRTL] = useState(false);
   const [successType, setSuccessType] = useState<'citizen' | 'partner'>('citizen');
+
+  // Create schemas with translations
+  const citizenFormSchema = createCitizenFormSchema(t);
+  const partnerFormSchema = createPartnerFormSchema(t);
 
   // Form hook instances
   const citizenForm = useForm<CitizenFormData>({
@@ -123,24 +129,12 @@ export default function RegistrationForms() {
   };
 
   if (showSuccess) {
-    const successContent = successType === 'citizen' ? {
-      title: "Registratie Voltooid",
-      subtitle: "Bedankt voor uw registratie bij JanazApp",
-      message: "Uw aanvraag is in goede orde ontvangen. Wij begrijpen dat dit een moeilijke tijd voor u kan zijn en waarderen uw vertrouwen in onze dienstverlening.",
-      nextSteps: [
-        "Binnen 24 uur neemt één van onze medewerkers persoonlijk contact met u op",
-        "Wij begeleiden u door het activatieproces en leggen het platform uit",
-        "Onze ondersteuning is beschikbaar wanneer u ons nodig heeft"
-      ]
-    } : {
-      title: "Partnerschap Aanvraag Ontvangen",
-      subtitle: "Dank voor uw interesse in samenwerking",
-      message: "Uw aanvraag voor een partnerschap met JanazApp is ontvangen. Wij waarderen uw toewijding aan het ondersteunen van families in moeilijke tijden.",
-      nextSteps: [
-        "Binnen 48 uur beoordelen wij uw aanvraag zorgvuldig",
-        "Een van onze partnership managers neemt contact met u op",
-        "Wij bespreken samen de mogelijkheden voor samenwerking"
-      ]
+    const successKey = successType === 'citizen' ? 'success.citizen' : 'success.partner';
+    const successContent = {
+      title: t(`${successKey}.title`),
+      subtitle: t(`${successKey}.subtitle`),
+      message: t(`${successKey}.message`),
+      nextSteps: t(`${successKey}.nextSteps`, { returnObjects: true }) as string[]
     };
 
     return (
@@ -175,7 +169,7 @@ export default function RegistrationForms() {
                     </p>
                     
                     <div className="text-left space-y-3">
-                      <h4 className="font-medium text-foreground mb-3">Volgende stappen:</h4>
+                      <h4 className="font-medium text-foreground mb-3">{t(`${successKey}.nextStepsTitle`)}</h4>
                       <ul className="space-y-2" role="list" aria-label="Volgende stappen">
                         {successContent.nextSteps.map((step, index) => (
                           <li key={index} className="flex items-start gap-3">
@@ -191,7 +185,7 @@ export default function RegistrationForms() {
                   
                   <div className="pt-4">
                     <p className="text-sm text-muted-foreground mb-4">
-                      Heeft u vragen of heeft u directe ondersteuning nodig?
+                      {t(`${successKey}.supportQuestion`)}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                       <Button 
@@ -200,7 +194,7 @@ export default function RegistrationForms() {
                         onClick={() => setShowSuccess(false)} 
                         data-testid="button-success-back"
                       >
-                        Terug naar Registratie
+                        {t(`${successKey}.backButton`)}
                       </Button>
                       <Button 
                         variant="default"
@@ -208,7 +202,7 @@ export default function RegistrationForms() {
                         onClick={handleEmergencyContact}
                         data-testid="button-contact-support"
                       >
-                        Contact Opnemen
+                        {t(`${successKey}.contactButton`)}
                       </Button>
                     </div>
                   </div>
@@ -236,6 +230,7 @@ export default function RegistrationForms() {
               : 'opacity-0 translate-y-8'
           }`}>
             <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-registration-subtitle">
+              {/* TODO: Add translation for subtitle text */}
               Een digitale oplossing die religieuze waarden respecteert en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
@@ -257,14 +252,14 @@ export default function RegistrationForms() {
                   className="data-[state=active]:bg-background data-[state=active]:text-foreground"
                   data-testid="tab-citizen"
                 >
-                  Particulieren
+                  {t('tabs.citizens')}
                 </TabsTrigger>
                 <TabsTrigger 
                   value="partner" 
                   className="data-[state=active]:bg-background data-[state=active]:text-foreground"
                   data-testid="tab-partner"
                 >
-                  Professionals
+                  {t('tabs.partners')}
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -278,8 +273,8 @@ export default function RegistrationForms() {
                       <IoPeopleOutline className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground">Registratie voor Burgers</h3>
-                      <p className="text-sm text-muted-foreground mt-1">Voor particulieren en families</p>
+                      <h3 className="text-xl font-semibold text-foreground">{t('citizenForm.title')}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{t('citizenForm.subtitle')}</p>
                     </div>
                   </CardTitle>
                 </CardHeader>
@@ -292,9 +287,9 @@ export default function RegistrationForms() {
                             <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center">
                               <IoPeopleOutline className="h-4 w-4" />
                             </div>
-                            <h4 className="text-xl font-semibold text-foreground">Persoonlijke Gegevens</h4>
+                            <h4 className="text-xl font-semibold text-foreground">{t('sections.personalData')}</h4>
                           </div>
-                          <p className="text-base text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
+                          <p className="text-base text-muted-foreground">{t('sections.personalDataSubtitle')}</p>
                         </div>
                         
                         <div className="grid md:grid-cols-2 gap-4">
@@ -303,10 +298,10 @@ export default function RegistrationForms() {
                             name="firstName"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Voornaam *</FormLabel>
+                                <FormLabel>{t('citizenForm.fields.firstName.label')}</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Fatima"
+                                    placeholder={t('citizenForm.fields.firstName.placeholder')}
                                     data-testid="input-firstname"
                                     {...field}
                                   />
@@ -320,10 +315,10 @@ export default function RegistrationForms() {
                             name="lastName"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Achternaam *</FormLabel>
+                                <FormLabel>{t('citizenForm.fields.lastName.label')}</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Benali"
+                                    placeholder={t('citizenForm.fields.lastName.placeholder')}
                                     data-testid="input-lastname"
                                     {...field}
                                   />
@@ -339,17 +334,17 @@ export default function RegistrationForms() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>E-mailadres *</FormLabel>
+                              <FormLabel>{t('citizenForm.fields.email.label')}</FormLabel>
                               <FormControl>
                                 <Input
                                   type="email"
-                                  placeholder="naam@example.be"
+                                  placeholder={t('citizenForm.fields.email.placeholder')}
                                   data-testid="input-email"
                                   {...field}
                                 />
                               </FormControl>
                               <FormMessage />
-                              <p className="text-xs text-muted-foreground">We gebruiken dit voor belangrijke updates</p>
+                              <p className="text-xs text-muted-foreground">{t('citizenForm.fields.email.helpText')}</p>
                             </FormItem>
                           )}
                         />
@@ -360,11 +355,11 @@ export default function RegistrationForms() {
                             name="phone"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Telefoonnummer</FormLabel>
+                                <FormLabel>{t('citizenForm.fields.phone.label')}</FormLabel>
                                 <FormControl>
                                   <Input
                                     type="tel"
-                                    placeholder="+32 472 12 34 56"
+                                    placeholder={t('citizenForm.fields.phone.placeholder')}
                                     data-testid="input-phone"
                                     {...field}
                                   />
@@ -378,10 +373,10 @@ export default function RegistrationForms() {
                             name="city"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Woonplaats</FormLabel>
+                                <FormLabel>{t('citizenForm.fields.city.label')}</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Antwerpen"
+                                    placeholder={t('citizenForm.fields.city.placeholder')}
                                     data-testid="input-city"
                                     {...field}
                                   />
@@ -397,7 +392,7 @@ export default function RegistrationForms() {
                           name="preferredLanguage"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Gewenste Taal voor Communicatie</FormLabel>
+                              <FormLabel>{t('citizenForm.fields.preferredLanguage.label')}</FormLabel>
                               <Select value={field.value} onValueChange={(value) => {
                                 field.onChange(value);
                                 setIsRTL(value === 'arabisch');
@@ -408,12 +403,12 @@ export default function RegistrationForms() {
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                  <SelectItem value="nederlands">Nederlands</SelectItem>
-                                  <SelectItem value="engels">English</SelectItem>
-                                  <SelectItem value="duits">Deutsch (Duits)</SelectItem>
-                                  <SelectItem value="arabisch">العربية (Arabisch)</SelectItem>
-                                  <SelectItem value="turks">Türkçe (Turks)</SelectItem>
-                                  <SelectItem value="frans">Français (Frans)</SelectItem>
+                                  <SelectItem value="nederlands">{t('citizenForm.languageOptions.nederlands')}</SelectItem>
+                                  <SelectItem value="engels">{t('citizenForm.languageOptions.engels')}</SelectItem>
+                                  <SelectItem value="duits">{t('citizenForm.languageOptions.duits')}</SelectItem>
+                                  <SelectItem value="arabisch">{t('citizenForm.languageOptions.arabisch')}</SelectItem>
+                                  <SelectItem value="turks">{t('citizenForm.languageOptions.turks')}</SelectItem>
+                                  <SelectItem value="frans">{t('citizenForm.languageOptions.frans')}</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -447,7 +442,7 @@ export default function RegistrationForms() {
                                   </a>
                                 </FormLabel>
                                 <p className="text-xs text-muted-foreground">
-                                  Uw gegevens worden veilig opgeslagen volgens GDPR-richtlijnen
+                                  {t('citizenForm.privacy.helpText')}
                                 </p>
                                 <FormMessage />
                               </div>
@@ -462,7 +457,7 @@ export default function RegistrationForms() {
                             disabled={citizenForm.formState.isSubmitting}
                             data-testid="button-submit-citizen"
                           >
-                            {citizenForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
+                            {citizenForm.formState.isSubmitting ? t('citizenForm.submittingButton') : t('citizenForm.submitButton')}
                           </Button>
                         </div>
                       </div>
@@ -482,8 +477,8 @@ export default function RegistrationForms() {
                       <IoBusinessOutline className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-foreground">Registratie voor Partners</h3>
-                      <p className="text-sm text-muted-foreground mt-1">Voor professionals en organisaties</p>
+                      <h3 className="text-xl font-semibold text-foreground">{t('partnerForm.title')}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{t('partnerForm.subtitle')}</p>
                     </div>
                   </CardTitle>
                 </CardHeader>
@@ -496,9 +491,9 @@ export default function RegistrationForms() {
                             <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center">
                               <IoBusinessOutline className="h-4 w-4" />
                             </div>
-                            <h4 className="text-xl font-semibold text-foreground">Bedrijfsinformatie</h4>
+                            <h4 className="text-xl font-semibold text-foreground">{t('sections.companyInfo')}</h4>
                           </div>
-                          <p className="text-base text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
+                          <p className="text-base text-muted-foreground">{t('sections.companyInfoSubtitle')}</p>
                         </div>
                         
                         <FormField
@@ -506,10 +501,10 @@ export default function RegistrationForms() {
                           name="companyName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Bedrijfsnaam *</FormLabel>
+                              <FormLabel>{t('partnerForm.fields.companyName.label')}</FormLabel>
                               <FormControl>
                                 <Input
-                                  placeholder="bijv. Moskee Al-Nour Antwerpen"
+                                  placeholder={t('partnerForm.fields.companyName.placeholder')}
                                   data-testid="input-company-name"
                                   {...field}
                                 />
@@ -525,10 +520,10 @@ export default function RegistrationForms() {
                             name="contactPerson"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Contactpersoon *</FormLabel>
+                                <FormLabel>{t('partnerForm.fields.contactPerson.label')}</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="Omar El Moussaoui"
+                                    placeholder={t('partnerForm.fields.contactPerson.placeholder')}
                                     data-testid="input-contact-person"
                                     {...field}
                                   />
@@ -542,19 +537,19 @@ export default function RegistrationForms() {
                             name="partnerType"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Type Partner *</FormLabel>
+                                <FormLabel>{t('partnerForm.fields.partnerType.label')}</FormLabel>
                                 <Select value={field.value} onValueChange={field.onChange}>
                                   <FormControl>
                                     <SelectTrigger data-testid="select-partner-type" className={isRTL ? 'select-trigger' : ''}>
-                                      <SelectValue placeholder="Selecteer type" />
+                                      <SelectValue placeholder={t('partnerForm.fields.partnerType.placeholder')} />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
-                                    <SelectItem value="uitvaartondernemer">Uitvaartondernemer - Volledige uitvaartdiensten</SelectItem>
-                                    <SelectItem value="moskee">Moskee - Religieuze begeleiding</SelectItem>
-                                    <SelectItem value="verzekeraar">Verzekeraar - Uitvaartverzekeringen</SelectItem>
-                                    <SelectItem value="wasplaats">Wasplaats - Rituele wassing</SelectItem>
-                                    <SelectItem value="andere">Andere - Gerelateerde diensten</SelectItem>
+                                    <SelectItem value="uitvaartondernemer">{t('partnerForm.partnerTypes.uitvaartondernemer')}</SelectItem>
+                                    <SelectItem value="moskee">{t('partnerForm.partnerTypes.moskee')}</SelectItem>
+                                    <SelectItem value="verzekeraar">{t('partnerForm.partnerTypes.verzekeraar')}</SelectItem>
+                                    <SelectItem value="wasplaats">{t('partnerForm.partnerTypes.wasplaats')}</SelectItem>
+                                    <SelectItem value="andere">{t('partnerForm.partnerTypes.andere')}</SelectItem>
                                   </SelectContent>
                                 </Select>
                                 <FormMessage />
@@ -568,11 +563,11 @@ export default function RegistrationForms() {
                           name="email"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>E-mailadres *</FormLabel>
+                              <FormLabel>{t('partnerForm.fields.email.label')}</FormLabel>
                               <FormControl>
                                 <Input
                                   type="email"
-                                  placeholder="info@moskee-alnour.be"
+                                  placeholder={t('partnerForm.fields.email.placeholder')}
                                   data-testid="input-partner-email"
                                   {...field}
                                 />
@@ -588,11 +583,11 @@ export default function RegistrationForms() {
                             name="phone"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Telefoonnummer</FormLabel>
+                                <FormLabel>{t('partnerForm.fields.phone.label')}</FormLabel>
                                 <FormControl>
                                   <Input
                                     type="tel"
-                                    placeholder="+32 3 234 56 78"
+                                    placeholder={t('partnerForm.fields.phone.placeholder')}
                                     data-testid="input-partner-phone"
                                     {...field}
                                   />
@@ -606,10 +601,10 @@ export default function RegistrationForms() {
                             name="city"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Vestigingsplaats</FormLabel>
+                                <FormLabel>{t('partnerForm.fields.city.label')}</FormLabel>
                                 <FormControl>
                                   <Input
-                                    placeholder="bijv. Brussel"
+                                    placeholder={t('partnerForm.fields.city.placeholder')}
                                     data-testid="input-partner-city"
                                     {...field}
                                   />
@@ -625,10 +620,10 @@ export default function RegistrationForms() {
                           name="description"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Beschrijving van Diensten</FormLabel>
+                              <FormLabel>{t('partnerForm.fields.description.label')}</FormLabel>
                               <FormControl>
                                 <Textarea
-                                  placeholder="Beschrijf welke diensten u aanbiedt en hoe u families kunt ondersteunen..."
+                                  placeholder={t('partnerForm.fields.description.placeholder')}
                                   data-testid="textarea-description"
                                   className="min-h-[100px]"
                                   {...field}
@@ -677,7 +672,7 @@ export default function RegistrationForms() {
                             disabled={partnerForm.formState.isSubmitting}
                             data-testid="button-submit-partner"
                           >
-                            {partnerForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
+                            {partnerForm.formState.isSubmitting ? t('partnerForm.submittingButton') : t('partnerForm.submitButton')}
                           </Button>
                         </div>
                       </div>

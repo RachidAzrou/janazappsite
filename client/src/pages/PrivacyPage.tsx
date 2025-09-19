@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from 'react-i18next';
 
 export default function PrivacyPage() {
+  const { t } = useTranslation('legal');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
@@ -40,12 +42,12 @@ export default function PrivacyPage() {
                     <MdOutlinePrivacyTip className="h-6 w-6" />
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-foreground" data-testid="text-privacy-title">
-                    Privacybeleid
+                    {t('privacy.title')}
                   </h1>
                 </div>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-privacy-intro">
-                  Uw privacy is van het grootste belang voor JanazApp. Dit beleid beschrijft hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.
+                  {t('privacy.intro')}
                 </p>
               </div>
             </div>
@@ -60,67 +62,57 @@ export default function PrivacyPage() {
                 <CardContent className="p-8 space-y-8">
                   
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">1. Gegevensverzameling</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.0.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Wij verzamelen alleen de gegevens die noodzakelijk zijn voor het verlenen van onze diensten in de overlijdenszorg. 
-                      Dit omvat persoonlijke informatie van nabestaanden, uitvaartondernemers en andere betrokken partijen.
+                      {t('privacy.sections.0.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">2. Gebruik van gegevens</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.1.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Uw gegevens worden uitsluitend gebruikt voor het faciliteren van overlijdensprocedures, 
-                      het coördineren tussen verschillende partijen en het naleven van wettelijke verplichtingen.
+                      {t('privacy.sections.1.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">3. Beveiliging</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.2.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Wij implementeren moderne beveiligingsmaatregelen om uw persoonlijke gegevens te beschermen tegen 
-                      ongeoorloofde toegang, wijziging of openbaarmaking. Alle gegevens worden geëncrypteerd opgeslagen.
+                      {t('privacy.sections.2.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">4. Delen van gegevens</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.3.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      Gegevens worden alleen gedeeld met partijen die direct betrokken zijn bij de overlijdensprocedure, 
-                      zoals uitvaartondernemers, moskeeën en overheidsinstanties, en alleen met uw expliciete toestemming.
+                      {t('privacy.sections.3.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">5. Uw rechten</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.4.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      U heeft het recht om uw gegevens in te zien, te corrigeren of te laten verwijderen. 
-                      Neem contact met ons op via info@janazapp.com voor vragen over uw privacy.
+                      {t('privacy.sections.4.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">6. GDPR-compliance</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.5.title')}</h2>
                     <p className="text-base leading-relaxed text-muted-foreground">
-                      JanazApp voldoet volledig aan de Algemene Verordening Gegevensbescherming (AVG/GDPR). 
-                      Wij respecteren uw privacy en hanteren strenge procedures voor gegevensbescherming.
+                      {t('privacy.sections.5.content')}
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-xl font-bold text-foreground mb-4">7. Contact</h2>
-                    <p className="text-base leading-relaxed text-muted-foreground">
-                      Voor vragen over dit privacybeleid kunt u contact opnemen via:
-                      <br />
-                      E-mail: info@janazapp.com
-                      <br />
-                      Telefoon: +32 2 123 4567
+                    <h2 className="text-xl font-bold text-foreground mb-4">{t('privacy.sections.6.title')}</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground" style={{whiteSpace: 'pre-line'}}>
+                      {t('privacy.sections.6.content')}
                     </p>
                   </section>
 
                   <div className="mt-8 p-4 bg-muted/50 rounded-md">
                     <p className="text-sm text-muted-foreground">
-                      Laatst bijgewerkt: januari 2025
+                      {t('privacy.lastUpdated')}
                     </p>
                   </div>
                   

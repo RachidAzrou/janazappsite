@@ -3,8 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { TiDocumentText } from "react-icons/ti";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useTranslation } from 'react-i18next';
 
 export default function TermsPage() {
+  const { t } = useTranslation('legal');
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
@@ -40,12 +42,12 @@ export default function TermsPage() {
                     <TiDocumentText className="h-6 w-6" />
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-foreground" data-testid="text-terms-title">
-                    Algemene Voorwaarden
+                    {t('terms.title')}
                   </h1>
                 </div>
                 
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-terms-intro">
-                  Deze algemene voorwaarden zijn van toepassing op het gebruik van JanazApp en regelen de rechten en plichten van alle betrokken partijen.
+                  {t('terms.intro')}
                 </p>
               </div>
             </div>
@@ -160,7 +162,7 @@ export default function TermsPage() {
 
                   <div className="mt-8 p-4 bg-muted/50 rounded-md">
                     <p className="text-sm text-muted-foreground">
-                      Laatst bijgewerkt: januari 2025
+                      {t('privacy.lastUpdated')}
                     </p>
                   </div>
                   
