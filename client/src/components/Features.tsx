@@ -94,8 +94,27 @@ export default function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="animate-in slide-in-from-bottom-8 duration-700 delay-500 grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {features.map((feature, index) => {
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-12 mb-20">
+          {/* Dashboard Preview */}
+          <div className="xl:col-span-1 animate-in slide-in-from-left duration-700 delay-400">
+            <div className="sticky top-8">
+              <Card className="overflow-hidden border-0 shadow-xl bg-background/80 backdrop-blur">
+                <CardContent className="p-4">
+                  <img 
+                    src="/attached_assets/image_1758288626690.png"
+                    alt="JanazApp Platform Preview - Dashboard Interface"
+                    className="w-full h-auto rounded-lg"
+                    data-testid="img-platform-preview"
+                  />
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          
+          {/* Features Cards */}
+          <div className="xl:col-span-3">
+            <div className="animate-in slide-in-from-bottom-8 duration-700 delay-500 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <div
@@ -151,6 +170,8 @@ export default function Features() {
               </div>
             );
           })}
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}
