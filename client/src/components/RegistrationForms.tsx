@@ -16,7 +16,8 @@ export default function RegistrationForms() {
   const [partnerStep, setPartnerStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
+  const [acceptPrivacyCitizen, setAcceptPrivacyCitizen] = useState(false);
+  const [acceptPrivacyPartner, setAcceptPrivacyPartner] = useState(false);
 
   const [citizenForm, setCitizenForm] = useState({
     firstName: '',
@@ -40,6 +41,20 @@ export default function RegistrationForms() {
 
   const handleCitizenSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate step 1 fields
+    if (!citizenForm.firstName.trim() || !citizenForm.lastName.trim() || !citizenForm.email.trim()) {
+      setCitizenStep(1);
+      alert('Vul alle verplichte velden in.');
+      return;
+    }
+    
+    // Only allow submission on step 2 with consent
+    if (citizenStep !== 2 || !acceptPrivacyCitizen) {
+      alert('Voltooi alle stappen en accepteer de privacyverklaring.');
+      return;
+    }
+    
     setIsSubmitting(true);
     // TODO: Remove mock functionality - replace with actual API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -49,6 +64,20 @@ export default function RegistrationForms() {
 
   const handlePartnerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate step 1 fields
+    if (!partnerForm.companyName.trim() || !partnerForm.contactPerson.trim() || !partnerForm.email.trim() || !partnerForm.partnerType) {
+      setPartnerStep(1);
+      alert('Vul alle verplichte velden in inclusief het type partner.');
+      return;
+    }
+    
+    // Only allow submission on step 2 with consent
+    if (partnerStep !== 2 || !acceptPrivacyPartner) {
+      alert('Voltooi alle stappen en accepteer de privacyverklaring.');
+      return;
+    }
+    
     setIsSubmitting(true);
     // TODO: Remove mock functionality - replace with actual API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -63,20 +92,41 @@ export default function RegistrationForms() {
 
   if (showSuccess) {
     return (
-      <section className="py-20 bg-background" id="registratie">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-md mx-auto text-center">
-            <Card className="p-8">
-              <CheckCircle2 className="h-16 w-16 text-primary mx-auto mb-4" data-testid="icon-success" />
-              <h3 className="text-2xl font-bold text-foreground mb-4" data-testid="text-success-title">
-                Registratie Succesvol!
-              </h3>
-              <p className="text-muted-foreground mb-6" data-testid="text-success-message">
-                We nemen binnen 24 uur contact met u op om uw account te activeren.
-              </p>
-              <Button onClick={() => setShowSuccess(false)} data-testid="button-success-ok">
-                Oké
-              </Button>
+      <section className="relative py-28 lg:py-36 bg-gradient-to-br from-primary/5 via-background to-primary/10 overflow-hidden" id="registratie">
+        {/* Premium Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-16 left-12 w-64 h-64 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl animate-pulse opacity-70"></div>
+          <div className="absolute bottom-16 right-12 w-48 h-48 bg-gradient-to-tl from-primary/6 to-primary/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-lg mx-auto text-center">
+            <Card className="border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden">
+              <CardContent className="p-12">
+                {/* Success Animation */}
+                <div className="relative mb-8">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/30 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+                  <div className="relative p-6 rounded-full bg-gradient-to-br from-primary/15 to-primary/10 w-fit mx-auto">
+                    <CheckCircle2 className="h-16 w-16 text-primary animate-pulse" data-testid="icon-success" />
+                  </div>
+                </div>
+                
+                <h3 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent" data-testid="text-success-title">
+                  Registratie Succesvol!
+                </h3>
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed" data-testid="text-success-message">
+                  Welkom bij JanazApp! We nemen binnen 24 uur contact met u op om uw account te activeren en u te begeleiden door het platform.
+                </p>
+                
+                <Button 
+                  size="lg"
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-semibold text-lg shadow-xl transition-all duration-500 border-0"
+                  onClick={() => setShowSuccess(false)} 
+                  data-testid="button-success-ok"
+                >
+                  Terug naar Registratie
+                </Button>
+              </CardContent>
             </Card>
           </div>
         </div>
@@ -85,72 +135,121 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section className="py-20 bg-background" id="registratie">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4" data-testid="badge-registration-label">
-            Wordt Onderdeel van Ons Netwerk
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="text-registration-title">
-            Registreer Je Vandaag
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-6" data-testid="text-registration-subtitle">
-            Ervaar hoe digitalisering de overlijdenszorg kan verbeteren
-          </p>
-          
-          {/* Emergency Contact */}
-          <div className="flex justify-center">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="gap-2 text-destructive border-destructive hover:bg-destructive hover:text-destructive-foreground"
-              onClick={handleEmergencyContact}
-              data-testid="button-emergency-contact"
-            >
-              <Phone className="h-4 w-4" />
-              Dringend Hulp Nodig? Bel Direct
-            </Button>
+    <section className="relative py-28 lg:py-36 bg-gradient-to-b from-muted/20 via-background to-muted/30 overflow-hidden" id="registratie">
+      {/* Premium Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-8 w-72 h-72 bg-gradient-to-br from-primary/6 to-primary/2 rounded-full blur-3xl animate-pulse opacity-70"></div>
+        <div className="absolute bottom-20 right-12 w-56 h-56 bg-gradient-to-tl from-primary/4 to-primary/8 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/3 w-40 h-40 bg-gradient-to-r from-primary/3 to-primary/6 rounded-full blur-xl animate-pulse delay-500"></div>
+      </div>
+      
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Premium Header Section */}
+        <div className="text-center mb-20 lg:mb-28">
+          <div className="animate-in slide-in-from-bottom-4 duration-1000 ease-out">
+            <Badge variant="outline" className="mb-8 px-6 py-3 bg-gradient-to-r from-primary/12 to-primary/8 text-primary border-primary/30 text-sm font-semibold tracking-wide shadow-lg" data-testid="badge-registration-label">
+              Word Onderdeel van Ons Netwerk
+            </Badge>
+          </div>
+          <div className="animate-in slide-in-from-bottom-6 duration-1000 delay-200 ease-out">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent leading-tight tracking-tight" data-testid="text-registration-title">
+              Start Uw
+              <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mt-2">Digitale Reis</span>
+            </h2>
+          </div>
+          <div className="animate-in slide-in-from-bottom-8 duration-1000 delay-400 ease-out">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light mb-8" data-testid="text-registration-subtitle">
+              Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
+              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
+            </p>
+            
+            {/* Premium Emergency Contact */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-destructive/20 to-destructive/30 rounded-full blur-lg animate-pulse opacity-60"></div>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="relative gap-3 px-6 py-3 rounded-full bg-background/80 backdrop-blur border-destructive/50 text-destructive font-semibold shadow-lg transition-all duration-500"
+                  onClick={handleEmergencyContact}
+                  data-testid="button-emergency-contact"
+                >
+                  <Phone className="h-5 w-5" />
+                  Dringend Hulp Nodig? Bel Direct
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* Premium Form Container */}
+        <div className="max-w-5xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-600 ease-out">
           <Tabs defaultValue="burger" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 h-auto p-1">
-              <TabsTrigger value="burger" className="flex flex-col items-center gap-2 p-4" data-testid="tab-citizen">
-                <Users className="h-5 w-5" />
-                <div>
-                  <div className="font-medium">Burger</div>
-                  <div className="text-xs text-muted-foreground">Familie & Individu</div>
-                </div>
-              </TabsTrigger>
-              <TabsTrigger value="partner" className="flex flex-col items-center gap-2 p-4" data-testid="tab-partner">
-                <Building2 className="h-5 w-5" />
-                <div>
-                  <div className="font-medium">Partner</div>
-                  <div className="text-xs text-muted-foreground">Professioneel</div>
-                </div>
-              </TabsTrigger>
-            </TabsList>
+            {/* Elegant Tab Navigation */}
+            <div className="relative mb-12">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-lg"></div>
+              <TabsList className="relative grid w-full grid-cols-2 h-auto p-2 bg-gradient-to-r from-background via-muted/20 to-background border-0 shadow-xl rounded-2xl backdrop-blur-sm">
+                <TabsTrigger 
+                  value="burger" 
+                  className="group flex flex-col items-center gap-3 p-6 rounded-xl transition-all duration-500 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/15 data-[state=active]:to-primary/10 data-[state=active]:shadow-lg" 
+                  data-testid="tab-citizen"
+                >
+                  <div className="relative">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-md">
+                      <Users className="h-6 w-6" />
+                    </div>
+                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-bold text-lg">Burger</div>
+                    <div className="text-sm text-muted-foreground">Familie & Individu</div>
+                  </div>
+                </TabsTrigger>
+                <TabsTrigger 
+                  value="partner" 
+                  className="group flex flex-col items-center gap-3 p-6 rounded-xl transition-all duration-500 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/15 data-[state=active]:to-primary/10 data-[state=active]:shadow-lg" 
+                  data-testid="tab-partner"
+                >
+                  <div className="relative">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary shadow-md">
+                      <Building2 className="h-6 w-6" />
+                    </div>
+                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-bold text-lg">Partner</div>
+                    <div className="text-sm text-muted-foreground">Professioneel</div>
+                  </div>
+                </TabsTrigger>
+              </TabsList>
+            </div>
 
-            {/* Citizen Registration */}
+            {/* Premium Citizen Registration */}
             <TabsContent value="burger">
-              <Card data-testid="card-citizen-form">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-primary" />
-                    Registratie voor Burgers
-                    <Badge variant="outline" className="ml-auto">
+              <Card className="border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
+                <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 p-8">
+                  <CardTitle className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary shadow-lg">
+                        <Users className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground">Registratie voor Burgers</h3>
+                        <p className="text-sm text-muted-foreground mt-1">Begin uw digitale reis met JanazApp</p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/30 text-primary px-4 py-2 text-sm font-semibold">
                       Stap {citizenStep} van 2
                     </Badge>
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleCitizenSubmit} className="space-y-6">
+                <CardContent className="p-8">
+                  <form onSubmit={handleCitizenSubmit} className="space-y-8">
                     {citizenStep === 1 && (
-                      <div className="space-y-6">
-                        <div className="mb-4">
-                          <h4 className="font-medium text-foreground mb-2">Basisgegevens</h4>
-                          <p className="text-sm text-muted-foreground">Vul uw persoonlijke gegevens in</p>
+                      <div className="space-y-8">
+                        <div className="text-center pb-4">
+                          <h4 className="text-xl font-bold text-foreground mb-2">Basisgegevens</h4>
+                          <p className="text-muted-foreground">Vul uw persoonlijke gegevens in voor een persoonlijke service</p>
                         </div>
                         
                         <div className="grid md:grid-cols-2 gap-4">
@@ -194,7 +293,14 @@ export default function RegistrationForms() {
                         
                         <Button 
                           type="button" 
-                          onClick={() => setCitizenStep(2)}
+                          onClick={() => {
+                            // Basic validation before advancing
+                            if (!citizenForm.firstName.trim() || !citizenForm.lastName.trim() || !citizenForm.email.trim()) {
+                              alert('Vul alle verplichte velden in voordat u doorgaat.');
+                              return;
+                            }
+                            setCitizenStep(2);
+                          }}
                           className="w-full gap-2" 
                           data-testid="button-citizen-next"
                         >
@@ -255,8 +361,8 @@ export default function RegistrationForms() {
                         <div className="flex items-start space-x-2">
                           <Checkbox 
                             id="privacy" 
-                            checked={acceptPrivacy}
-                            onCheckedChange={(checked) => setAcceptPrivacy(checked === true)}
+                            checked={acceptPrivacyCitizen}
+                            onCheckedChange={(checked) => setAcceptPrivacyCitizen(checked === true)}
                             data-testid="checkbox-privacy"
                           />
                           <div className="space-y-1 leading-none">
@@ -289,7 +395,7 @@ export default function RegistrationForms() {
                           <Button 
                             type="submit" 
                             className="flex-1" 
-                            disabled={!acceptPrivacy || isSubmitting}
+                            disabled={!acceptPrivacyCitizen || isSubmitting}
                             data-testid="button-submit-citizen"
                           >
                             {isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
@@ -302,22 +408,29 @@ export default function RegistrationForms() {
               </Card>
             </TabsContent>
 
-            {/* Partner Registration */}
+            {/* Premium Partner Registration */}
             <TabsContent value="partner">
-              <Card data-testid="card-partner-form">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Building2 className="h-5 w-5 text-primary" />
-                    Registratie voor Partners
-                    <Badge variant="outline" className="ml-auto">
+              <Card className="border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
+                <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 p-8">
+                  <CardTitle className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary shadow-lg">
+                        <Building2 className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-foreground">Registratie voor Partners</h3>
+                        <p className="text-sm text-muted-foreground mt-1">Word onderdeel van ons professionele netwerk</p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/30 text-primary px-4 py-2 text-sm font-semibold">
                       Stap {partnerStep} van 2
                     </Badge>
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <form onSubmit={handlePartnerSubmit} className="space-y-6">
+                <CardContent className="p-8">
+                  <form onSubmit={handlePartnerSubmit} className="space-y-8">
                     {partnerStep === 1 && (
-                      <div className="space-y-6">
+                      <div className="space-y-8">
                         <div className="mb-4">
                           <h4 className="font-medium text-foreground mb-2">Bedrijfsgegevens</h4>
                           <p className="text-sm text-muted-foreground">Basisinformatie over uw organisatie</p>
@@ -380,7 +493,14 @@ export default function RegistrationForms() {
                         
                         <Button 
                           type="button" 
-                          onClick={() => setPartnerStep(2)}
+                          onClick={() => {
+                            // Basic validation before advancing
+                            if (!partnerForm.companyName.trim() || !partnerForm.contactPerson.trim() || !partnerForm.email.trim() || !partnerForm.partnerType) {
+                              alert('Vul alle verplichte velden in voordat u doorgaat.');
+                              return;
+                            }
+                            setPartnerStep(2);
+                          }}
                           className="w-full gap-2" 
                           data-testid="button-partner-next"
                         >
@@ -465,8 +585,8 @@ export default function RegistrationForms() {
                         <div className="flex items-start space-x-2">
                           <Checkbox 
                             id="partnerPrivacy" 
-                            checked={acceptPrivacy}
-                            onCheckedChange={(checked) => setAcceptPrivacy(checked === true)}
+                            checked={acceptPrivacyPartner}
+                            onCheckedChange={(checked) => setAcceptPrivacyPartner(checked === true)}
                             data-testid="checkbox-partner-privacy"
                           />
                           <div className="space-y-1 leading-none">
@@ -499,7 +619,7 @@ export default function RegistrationForms() {
                           <Button 
                             type="submit" 
                             className="flex-1" 
-                            disabled={!acceptPrivacy || isSubmitting}
+                            disabled={!acceptPrivacyPartner || isSubmitting}
                             data-testid="button-submit-partner"
                           >
                             {isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
