@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import logoUrl from "@assets/W - Logo H_1758297667612.png";
 
@@ -83,13 +84,13 @@ export default function Footer() {
               © 2025 JanazApp. Alle rechten voorbehouden.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
-              <a 
-                href="#privacy" 
+              <Link 
+                href="/privacy" 
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
                 data-testid="link-privacy-bottom"
               >
                 Privacy
-              </a>
+              </Link>
               <a 
                 href="#cookies" 
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 

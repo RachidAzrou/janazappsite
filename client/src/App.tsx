@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import LandingPage from "@/pages/LandingPage";
 import AboutPage from "@/pages/AboutPage";
+import PrivacyPage from "@/pages/PrivacyPage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -12,6 +13,7 @@ function Router() {
     <Switch>
       <Route path="/" component={LandingPage} />
       <Route path="/over-ons" component={AboutPage} />
+      <Route path="/privacy" component={PrivacyPage} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
