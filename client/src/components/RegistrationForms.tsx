@@ -216,20 +216,20 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section ref={sectionRef} className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
+    <section ref={sectionRef} className="relative py-8 sm:py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
       </div>
       
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-3 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className={`transition-all duration-1000 ease-out ${
             sectionVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
           }`}>
-            <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-registration-subtitle">
+            <p className="text-sm sm:text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0" data-testid="text-registration-subtitle">
               {/* TODO: Add translation for subtitle text */}
               Een digitale oplossing die
               <span className="text-foreground font-medium"> religieuze waarden respecteert</span> en
@@ -239,25 +239,25 @@ export default function RegistrationForms() {
         </div>
 
         {/* Form Container */}
-        <div ref={formRef} className={`max-w-5xl mx-auto transition-all duration-1000 ease-out ${
+        <div ref={formRef} className={`max-w-4xl mx-auto transition-all duration-1000 ease-out ${
           formVisible 
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-8'
         }`}>
           <Tabs defaultValue="burger" className="w-full">
             {/* Simple Tab Navigation */}
-            <div className="mb-8">
-              <TabsList className="grid w-full grid-cols-2 bg-muted rounded-lg p-1">
+            <div className="mb-6 sm:mb-8">
+              <TabsList className="grid w-full grid-cols-2 bg-muted rounded-lg p-1 h-12 sm:h-auto">
                 <TabsTrigger 
                   value="burger" 
-                  className="data-[state=active]:bg-background data-[state=active]:text-foreground"
+                  className="data-[state=active]:bg-background data-[state=active]:text-foreground text-sm sm:text-base py-2 sm:py-1 px-2 sm:px-3"
                   data-testid="tab-citizen"
                 >
                   {t('tabs.citizens')}
                 </TabsTrigger>
                 <TabsTrigger 
                   value="partner" 
-                  className="data-[state=active]:bg-background data-[state=active]:text-foreground"
+                  className="data-[state=active]:bg-background data-[state=active]:text-foreground text-sm sm:text-base py-2 sm:py-1 px-2 sm:px-3"
                   data-testid="tab-partner"
                 >
                   {t('tabs.partners')}
@@ -268,11 +268,11 @@ export default function RegistrationForms() {
             {/* Citizen Registration */}
             <TabsContent value="burger">
               <Card className="border border-border shadow-md bg-background/95 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
-                <CardContent className={`p-8 ${isRTL ? 'rtl-support' : ''}`}>
+                <CardContent className={`p-4 sm:p-6 lg:p-8 ${isRTL ? 'rtl-support' : ''}`}>
                   <Form {...citizenForm}>
                     <form onSubmit={citizenForm.handleSubmit(handleCitizenSubmit)} className="space-y-6">
-                      <div className="space-y-8">
-                        <div className="grid md:grid-cols-2 gap-4">
+                      <div className="space-y-6 sm:space-y-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                           <FormField
                             control={citizenForm.control}
                             name="firstName"
@@ -329,7 +329,7 @@ export default function RegistrationForms() {
                           )}
                         />
                         
-                        <div className="grid md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                           <FormField
                             control={citizenForm.control}
                             name="phone"
@@ -451,10 +451,10 @@ export default function RegistrationForms() {
             {/* Partner Registration */}
             <TabsContent value="partner">
               <Card className="border border-border shadow-md bg-background/95 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
-                <CardContent className={`p-8 ${isRTL ? 'rtl-support' : ''}`}>
+                <CardContent className={`p-4 sm:p-6 lg:p-8 ${isRTL ? 'rtl-support' : ''}`}>
                   <Form {...partnerForm}>
                     <form onSubmit={partnerForm.handleSubmit(handlePartnerSubmit)} className="space-y-6">
-                      <div className="space-y-8">
+                      <div className="space-y-6 sm:space-y-8">
                         <FormField
                           control={partnerForm.control}
                           name="companyName"
@@ -473,7 +473,7 @@ export default function RegistrationForms() {
                           )}
                         />
                         
-                        <div className="grid md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                           <FormField
                             control={partnerForm.control}
                             name="contactPerson"
@@ -536,7 +536,7 @@ export default function RegistrationForms() {
                           )}
                         />
                         
-                        <div className="grid md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                           <FormField
                             control={partnerForm.control}
                             name="phone"

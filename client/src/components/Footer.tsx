@@ -25,45 +25,45 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-black/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_50%)] pointer-events-none" />
       
-      <div className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 transition-all duration-1000 ease-out ${
+      <div className={`relative container mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 transition-all duration-1000 ease-out ${
         footerVisible 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-8'
       }`}>
         {/* Main Footer Content */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="group">
               <img 
                 src={logoUrl} 
                 alt="JanazApp" 
-                className="h-10 w-auto mb-6 transition-all duration-300 group-hover:scale-105" 
+                className="h-8 sm:h-10 w-auto mb-4 sm:mb-6 transition-all duration-300 group-hover:scale-105" 
                 data-testid="img-footer-logo" 
               />
             </div>
-            <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-start">
               <div>
-                <p className="text-primary-foreground/90 leading-relaxed text-base" data-testid="text-company-description">
+                <p className="text-primary-foreground/90 leading-relaxed text-sm sm:text-base" data-testid="text-company-description">
                   {t('footer.description')}
                 </p>
               </div>
-              <div className="space-y-3 md:col-start-3">
-                <div className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-                    <MapPin className="h-4 w-4 text-primary-foreground" />
+              <div className="space-y-3 md:col-start-3 mt-4 md:mt-0">
+                <div className="group flex items-center gap-3 text-xs sm:text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200 py-1">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+                    <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-primary-foreground" />
                   </div>
                   <span data-testid="text-address" className="font-medium">{t('footer.address')}</span>
                 </div>
-                <div className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-                    <Mail className="h-4 w-4 text-primary-foreground" />
+                <div className="group flex items-center gap-3 text-xs sm:text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200 py-1">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+                    <Mail className="h-3 w-3 sm:h-4 sm:w-4 text-primary-foreground" />
                   </div>
                   <span data-testid="text-email" className="font-medium">{t('footer.email')}</span>
                 </div>
-                <div className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-                    <Phone className="h-4 w-4 text-primary-foreground" />
+                <div className="group flex items-center gap-3 text-xs sm:text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200 py-1">
+                  <div className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+                    <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-primary-foreground" />
                   </div>
                   <span data-testid="text-phone" className="font-medium">{t('footer.phone')}</span>
                 </div>
@@ -75,31 +75,31 @@ export default function Footer() {
         </div>
 
         <div className="relative">
-          <Separator className="mb-8 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          <Separator className="mb-6 sm:mb-8 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           
           {/* Bottom Footer */}
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4">
-            <div className="text-sm text-primary-foreground/80 font-medium" data-testid="text-copyright">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 pt-3 sm:pt-4">
+            <div className="text-xs sm:text-sm text-primary-foreground/80 font-medium text-center md:text-left" data-testid="text-copyright">
               {t('footer.copyright')}
             </div>
-            <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 sm:gap-6 text-xs sm:text-sm">
               <Link 
                 href="/privacy" 
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px] py-1 px-2 rounded hover:bg-white/10" 
                 data-testid="link-privacy-bottom"
               >
                 {t('footer.privacy')}
               </Link>
               <Link 
                 href="/cookies" 
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px] py-1 px-2 rounded hover:bg-white/10" 
                 data-testid="link-cookies"
               >
                 {t('footer.cookies')}
               </Link>
               <Link 
                 href="/algemene-voorwaarden" 
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px] py-1 px-2 rounded hover:bg-white/10" 
                 data-testid="link-terms"
               >
                 {t('footer.terms')}

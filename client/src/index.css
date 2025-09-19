@@ -607,6 +607,73 @@
   }
 
   /* Islamic geometric pattern background */
+  /* Global mobile optimizations */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* iOS safe area support */
+  .sticky {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  /* Scroll margin for anchored sections to prevent header overlap */
+  #diensten, #registratie, #contact {
+    scroll-margin-top: 4rem; /* matches header height */
+  }
+  
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    /* Better mobile scrolling */
+    html {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Ensure header safe area on mobile */
+    header.sticky {
+      padding-top: env(safe-area-inset-top);
+    }
+    
+    /* Improved mobile touch targets - minimum 44px */
+    button, a, input, select, textarea, [role="button"], [role="link"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better mobile text rendering */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    
+    /* Remove default tap highlight on iOS */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Custom tap feedback */
+    button:active, [role="button"]:active, a:active {
+      transform: scale(0.98);
+      transition: transform 0.1s ease-in-out;
+    }
+    
+    /* Prevent horizontal scroll on mobile */
+    body {
+      overflow-x: hidden;
+    }
+    
+    /* Better mobile form elements - prevent iOS zoom */
+    input, select, textarea {
+      font-size: 16px !important; /* Prevents zoom on iOS */
+    }
+    
+    /* Ensure anchored sections account for mobile header */
+    #diensten, #registratie, #contact {
+      scroll-margin-top: 3.5rem; /* mobile header height */
+    }
+  }
+
   .islamic-pattern {
     background-image: 
       /* 8-pointed stars pattern */

@@ -21,11 +21,11 @@ export default function Header() {
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-14 sm:h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <img src={logoUrl} alt="JanazApp" className="h-8 w-auto cursor-pointer" data-testid="img-logo" />
+              <img src={logoUrl} alt="JanazApp" className="h-7 sm:h-8 w-auto cursor-pointer" data-testid="img-logo" />
             </Link>
           </div>
 
@@ -69,21 +69,21 @@ export default function Header() {
               }}
               data-testid="button-mobile-menu"
             >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t" data-testid="nav-mobile">
-            <div className="space-y-4">
-              <Link href="/over-ons" className="block text-foreground hover:text-primary transition-colors" data-testid="link-about-mobile">
+          <div className="md:hidden py-4 border-t bg-background/95 animate-in slide-in-from-top-2 duration-200" data-testid="nav-mobile">
+            <div className="space-y-1">
+              <Link href="/over-ons" className="block text-foreground hover:text-primary transition-colors py-3 px-2 rounded-md hover:bg-muted" data-testid="link-about-mobile">
                 {t('navigation.aboutUs')}
               </Link>
               <a 
                 href="/#diensten" 
-                className="block text-foreground hover:text-primary transition-colors" 
+                className="block text-foreground hover:text-primary transition-colors py-3 px-2 rounded-md hover:bg-muted" 
                 data-testid="link-services-mobile"
                 onClick={(e) => handleSectionClick(e, 'diensten')}
               >
@@ -91,13 +91,13 @@ export default function Header() {
               </a>
               <a 
                 href="/#registratie" 
-                className="block text-foreground hover:text-primary transition-colors" 
+                className="block text-foreground hover:text-primary transition-colors py-3 px-2 rounded-md hover:bg-muted" 
                 data-testid="link-register-mobile"
                 onClick={(e) => handleSectionClick(e, 'registratie')}
               >
                 {t('navigation.register')}
               </a>
-              <div className="mt-4 space-y-3">
+              <div className="mt-6 space-y-3 pt-4 border-t">
                 <LanguageSwitcher />
                 <Button variant="ghost" size="default" className="w-full font-semibold rounded-md bg-primary/15 text-primary hover:bg-primary/25 hover:scale-105 transition-all duration-300 px-4 py-2" data-testid="button-login-mobile">
                   {t('navigation.login')}

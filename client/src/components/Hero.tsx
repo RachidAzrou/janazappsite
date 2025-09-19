@@ -8,7 +8,7 @@ export default function Hero() {
   const { t } = useTranslation('landing');
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center">
+    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center py-8 sm:py-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -21,30 +21,30 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-hero-title">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6" data-testid="text-hero-title">
             {t('hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8" data-testid="text-hero-subtitle">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8" data-testid="text-hero-subtitle">
             {t('hero.subtitle')}
           </p>
-          <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto" data-testid="text-hero-description">
+          <p className="text-sm sm:text-lg text-white/80 mb-8 sm:mb-12 max-w-2xl mx-auto px-2 sm:px-0" data-testid="text-hero-description">
             {t('hero.description')}
           </p>
 
           {/* Registration Cards */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
             {/* Burgers Card */}
             <Card className="bg-white/10 backdrop-blur-md border-white/20 hover-elevate" data-testid="card-citizens">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 sm:p-6 text-center">
                 <div className="mb-4">
-                  <IoPeopleOutline className="h-12 w-12 text-white mx-auto" />
+                  <IoPeopleOutline className="h-10 w-10 sm:h-12 sm:w-12 text-white mx-auto" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3" data-testid="text-citizens-title">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3" data-testid="text-citizens-title">
                   {t('hero.citizensCard.title')}
                 </h3>
-                <p className="text-white/80 mb-4" data-testid="text-citizens-description">
+                <p className="text-sm sm:text-base text-white/80 mb-4" data-testid="text-citizens-description">
                   {t('hero.citizensCard.description')}
                 </p>
                 <Button 
@@ -60,14 +60,14 @@ export default function Hero() {
 
             {/* Partners Card */}
             <Card className="bg-white/10 backdrop-blur-md border-white/20 hover-elevate" data-testid="card-partners">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 sm:p-6 text-center">
                 <div className="mb-4">
-                  <IoBusinessOutline className="h-12 w-12 text-white mx-auto" />
+                  <IoBusinessOutline className="h-10 w-10 sm:h-12 sm:w-12 text-white mx-auto" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3" data-testid="text-partners-title">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3" data-testid="text-partners-title">
                   {t('hero.partnersCard.title')}
                 </h3>
-                <p className="text-white/80 mb-4" data-testid="text-partners-description">
+                <p className="text-sm sm:text-base text-white/80 mb-4" data-testid="text-partners-description">
                   {t('hero.partnersCard.description')}
                 </p>
                 <Button 
