@@ -76,35 +76,6 @@ export default function ProductPreview() {
           </div>
         </div>
 
-        {/* Call to Actions */}
-        <div className="text-center mt-20">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="gap-2"
-              onClick={handleDemoClick}
-              data-testid="button-request-demo"
-            >
-              <Monitor className="h-5 w-5" />
-              Vraag een Demo Aan
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="gap-2"
-              onClick={handleVideoClick}
-              data-testid="button-watch-video"
-            >
-              <PlayCircle className="h-5 w-5" />
-              Bekijk Product Video
-            </Button>
-          </div>
-          
-          <p className="text-sm text-muted-foreground mt-4" data-testid="text-demo-note">
-            Geen verplichtingen • 15 minuten persoonlijke demo
-          </p>
-        </div>
       </div>
     </section>
   );
