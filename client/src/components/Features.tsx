@@ -83,70 +83,108 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Interactive Platform Showcase */}
-        <div className="mb-28">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Mockup */}
-            <div className="lg:sticky lg:top-8">
-              <Card className="overflow-hidden shadow-lg bg-gradient-to-br from-background via-muted/20 to-background">
-                <img 
-                  src={mockupImage} 
-                  alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
-                  className="w-full h-auto"
-                />
-              </Card>
+        {/* Immersive Platform Experience */}
+        <div className="relative">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            {/* Central Mockup with Floating Features */}
+            <div className="lg:col-span-7 relative">
+              {/* Main Mockup Container */}
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-700"></div>
+                <Card className="relative overflow-hidden shadow-2xl bg-gradient-to-br from-background via-muted/30 to-background transform transition-all duration-700 group-hover:scale-[1.02]">
+                  <img 
+                    src={mockupImage} 
+                    alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
+                    className="w-full h-auto"
+                  />
+                </Card>
+              </div>
+              
+              {/* Floating Feature Highlights */}
+              <div className="absolute -right-4 top-16 lg:block hidden animate-in slide-in-from-right-8 duration-1000 delay-1000 opacity-0" style={{ animationFillMode: 'both' }}>
+                <div className="bg-background/95 backdrop-blur-md rounded-2xl shadow-xl border border-primary/20 p-4 max-w-56">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
+                      <MdOutlineSpeed className="h-4 w-4" />
+                    </div>
+                    <span className="font-semibold text-sm text-foreground">24-48 uur sneller</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">Gestroomlijnde digitale processen</p>
+                </div>
+              </div>
+              
+              <div className="absolute -left-8 bottom-20 lg:block hidden animate-in slide-in-from-left-8 duration-1000 delay-1200 opacity-0" style={{ animationFillMode: 'both' }}>
+                <div className="bg-background/95 backdrop-blur-md rounded-2xl shadow-xl border border-primary/20 p-4 max-w-52">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
+                      <AiOutlineSafetyCertificate className="h-4 w-4" />
+                    </div>
+                    <span className="font-semibold text-sm text-foreground">GDPR Compliant</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">Uw gegevens zijn veilig</p>
+                </div>
+              </div>
             </div>
             
-            {/* Animated Features */}
-            <div className="space-y-6">
-              <div className="mb-8">
-                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  Ontdek de voordelen
+            {/* Interactive Features Column */}
+            <div className="lg:col-span-5 space-y-4">
+              <div className="mb-8 animate-in slide-in-from-bottom-8 duration-800 delay-300 opacity-0" style={{ animationFillMode: 'both' }}>
+                <h3 className="text-3xl font-bold text-foreground mb-4">
+                  Waarom JanazApp?
                 </h3>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  JanazApp transformeert complexe procedures tot eenvoudige, begeleide stappen.
+                <p className="text-muted-foreground leading-relaxed">
+                  Ontdek hoe onze moderne oplossing islamitische begrafenisprocessen revolutioneert.
                 </p>
               </div>
               
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div
-                    key={index}
-                    className="group animate-in slide-in-from-right-8 duration-700 opacity-0 hover-elevate"
-                    style={{ 
-                      animationDelay: `${index * 150 + 400}ms`,
-                      animationFillMode: 'both'
-                    }}
-                    data-testid={`feature-item-${index}`}
-                  >
-                    <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-background via-muted/10 to-background border border-muted/20 group-hover:border-primary/20 transition-all duration-300 group-hover:shadow-lg">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/15 to-primary/8 text-primary flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                          <IconComponent className="h-6 w-6" />
-                        </div>
-                      </div>
-                      
-                      <div className="flex-1 min-w-0">
-                        <h4 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                          {feature.title}
-                        </h4>
-                        <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                          {feature.description}
-                        </p>
-                        <div className="flex items-center gap-2">
-                          <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
-                            <CheckCircle className="w-2.5 h-2.5 text-primary" />
+              <div className="space-y-3">
+                {features.map((feature, index) => {
+                  const IconComponent = feature.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="group cursor-pointer animate-in slide-in-from-right-8 duration-600 opacity-0"
+                      style={{ 
+                        animationDelay: `${index * 100 + 600}ms`,
+                        animationFillMode: 'both'
+                      }}
+                      data-testid={`feature-item-${index}`}
+                    >
+                      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-background/80 via-muted/30 to-background/80 backdrop-blur-sm border border-muted/40 p-5 transition-all duration-500 group-hover:border-primary/30 group-hover:shadow-xl group-hover:-translate-y-1">
+                        {/* Animated background on hover */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        <div className="relative flex items-start gap-4">
+                          <div className="flex-shrink-0">
+                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                              <IconComponent className="h-5 w-5" />
+                            </div>
                           </div>
-                          <span className="text-xs font-medium text-primary">
-                            {feature.benefit}
-                          </span>
+                          
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                              {feature.title}
+                            </h4>
+                            <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+                              {feature.description}
+                            </p>
+                            <div className="text-xs font-medium text-primary opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                              ✓ {feature.benefit}
+                            </div>
+                          </div>
+                          
+                          {/* Subtle arrow indicator */}
+                          <div className="flex-shrink-0 opacity-0 group-hover:opacity-60 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                            <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
+                              <div className="w-2 h-2 border-r-2 border-t-2 border-primary rotate-45"></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
