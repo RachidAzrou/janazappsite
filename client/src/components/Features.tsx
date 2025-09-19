@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Globe, CheckCircle, Monitor, Smartphone, Clock } from "lucide-react";
+import { Plane, CheckCircle, Monitor, Smartphone, Clock } from "lucide-react";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { MdOutlineSpeed, MdDevices, MdOutlineCircleNotifications } from "react-icons/md";
@@ -39,10 +39,10 @@ const features = [
     benefit: "Respectvolle behandeling"
   },
   {
-    icon: Globe,
-    title: "Internationale Support",
+    icon: Plane,
+    title: "Repatriering",
     kicker: "Repatriëring mogelijk",
-    description: "Ondersteuning voor consulaire procedures wereldwijd.",
+    description: "Ondersteuning voor consulaire procedures en repatriëring.",
     benefit: "Naar land van herkomst"
   },
   {
