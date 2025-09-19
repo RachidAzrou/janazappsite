@@ -155,7 +155,7 @@ export default function RegistrationForms() {
               : 'opacity-0 translate-y-8'
           }`}>
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-registration-subtitle">
-              Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
+              Ervaar zelf hoe digitalisering de overlijdenszorg kan verbeteren en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
           </div>
