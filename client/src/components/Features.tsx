@@ -102,11 +102,15 @@ export default function Features() {
                 return (
                   <div
                     key={index}
-                    className="flex items-start gap-4 group hover-elevate"
+                    className="flex items-start gap-4 group hover-elevate animate-in slide-in-from-right-8 duration-600 opacity-0"
+                    style={{ 
+                      animationDelay: `${index * 150}ms`,
+                      animationFillMode: 'both'
+                    }}
                     data-testid={`feature-item-${index}`}
                   >
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-md bg-muted text-muted-foreground flex items-center justify-center group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">
+                      <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center group-hover:bg-primary/25 group-hover:scale-105 transition-all duration-300">
                         <IconComponent className="h-6 w-6" />
                       </div>
                     </div>
