@@ -33,12 +33,6 @@ export default function ProductPreview() {
               Live Platform Experience
             </Badge>
           </div>
-          <div className="animate-in slide-in-from-bottom-6 duration-1000 delay-200 ease-out">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent leading-tight tracking-tight" data-testid="text-preview-title">
-              Ontdek de 
-              <span className="block bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent mt-2">JanazApp Interface</span>
-            </h2>
-          </div>
           <div className="animate-in slide-in-from-bottom-8 duration-1000 delay-400 ease-out">
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light mb-8" data-testid="text-preview-subtitle">
               Een intuïtieve digitale omgeving waar
