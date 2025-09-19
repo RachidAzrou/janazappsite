@@ -98,13 +98,6 @@ export default function Footer() {
               >
                 Cookies
               </Link>
-              <a 
-                href="#toegankelijkheid" 
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-all duration-200 font-medium hover:translate-y-[-1px]" 
-                data-testid="link-accessibility"
-              >
-                Toegankelijkheid
-              </a>
             </div>
           </div>
         </div>
