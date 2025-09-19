@@ -229,7 +229,7 @@ export default function RegistrationForms() {
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
           }`}>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0" data-testid="text-registration-subtitle">
+            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0" data-testid="text-registration-subtitle">
               Registreer jezelf voor toegang tot onze diensten en persoonlijke ondersteuning
             </p>
           </div>
