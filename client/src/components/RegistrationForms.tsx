@@ -10,85 +10,111 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { AlertCircle, Users, Building2, Phone, CheckCircle2, ArrowRight } from "lucide-react";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+
+// Zod validation schemas
+const citizenFormSchema = z.object({
+  firstName: z.string().min(1, "Voornaam is verplicht").min(2, "Voornaam moet minstens 2 karakters bevatten"),
+  lastName: z.string().min(1, "Achternaam is verplicht").min(2, "Achternaam moet minstens 2 karakters bevatten"),
+  email: z.string().min(1, "E-mailadres is verplicht").email("Vul een geldig e-mailadres in"),
+  phone: z.string().optional().refine((val) => !val || /^[\+]?[0-9\-\s\(\)]{10,}$/.test(val), {
+    message: "Vul een geldig telefoonnummer in (bijv. +31 6 12345678)"
+  }),
+  city: z.string().optional(),
+  preferredLanguage: z.string().min(1, "Selecteer een gewenste taal"),
+  acceptPrivacy: z.boolean().refine(val => val === true, {
+    message: "U moet akkoord gaan met de privacyverklaring om door te gaan"
+  })
+});
+
+const partnerFormSchema = z.object({
+  companyName: z.string().min(1, "Bedrijfsnaam is verplicht").min(2, "Bedrijfsnaam moet minstens 2 karakters bevatten"),
+  contactPerson: z.string().min(1, "Contactpersoon is verplicht").min(2, "Contactpersoon moet minstens 2 karakters bevatten"),
+  email: z.string().min(1, "E-mailadres is verplicht").email("Vul een geldig e-mailadres in"),
+  phone: z.string().optional().refine((val) => !val || /^[\+]?[0-9\-\s\(\)]{10,}$/.test(val), {
+    message: "Vul een geldig telefoonnummer in (bijv. +31 20 1234567)"
+  }),
+  partnerType: z.string().min(1, "Selecteer het type partner"),
+  city: z.string().optional(),
+  description: z.string().optional(),
+  acceptPrivacy: z.boolean().refine(val => val === true, {
+    message: "U moet akkoord gaan met de privacyverklaring om door te gaan"
+  })
+});
+
+type CitizenFormData = z.infer<typeof citizenFormSchema>;
+type PartnerFormData = z.infer<typeof partnerFormSchema>;
 
 export default function RegistrationForms() {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [acceptPrivacyCitizen, setAcceptPrivacyCitizen] = useState(false);
-  const [acceptPrivacyPartner, setAcceptPrivacyPartner] = useState(false);
   const [isRTL, setIsRTL] = useState(false);
+  const [successType, setSuccessType] = useState<'citizen' | 'partner'>('citizen');
 
-  const [citizenForm, setCitizenForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    city: '',
-    preferredLanguage: 'nederlands'
+  // Form hook instances
+  const citizenForm = useForm<CitizenFormData>({
+    resolver: zodResolver(citizenFormSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      city: '',
+      preferredLanguage: 'nederlands',
+      acceptPrivacy: false
+    }
   });
 
-  const [partnerForm, setPartnerForm] = useState({
-    companyName: '',
-    contactPerson: '',
-    email: '',
-    phone: '',
-    partnerType: '',
-    city: '',
-    description: ''
+  const partnerForm = useForm<PartnerFormData>({
+    resolver: zodResolver(partnerFormSchema),
+    defaultValues: {
+      companyName: '',
+      contactPerson: '',
+      email: '',
+      phone: '',
+      partnerType: '',
+      city: '',
+      description: '',
+      acceptPrivacy: false
+    }
   });
 
   // Update RTL state when language changes
   const handleCitizenLanguageChange = (value: string) => {
-    setCitizenForm(prev => ({...prev, preferredLanguage: value}));
+    citizenForm.setValue('preferredLanguage', value);
     setIsRTL(value === 'arabisch');
   };
 
-  const handleCitizenSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate required fields
-    if (!citizenForm.firstName.trim() || !citizenForm.lastName.trim() || !citizenForm.email.trim()) {
-      alert('Vul alle verplichte velden in.');
-      return;
+  const handleCitizenSubmit = async (data: CitizenFormData) => {
+    try {
+      // TODO: Remove mock functionality - replace with actual API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSuccessType('citizen');
+      setShowSuccess(true);
+      citizenForm.reset();
+    } catch (error) {
+      // Handle submission error
+      console.error('Submission error:', error);
     }
-    
-    // Check privacy consent
-    if (!acceptPrivacyCitizen) {
-      alert('Accepteer de privacyverklaring om door te gaan.');
-      return;
-    }
-    
-    setIsSubmitting(true);
-    // TODO: Remove mock functionality - replace with actual API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setShowSuccess(true);
   };
 
-  const handlePartnerSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validate required fields
-    if (!partnerForm.companyName.trim() || !partnerForm.contactPerson.trim() || !partnerForm.email.trim() || !partnerForm.partnerType) {
-      alert('Vul alle verplichte velden in inclusief het type partner.');
-      return;
+  const handlePartnerSubmit = async (data: PartnerFormData) => {
+    try {
+      // TODO: Remove mock functionality - replace with actual API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSuccessType('partner');
+      setShowSuccess(true);
+      partnerForm.reset();
+    } catch (error) {
+      // Handle submission error
+      console.error('Submission error:', error);
     }
-    
-    // Check privacy consent
-    if (!acceptPrivacyPartner) {
-      alert('Accepteer de privacyverklaring om door te gaan.');
-      return;
-    }
-    
-    setIsSubmitting(true);
-    // TODO: Remove mock functionality - replace with actual API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setShowSuccess(true);
   };
 
   const handleEmergencyContact = () => {
@@ -97,38 +123,96 @@ export default function RegistrationForms() {
   };
 
   if (showSuccess) {
+    const successContent = successType === 'citizen' ? {
+      title: "Registratie Voltooid",
+      subtitle: "Bedankt voor uw registratie bij JanazApp",
+      message: "Uw aanvraag is in goede orde ontvangen. Wij begrijpen dat dit een moeilijke tijd voor u kan zijn en waarderen uw vertrouwen in onze dienstverlening.",
+      nextSteps: [
+        "Binnen 24 uur neemt één van onze medewerkers persoonlijk contact met u op",
+        "Wij begeleiden u door het activatieproces en leggen het platform uit",
+        "Onze ondersteuning is beschikbaar wanneer u ons nodig heeft"
+      ]
+    } : {
+      title: "Partnerschap Aanvraag Ontvangen",
+      subtitle: "Dank voor uw interesse in samenwerking",
+      message: "Uw aanvraag voor een partnerschap met JanazApp is ontvangen. Wij waarderen uw toewijding aan het ondersteunen van families in moeilijke tijden.",
+      nextSteps: [
+        "Binnen 48 uur beoordelen wij uw aanvraag zorgvuldig",
+        "Een van onze partnership managers neemt contact met u op",
+        "Wij bespreken samen de mogelijkheden voor samenwerking"
+      ]
+    };
+
     return (
       <section className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
-        {/* Clean Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
         </div>
         
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-lg mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <Card className="border border-border shadow-sm bg-background overflow-hidden">
-              <CardContent className="p-6">
+              <CardContent className="p-8">
                 {/* Success Icon */}
                 <div className="mb-8">
-                  <div className="p-6 w-fit mx-auto">
-                    <CheckCircle2 className="h-16 w-16 text-primary" data-testid="icon-success" />
+                  <div className="p-4 w-fit mx-auto">
+                    <CheckCircle2 className="h-12 w-12 text-primary" data-testid="icon-success" />
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-6 text-foreground" data-testid="text-success-title">
-                  Registratie Succesvol!
-                </h3>
-                <p className="text-base text-muted-foreground mb-6 leading-relaxed" data-testid="text-success-message">
-                  Welkom bij JanazApp! We nemen binnen 24 uur contact met u op om uw account te activeren en u te begeleiden door het platform.
-                </p>
-                
-                <Button 
-                  variant="default"
-                  size="lg"
-                  onClick={() => setShowSuccess(false)} 
-                  data-testid="button-success-ok"
-                >
-                  Terug naar Registratie
-                </Button>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2 text-foreground" data-testid="text-success-title">
+                      {successContent.title}
+                    </h3>
+                    <p className="text-lg text-muted-foreground" data-testid="text-success-subtitle">
+                      {successContent.subtitle}
+                    </p>
+                  </div>
+                  
+                  <div className="bg-muted/30 rounded-lg p-6">
+                    <p className="text-base text-foreground leading-relaxed mb-4" data-testid="text-success-message">
+                      {successContent.message}
+                    </p>
+                    
+                    <div className="text-left space-y-3">
+                      <h4 className="font-medium text-foreground mb-3">Volgende stappen:</h4>
+                      <ul className="space-y-2" role="list" aria-label="Volgende stappen">
+                        {successContent.nextSteps.map((step, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <div className="w-6 h-6 rounded-full bg-primary/15 text-primary flex items-center justify-center text-sm font-medium mt-0.5 flex-shrink-0">
+                              {index + 1}
+                            </div>
+                            <span className="text-sm text-muted-foreground leading-relaxed">{step}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Heeft u vragen of heeft u directe ondersteuning nodig?
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                      <Button 
+                        variant="outline"
+                        size="default"
+                        onClick={() => setShowSuccess(false)} 
+                        data-testid="button-success-back"
+                      >
+                        Terug naar Registratie
+                      </Button>
+                      <Button 
+                        variant="default"
+                        size="default"
+                        onClick={handleEmergencyContact}
+                        data-testid="button-contact-support"
+                      >
+                        Contact Opnemen
+                      </Button>
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -199,129 +283,183 @@ export default function RegistrationForms() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className={`p-6 ${isRTL ? 'rtl-support' : ''}`}>
-                  <form onSubmit={handleCitizenSubmit} className="space-y-6">
-                    <div className="space-y-6">
-                      <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
-                        <h4 className="text-xl font-semibold text-foreground mb-2">Persoonlijke Gegevens</h4>
-                        <p className="text-base text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
-                      </div>
-                      
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="firstName">Voornaam *</Label>
-                          <Input
-                            id="firstName"
-                            placeholder="bijv. Ahmed"
-                            value={citizenForm.firstName}
-                            onChange={(e) => setCitizenForm(prev => ({...prev, firstName: e.target.value}))}
-                            required
-                            data-testid="input-firstname"
+                  <Form {...citizenForm}>
+                    <form onSubmit={citizenForm.handleSubmit(handleCitizenSubmit)} className="space-y-6">
+                      <div className="space-y-6">
+                        <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
+                          <h4 className="text-xl font-semibold text-foreground mb-2">Persoonlijke Gegevens</h4>
+                          <p className="text-base text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
+                        </div>
+                        
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <FormField
+                            control={citizenForm.control}
+                            name="firstName"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Voornaam *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="bijv. Ahmed"
+                                    data-testid="input-firstname"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={citizenForm.control}
+                            name="lastName"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Achternaam *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="bijv. Van der Berg"
+                                    data-testid="input-lastname"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
                           />
                         </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="lastName">Achternaam *</Label>
-                          <Input
-                            id="lastName"
-                            placeholder="bijv. Van der Berg"
-                            value={citizenForm.lastName}
-                            onChange={(e) => setCitizenForm(prev => ({...prev, lastName: e.target.value}))}
-                            required
-                            data-testid="input-lastname"
-                          />
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="email">E-mailadres *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="naam@voorbeeld.nl"
-                          value={citizenForm.email}
-                          onChange={(e) => setCitizenForm(prev => ({...prev, email: e.target.value}))}
-                          required
-                          data-testid="input-email"
+                        
+                        <FormField
+                          control={citizenForm.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>E-mailadres *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="email"
+                                  placeholder="naam@voorbeeld.nl"
+                                  data-testid="input-email"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                              <p className="text-xs text-muted-foreground">We gebruiken dit voor belangrijke updates</p>
+                            </FormItem>
+                          )}
                         />
-                        <p className="text-xs text-muted-foreground">We gebruiken dit voor belangrijke updates</p>
-                      </div>
-                      
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="phone">Telefoonnummer</Label>
-                          <Input
-                            id="phone"
-                            type="tel"
-                            placeholder="+31 6 12345678"
-                            value={citizenForm.phone}
-                            onChange={(e) => setCitizenForm(prev => ({...prev, phone: e.target.value}))}
-                            data-testid="input-phone"
+                        
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <FormField
+                            control={citizenForm.control}
+                            name="phone"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Telefoonnummer</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="tel"
+                                    placeholder="+31 6 12345678"
+                                    data-testid="input-phone"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={citizenForm.control}
+                            name="city"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Woonplaats</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="bijv. Amsterdam"
+                                    data-testid="input-city"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
                           />
                         </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="city">Woonplaats</Label>
-                          <Input
-                            id="city"
-                            placeholder="bijv. Amsterdam"
-                            value={citizenForm.city}
-                            onChange={(e) => setCitizenForm(prev => ({...prev, city: e.target.value}))}
-                            data-testid="input-city"
-                          />
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="language">Gewenste Taal voor Communicatie</Label>
-                        <Select value={citizenForm.preferredLanguage} onValueChange={handleCitizenLanguageChange}>
-                          <SelectTrigger data-testid="select-language" className={isRTL ? 'select-trigger' : ''}>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="nederlands">Nederlands</SelectItem>
-                            <SelectItem value="engels">English</SelectItem>
-                            <SelectItem value="duits">Deutsch (Duits)</SelectItem>
-                            <SelectItem value="arabisch">العربية (Arabisch)</SelectItem>
-                            <SelectItem value="turks">Türkçe (Turks)</SelectItem>
-                            <SelectItem value="frans">Français (Frans)</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      
-                      <Separator />
-                      
-                      <div className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
-                        <Checkbox 
-                          id="privacy" 
-                          checked={acceptPrivacyCitizen}
-                          onCheckedChange={(checked) => setAcceptPrivacyCitizen(checked === true)}
-                          data-testid="checkbox-privacy"
+                        
+                        <FormField
+                          control={citizenForm.control}
+                          name="preferredLanguage"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Gewenste Taal voor Communicatie</FormLabel>
+                              <Select value={field.value} onValueChange={(value) => {
+                                field.onChange(value);
+                                setIsRTL(value === 'arabisch');
+                              }}>
+                                <FormControl>
+                                  <SelectTrigger data-testid="select-language" className={isRTL ? 'select-trigger' : ''}>
+                                    <SelectValue />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  <SelectItem value="nederlands">Nederlands</SelectItem>
+                                  <SelectItem value="engels">English</SelectItem>
+                                  <SelectItem value="duits">Deutsch (Duits)</SelectItem>
+                                  <SelectItem value="arabisch">العربية (Arabisch)</SelectItem>
+                                  <SelectItem value="turks">Türkçe (Turks)</SelectItem>
+                                  <SelectItem value="frans">Français (Frans)</SelectItem>
+                                </SelectContent>
+                              </Select>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
-                        <div className="space-y-1 leading-none">
-                          <Label htmlFor="privacy" className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
-                            Ik ga akkoord met de{" "}
-                            <a href="/privacy" className="text-primary hover:underline">
-                              privacyverklaring
-                            </a>{" "}
-                            en{" "}
-                            <a href="/algemene-voorwaarden" className="text-primary hover:underline">
-                              algemene voorwaarden
-                            </a>
-                          </Label>
-                          <p className="text-xs text-muted-foreground">
-                            Uw gegevens worden veilig opgeslagen volgens GDPR-richtlijnen
-                          </p>
-                        </div>
+                        
+                        <Separator />
+                        
+                        <FormField
+                          control={citizenForm.control}
+                          name="acceptPrivacy"
+                          render={({ field }) => (
+                            <FormItem className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
+                              <FormControl>
+                                <Checkbox 
+                                  checked={field.value}
+                                  onCheckedChange={field.onChange}
+                                  data-testid="checkbox-privacy"
+                                />
+                              </FormControl>
+                              <div className="space-y-1 leading-none">
+                                <FormLabel className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
+                                  Ik ga akkoord met de{" "}
+                                  <a href="/privacy" className="text-primary hover:underline">
+                                    privacyverklaring
+                                  </a>{" "}
+                                  en{" "}
+                                  <a href="/algemene-voorwaarden" className="text-primary hover:underline">
+                                    algemene voorwaarden
+                                  </a>
+                                </FormLabel>
+                                <p className="text-xs text-muted-foreground">
+                                  Uw gegevens worden veilig opgeslagen volgens GDPR-richtlijnen
+                                </p>
+                                <FormMessage />
+                              </div>
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <Button 
+                          type="submit" 
+                          className="w-full" 
+                          disabled={citizenForm.formState.isSubmitting}
+                          data-testid="button-submit-citizen"
+                        >
+                          {citizenForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
+                        </Button>
                       </div>
-                      
-                      <Button 
-                        type="submit" 
-                        className="w-full" 
-                        disabled={!acceptPrivacyCitizen || isSubmitting}
-                        data-testid="button-submit-citizen"
-                      >
-                        {isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
-                      </Button>
-                    </div>
-                  </form>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -341,137 +479,195 @@ export default function RegistrationForms() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className={`p-6 ${isRTL ? 'rtl-support' : ''}`}>
-                  <form onSubmit={handlePartnerSubmit} className="space-y-6">
-                    <div className="space-y-6">
-                      <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
-                        <h4 className="text-xl font-semibold text-foreground mb-2">Bedrijfsinformatie</h4>
-                        <p className="text-base text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="companyName">Bedrijfsnaam *</Label>
-                        <Input
-                          id="companyName"
-                          placeholder="bijv. Uitvaart Van der Berg B.V."
-                          value={partnerForm.companyName}
-                          onChange={(e) => setPartnerForm(prev => ({...prev, companyName: e.target.value}))}
-                          required
-                          data-testid="input-company-name"
+                  <Form {...partnerForm}>
+                    <form onSubmit={partnerForm.handleSubmit(handlePartnerSubmit)} className="space-y-6">
+                      <div className="space-y-6">
+                        <div className={`pb-4 ${isRTL ? 'text-right' : 'text-center'}`}>
+                          <h4 className="text-xl font-semibold text-foreground mb-2">Bedrijfsinformatie</h4>
+                          <p className="text-base text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
+                        </div>
+                        
+                        <FormField
+                          control={partnerForm.control}
+                          name="companyName"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Bedrijfsnaam *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  placeholder="bijv. Uitvaart Van der Berg B.V."
+                                  data-testid="input-company-name"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
-                      </div>
-                      
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="contactPerson">Contactpersoon *</Label>
-                          <Input
-                            id="contactPerson"
-                            placeholder="Voor- en achternaam"
-                            value={partnerForm.contactPerson}
-                            onChange={(e) => setPartnerForm(prev => ({...prev, contactPerson: e.target.value}))}
-                            required
-                            data-testid="input-contact-person"
+                        
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <FormField
+                            control={partnerForm.control}
+                            name="contactPerson"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Contactpersoon *</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="Voor- en achternaam"
+                                    data-testid="input-contact-person"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={partnerForm.control}
+                            name="partnerType"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Type Partner *</FormLabel>
+                                <Select value={field.value} onValueChange={field.onChange}>
+                                  <FormControl>
+                                    <SelectTrigger data-testid="select-partner-type" className={isRTL ? 'select-trigger' : ''}>
+                                      <SelectValue placeholder="Selecteer type" />
+                                    </SelectTrigger>
+                                  </FormControl>
+                                  <SelectContent>
+                                    <SelectItem value="uitvaartondernemer">Uitvaartondernemer - Volledige uitvaartdiensten</SelectItem>
+                                    <SelectItem value="moskee">Moskee - Religieuze begeleiding</SelectItem>
+                                    <SelectItem value="verzekeraar">Verzekeraar - Uitvaartverzekeringen</SelectItem>
+                                    <SelectItem value="gemeente">Gemeente - Burgerlijke stand</SelectItem>
+                                    <SelectItem value="wasplaats">Wasplaats - Rituele wassing</SelectItem>
+                                    <SelectItem value="andere">Andere - Gerelateerde diensten</SelectItem>
+                                  </SelectContent>
+                                </Select>
+                                <FormMessage />
+                              </FormItem>
+                            )}
                           />
                         </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="partnerType">Type Partner *</Label>
-                          <Select value={partnerForm.partnerType} onValueChange={(value) => setPartnerForm(prev => ({...prev, partnerType: value}))} required>
-                            <SelectTrigger data-testid="select-partner-type" className={isRTL ? 'select-trigger' : ''}>
-                              <SelectValue placeholder="Selecteer type" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="uitvaartondernemer">Uitvaartondernemer - Volledige uitvaartdiensten</SelectItem>
-                              <SelectItem value="moskee">Moskee - Religieuze begeleiding</SelectItem>
-                              <SelectItem value="verzekeraar">Verzekeraar - Uitvaartverzekeringen</SelectItem>
-                              <SelectItem value="gemeente">Gemeente - Burgerlijke stand</SelectItem>
-                              <SelectItem value="wasplaats">Wasplaats - Rituele wassing</SelectItem>
-                              <SelectItem value="andere">Andere - Gerelateerde diensten</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="partnerEmail">E-mailadres *</Label>
-                        <Input
-                          id="partnerEmail"
-                          type="email"
-                          placeholder="contact@uwbedrijf.nl"
-                          value={partnerForm.email}
-                          onChange={(e) => setPartnerForm(prev => ({...prev, email: e.target.value}))}
-                          required
-                          data-testid="input-partner-email"
+                        
+                        <FormField
+                          control={partnerForm.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>E-mailadres *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="email"
+                                  placeholder="contact@uwbedrijf.nl"
+                                  data-testid="input-partner-email"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
-                      </div>
-                      
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="partnerPhone">Telefoonnummer</Label>
-                          <Input
-                            id="partnerPhone"
-                            type="tel"
-                            placeholder="+31 20 1234567"
-                            value={partnerForm.phone}
-                            onChange={(e) => setPartnerForm(prev => ({...prev, phone: e.target.value}))}
-                            data-testid="input-partner-phone"
+                        
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <FormField
+                            control={partnerForm.control}
+                            name="phone"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Telefoonnummer</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    type="tel"
+                                    placeholder="+31 20 1234567"
+                                    data-testid="input-partner-phone"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                          <FormField
+                            control={partnerForm.control}
+                            name="city"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Vestigingsplaats</FormLabel>
+                                <FormControl>
+                                  <Input
+                                    placeholder="bijv. Rotterdam"
+                                    data-testid="input-partner-city"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
                           />
                         </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="partnerCity">Vestigingsplaats</Label>
-                          <Input
-                            id="partnerCity"
-                            placeholder="bijv. Rotterdam"
-                            value={partnerForm.city}
-                            onChange={(e) => setPartnerForm(prev => ({...prev, city: e.target.value}))}
-                            data-testid="input-partner-city"
-                          />
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="description">Beschrijving van Diensten</Label>
-                        <Textarea
-                          id="description"
-                          value={partnerForm.description}
-                          onChange={(e) => setPartnerForm(prev => ({...prev, description: e.target.value}))}
-                          placeholder="Beschrijf welke diensten u aanbiedt en hoe u families kunt ondersteunen..."
-                          data-testid="textarea-description"
-                          className="min-h-[100px]"
+                        
+                        <FormField
+                          control={partnerForm.control}
+                          name="description"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Beschrijving van Diensten</FormLabel>
+                              <FormControl>
+                                <Textarea
+                                  placeholder="Beschrijf welke diensten u aanbiedt en hoe u families kunt ondersteunen..."
+                                  data-testid="textarea-description"
+                                  className="min-h-[100px]"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
-                      </div>
-                      
-                      <Separator />
-                      
-                      <div className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
-                        <Checkbox 
-                          id="partnerPrivacy" 
-                          checked={acceptPrivacyPartner}
-                          onCheckedChange={(checked) => setAcceptPrivacyPartner(checked === true)}
-                          data-testid="checkbox-partner-privacy"
+                        
+                        <Separator />
+                        
+                        <FormField
+                          control={partnerForm.control}
+                          name="acceptPrivacy"
+                          render={({ field }) => (
+                            <FormItem className={`flex items-start ${isRTL ? 'space-x-reverse space-x-2 checkbox-wrapper' : 'space-x-2'}`}>
+                              <FormControl>
+                                <Checkbox 
+                                  checked={field.value}
+                                  onCheckedChange={field.onChange}
+                                  data-testid="checkbox-partner-privacy"
+                                />
+                              </FormControl>
+                              <div className="space-y-1 leading-none">
+                                <FormLabel className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
+                                  Ik ga akkoord met de{" "}
+                                  <a href="/privacy" className="text-primary hover:underline">
+                                    privacyverklaring
+                                  </a>{" "}
+                                  en{" "}
+                                  <a href="/algemene-voorwaarden" className="text-primary hover:underline">
+                                    algemene voorwaarden
+                                  </a>
+                                </FormLabel>
+                                <FormMessage />
+                              </div>
+                            </FormItem>
+                          )}
                         />
-                        <div className="space-y-1 leading-none">
-                          <Label htmlFor="partnerPrivacy" className={`text-sm ${isRTL ? 'checkbox-label' : ''}`}>
-                            Ik ga akkoord met de{" "}
-                            <a href="/privacy" className="text-primary hover:underline">
-                              privacyverklaring
-                            </a>{" "}
-                            en{" "}
-                            <a href="/algemene-voorwaarden" className="text-primary hover:underline">
-                              algemene voorwaarden
-                            </a>
-                          </Label>
-                        </div>
+                        
+                        <Button 
+                          type="submit" 
+                          className="w-full" 
+                          disabled={partnerForm.formState.isSubmitting}
+                          data-testid="button-submit-partner"
+                        >
+                          {partnerForm.formState.isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
+                        </Button>
                       </div>
-                      
-                      <Button 
-                        type="submit" 
-                        className="w-full" 
-                        disabled={!acceptPrivacyPartner || isSubmitting}
-                        data-testid="button-submit-partner"
-                      >
-                        {isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
-                      </Button>
-                    </div>
-                  </form>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </TabsContent>
