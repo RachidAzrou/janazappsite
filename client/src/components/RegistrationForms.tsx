@@ -151,23 +151,6 @@ export default function RegistrationForms() {
               Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
-            
-            {/* Premium Emergency Contact */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-destructive/20 to-destructive/30 rounded-full blur-lg animate-pulse opacity-60"></div>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="relative gap-3 px-6 py-3 rounded-full bg-background/80 backdrop-blur border-destructive/50 text-destructive font-semibold shadow-lg transition-all duration-500"
-                  onClick={handleEmergencyContact}
-                  data-testid="button-emergency-contact"
-                >
-                  <Phone className="h-5 w-5" />
-                  Dringend Hulp Nodig? Bel Direct
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
 
