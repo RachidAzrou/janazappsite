@@ -138,7 +138,7 @@ export default function RegistrationForms() {
     };
 
     return (
-      <section className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
+      <section className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern serene-surface serene-gradient serene-pattern" id="registratie">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
         </div>
         
@@ -216,7 +216,7 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section ref={sectionRef} className="relative py-8 sm:py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
+    <section ref={sectionRef} className="relative py-8 sm:py-12 lg:py-16 bg-background overflow-hidden islamic-pattern serene-surface serene-gradient serene-pattern" id="registratie">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
       </div>
