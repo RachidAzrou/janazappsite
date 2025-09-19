@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { PlayCircle, Monitor, Smartphone, Sparkles } from "lucide-react";
-import mockupImage from "@assets/image_1758276905826.png";
+import mockupImage from "@assets/Ontwerp zonder titel (1)_1758293581272.png";
 
 export default function ProductPreview() {
   const handleDemoClick = () => {
@@ -44,19 +44,12 @@ export default function ProductPreview() {
           <div className="absolute -inset-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl blur-2xl opacity-60"></div>
           
           <Card className="relative overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm" data-testid="card-mockup">
-            <CardContent className="p-8 lg:p-16">
-              <div className="relative">
-                {/* Premium Image Container */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-muted/20 to-muted/40">
-                  <img 
-                    src={mockupImage} 
-                    alt="JanazApp Dashboard Preview - Desktop en Mobiel Interface" 
-                    className="relative w-full h-auto rounded-2xl"
-                    data-testid="img-dashboard-mockup"
-                  />
-                </div>
-              </div>
-            </CardContent>
+            <img 
+              src={mockupImage} 
+              alt="JanazApp Dashboard Preview - Desktop en Mobiel Interface" 
+              className="w-full h-auto"
+              data-testid="img-dashboard-mockup"
+            />
           </Card>
           
           {/* Premium Floating Feature Cards */}
