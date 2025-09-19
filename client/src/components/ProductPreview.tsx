@@ -39,11 +39,8 @@ export default function ProductPreview() {
         </div>
 
         {/* Premium Mockup Display */}
-        <div className="relative max-w-7xl mx-auto mb-20 animate-in slide-in-from-bottom-8 duration-1000 delay-600 ease-out">
-          {/* Sophisticated Background Frame */}
-          <div className="absolute -inset-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-3xl blur-2xl opacity-60"></div>
-          
-          <Card className="relative overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm" data-testid="card-mockup">
+        <div className="max-w-5xl mx-auto">
+          <Card className="overflow-hidden shadow-lg bg-gradient-to-br from-background via-muted/20 to-background" data-testid="card-mockup">
             <img 
               src={mockupImage} 
               alt="JanazApp Dashboard Preview - Desktop en Mobiel Interface" 
@@ -52,50 +49,32 @@ export default function ProductPreview() {
             />
           </Card>
           
-          {/* Premium Floating Feature Cards */}
-          <div className="absolute -bottom-8 left-6 right-6 lg:left-12 lg:right-12 z-30">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-              <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-dashboard">
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
-                      <Monitor className="h-6 w-6" />
-                    </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
-                  </div>
-                  <p className="text-sm font-bold text-foreground mb-1">Compleet Dashboard</p>
-                  <p className="text-xs text-muted-foreground">Alle procedures overzichtelijk</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-mobile">
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
-                      <Smartphone className="h-6 w-6" />
-                    </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
-                  </div>
-                  <p className="text-sm font-bold text-foreground mb-1">Mobiel Optimaal</p>
-                  <p className="text-xs text-muted-foreground">24/7 toegankelijk platform</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-progress">
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
-                      <div className="relative h-6 w-6">
-                        <div className="absolute inset-0 rounded-full border-2 border-primary/40"></div>
-                        <div className="absolute inset-0 rounded-full border-2 border-primary border-r-transparent animate-spin" style={{ animationDuration: '3s' }}></div>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
-                  </div>
-                  <p className="text-sm font-bold text-foreground mb-1">Live Tracking</p>
-                  <p className="text-xs text-muted-foreground">Real-time status updates</p>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div className="text-center" data-testid="card-feature-dashboard">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary mx-auto mb-3 flex items-center justify-center">
+                <Monitor className="h-6 w-6" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-1">Compleet Dashboard</h4>
+              <p className="text-sm text-muted-foreground">Alle procedures overzichtelijk</p>
+            </div>
+            
+            <div className="text-center" data-testid="card-feature-mobile">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary mx-auto mb-3 flex items-center justify-center">
+                <Smartphone className="h-6 w-6" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-1">Mobiel Optimaal</h4>
+              <p className="text-sm text-muted-foreground">24/7 toegankelijk platform</p>
+            </div>
+            
+            <div className="text-center" data-testid="card-feature-progress">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary mx-auto mb-3 flex items-center justify-center">
+                <div className="relative h-6 w-6">
+                  <div className="absolute inset-0 rounded-full border-2 border-primary/40"></div>
+                  <div className="absolute inset-0 rounded-full border-2 border-primary border-r-transparent animate-spin" style={{ animationDuration: '3s' }}></div>
+                </div>
+              </div>
+              <h4 className="font-semibold text-foreground mb-1">Live Tracking</h4>
+              <p className="text-sm text-muted-foreground">Real-time status updates</p>
             </div>
           </div>
         </div>
