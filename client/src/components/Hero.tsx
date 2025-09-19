@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import heroImage from "@assets/generated_images/Islamic_architecture_hero_background_5d13e65a.png";
+import logoImage from "@assets/W - Logo H_1758310064796.png";
 
 export default function Hero() {
   const { t } = useTranslation('landing');
@@ -23,9 +24,13 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-3 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6" data-testid="text-hero-title">
-            {t('hero.title')}
-          </h1>
+          <div className="mb-4 sm:mb-6" data-testid="logo-hero">
+            <img 
+              src={logoImage} 
+              alt="JanazApp Logo" 
+              className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto mx-auto drop-shadow-lg"
+            />
+          </div>
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8" data-testid="text-hero-subtitle">
             {t('hero.subtitle')}
           </p>
