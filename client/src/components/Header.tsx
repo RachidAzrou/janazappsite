@@ -23,10 +23,10 @@ export default function Header() {
             <Link href="/over-ons" className="text-foreground hover:text-primary transition-colors" data-testid="link-about">
               Over Ons
             </Link>
-            <a href="#diensten" className="text-foreground hover:text-primary transition-colors" data-testid="link-services">
+            <a href="/#diensten" className="text-foreground hover:text-primary transition-colors" data-testid="link-services">
               Diensten
             </a>
-            <a href="#registratie" className="text-foreground hover:text-primary transition-colors" data-testid="link-register">
+            <a href="/#registratie" className="text-foreground hover:text-primary transition-colors" data-testid="link-register">
               Registreren
             </a>
             <Button variant="default" size="default" className="font-semibold" data-testid="button-login">
@@ -57,10 +57,10 @@ export default function Header() {
               <Link href="/over-ons" className="block text-foreground hover:text-primary transition-colors" data-testid="link-about-mobile">
                 Over Ons
               </Link>
-              <a href="#diensten" className="block text-foreground hover:text-primary transition-colors" data-testid="link-services-mobile">
+              <a href="/#diensten" className="block text-foreground hover:text-primary transition-colors" data-testid="link-services-mobile">
                 Diensten
               </a>
-              <a href="#registratie" className="block text-foreground hover:text-primary transition-colors" data-testid="link-register-mobile">
+              <a href="/#registratie" className="block text-foreground hover:text-primary transition-colors" data-testid="link-register-mobile">
                 Registreren
               </a>
               <Button variant="default" size="default" className="w-full font-semibold" data-testid="button-login-mobile">
