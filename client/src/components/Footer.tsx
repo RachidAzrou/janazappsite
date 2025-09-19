@@ -41,12 +41,14 @@ export default function Footer() {
                 data-testid="img-footer-logo" 
               />
             </div>
-            <div className="space-y-4">
-              <p className="text-primary-foreground/90 leading-relaxed max-w-lg text-base" data-testid="text-company-description">
-                JanazApp digitaliseert de overlijdenszorg voor de islamitische gemeenschap in West-Europa. 
-                Ons platform verbindt families, uitvaartondernemers, moskeeën en overheidsinstellingen.
-              </p>
-              <div className="pt-2 space-y-3">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <p className="text-primary-foreground/90 leading-relaxed text-base" data-testid="text-company-description">
+                  JanazApp digitaliseert de overlijdenszorg voor de islamitische gemeenschap in West-Europa. 
+                  Ons platform verbindt families, uitvaartondernemers, moskeeën en overheidsinstellingen.
+                </p>
+              </div>
+              <div className="space-y-3">
                 <div className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
                     <MapPin className="h-4 w-4 text-primary-foreground" />
