@@ -78,18 +78,6 @@ export default function Features() {
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
-        <div className="text-center mb-12 lg:mb-16">
-          <div className={`transition-all duration-1000 ease-out ${
-            sectionVisible 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'
-          }`}>
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
-              Een digitale oplossing die religieuze waarden respecteert en
-              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
-            </p>
-          </div>
-        </div>
 
         {/* Platform Preview with Features */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
