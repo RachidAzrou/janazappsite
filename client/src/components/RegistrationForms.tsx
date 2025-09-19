@@ -12,8 +12,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { AlertCircle, Users, Building2, Phone, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function RegistrationForms() {
-  const [citizenStep, setCitizenStep] = useState(1);
-  const [partnerStep, setPartnerStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [acceptPrivacyCitizen, setAcceptPrivacyCitizen] = useState(false);
@@ -42,16 +40,15 @@ export default function RegistrationForms() {
   const handleCitizenSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate step 1 fields
+    // Validate required fields
     if (!citizenForm.firstName.trim() || !citizenForm.lastName.trim() || !citizenForm.email.trim()) {
-      setCitizenStep(1);
       alert('Vul alle verplichte velden in.');
       return;
     }
     
-    // Only allow submission on step 2 with consent
-    if (citizenStep !== 2 || !acceptPrivacyCitizen) {
-      alert('Voltooi alle stappen en accepteer de privacyverklaring.');
+    // Check privacy consent
+    if (!acceptPrivacyCitizen) {
+      alert('Accepteer de privacyverklaring om door te gaan.');
       return;
     }
     
@@ -65,16 +62,15 @@ export default function RegistrationForms() {
   const handlePartnerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate step 1 fields
+    // Validate required fields
     if (!partnerForm.companyName.trim() || !partnerForm.contactPerson.trim() || !partnerForm.email.trim() || !partnerForm.partnerType) {
-      setPartnerStep(1);
       alert('Vul alle verplichte velden in inclusief het type partner.');
       return;
     }
     
-    // Only allow submission on step 2 with consent
-    if (partnerStep !== 2 || !acceptPrivacyPartner) {
-      alert('Voltooi alle stappen en accepteer de privacyverklaring.');
+    // Check privacy consent
+    if (!acceptPrivacyPartner) {
+      alert('Accepteer de privacyverklaring om door te gaan.');
       return;
     }
     
@@ -195,171 +191,129 @@ export default function RegistrationForms() {
                         <p className="text-sm text-muted-foreground mt-1">Begin uw digitale reis met JanazApp</p>
                       </div>
                     </div>
-                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/25 text-primary px-4 py-1.5 text-sm font-medium">
-                      Stap {citizenStep} van 2
-                    </Badge>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
                   <form onSubmit={handleCitizenSubmit} className="space-y-8">
-                    {citizenStep === 1 && (
-                      <div className="space-y-8">
-                        <div className="text-center pb-4">
-                          <h4 className="text-xl font-bold text-foreground mb-2">Basisgegevens</h4>
-                          <p className="text-muted-foreground">Vul uw persoonlijke gegevens in voor een persoonlijke service</p>
-                        </div>
-                        
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="firstName">Voornaam *</Label>
-                            <Input
-                              id="firstName"
-                              placeholder="bijv. Ahmed"
-                              value={citizenForm.firstName}
-                              onChange={(e) => setCitizenForm(prev => ({...prev, firstName: e.target.value}))}
-                              required
-                              data-testid="input-firstname"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="lastName">Achternaam *</Label>
-                            <Input
-                              id="lastName"
-                              placeholder="bijv. Van der Berg"
-                              value={citizenForm.lastName}
-                              onChange={(e) => setCitizenForm(prev => ({...prev, lastName: e.target.value}))}
-                              required
-                              data-testid="input-lastname"
-                            />
-                          </div>
-                        </div>
-                        
+                    <div className="space-y-8">
+                      <div className="text-center pb-4">
+                        <h4 className="text-xl font-bold text-foreground mb-2">Persoonlijke Gegevens</h4>
+                        <p className="text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="email">E-mailadres *</Label>
+                          <Label htmlFor="firstName">Voornaam *</Label>
                           <Input
-                            id="email"
-                            type="email"
-                            placeholder="naam@voorbeeld.nl"
-                            value={citizenForm.email}
-                            onChange={(e) => setCitizenForm(prev => ({...prev, email: e.target.value}))}
+                            id="firstName"
+                            placeholder="bijv. Ahmed"
+                            value={citizenForm.firstName}
+                            onChange={(e) => setCitizenForm(prev => ({...prev, firstName: e.target.value}))}
                             required
-                            data-testid="input-email"
+                            data-testid="input-firstname"
                           />
-                          <p className="text-xs text-muted-foreground">We gebruiken dit voor belangrijke updates</p>
                         </div>
-                        
-                        <Button 
-                          type="button" 
-                          onClick={() => {
-                            // Basic validation before advancing
-                            if (!citizenForm.firstName.trim() || !citizenForm.lastName.trim() || !citizenForm.email.trim()) {
-                              alert('Vul alle verplichte velden in voordat u doorgaat.');
-                              return;
-                            }
-                            setCitizenStep(2);
-                          }}
-                          className="w-full gap-2" 
-                          data-testid="button-citizen-next"
-                        >
-                          Volgende Stap
-                          <ArrowRight className="h-4 w-4" />
-                        </Button>
-                      </div>
-                    )}
-                    
-                    {citizenStep === 2 && (
-                      <div className="space-y-6">
-                        <div className="mb-4">
-                          <h4 className="font-medium text-foreground mb-2">Aanvullende Informatie</h4>
-                          <p className="text-sm text-muted-foreground">Optionele gegevens voor betere service</p>
-                        </div>
-                        
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="phone">Telefoonnummer</Label>
-                            <Input
-                              id="phone"
-                              type="tel"
-                              placeholder="+31 6 12345678"
-                              value={citizenForm.phone}
-                              onChange={(e) => setCitizenForm(prev => ({...prev, phone: e.target.value}))}
-                              data-testid="input-phone"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="city">Woonplaats</Label>
-                            <Input
-                              id="city"
-                              placeholder="bijv. Amsterdam"
-                              value={citizenForm.city}
-                              onChange={(e) => setCitizenForm(prev => ({...prev, city: e.target.value}))}
-                              data-testid="input-city"
-                            />
-                          </div>
-                        </div>
-                        
                         <div className="space-y-2">
-                          <Label htmlFor="language">Gewenste Taal voor Communicatie</Label>
-                          <Select value={citizenForm.preferredLanguage} onValueChange={(value) => setCitizenForm(prev => ({...prev, preferredLanguage: value}))}>
-                            <SelectTrigger data-testid="select-language">
-                              <SelectValue />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="nederlands">Nederlands</SelectItem>
-                              <SelectItem value="arabisch">العربية (Arabisch)</SelectItem>
-                              <SelectItem value="turks">Türkçe (Turks)</SelectItem>
-                              <SelectItem value="frans">Français (Frans)</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-                        
-                        <Separator />
-                        
-                        <div className="flex items-start space-x-2">
-                          <Checkbox 
-                            id="privacy" 
-                            checked={acceptPrivacyCitizen}
-                            onCheckedChange={(checked) => setAcceptPrivacyCitizen(checked === true)}
-                            data-testid="checkbox-privacy"
+                          <Label htmlFor="lastName">Achternaam *</Label>
+                          <Input
+                            id="lastName"
+                            placeholder="bijv. Van der Berg"
+                            value={citizenForm.lastName}
+                            onChange={(e) => setCitizenForm(prev => ({...prev, lastName: e.target.value}))}
+                            required
+                            data-testid="input-lastname"
                           />
-                          <div className="space-y-1 leading-none">
-                            <Label htmlFor="privacy" className="text-sm">
-                              Ik ga akkoord met de{" "}
-                              <a href="#privacy" className="text-primary hover:underline">
-                                privacyverklaring
-                              </a>{" "}
-                              en{" "}
-                              <a href="#terms" className="text-primary hover:underline">
-                                algemene voorwaarden
-                              </a>
-                            </Label>
-                            <p className="text-xs text-muted-foreground">
-                              Uw gegevens worden veilig opgeslagen volgens GDPR-richtlijnen
-                            </p>
-                          </div>
-                        </div>
-                        
-                        <div className="flex gap-3">
-                          <Button 
-                            type="button" 
-                            variant="outline"
-                            onClick={() => setCitizenStep(1)}
-                            className="flex-1" 
-                            data-testid="button-citizen-back"
-                          >
-                            Vorige
-                          </Button>
-                          <Button 
-                            type="submit" 
-                            className="flex-1" 
-                            disabled={!acceptPrivacyCitizen || isSubmitting}
-                            data-testid="button-submit-citizen"
-                          >
-                            {isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
-                          </Button>
                         </div>
                       </div>
-                    )}
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="email">E-mailadres *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="naam@voorbeeld.nl"
+                          value={citizenForm.email}
+                          onChange={(e) => setCitizenForm(prev => ({...prev, email: e.target.value}))}
+                          required
+                          data-testid="input-email"
+                        />
+                        <p className="text-xs text-muted-foreground">We gebruiken dit voor belangrijke updates</p>
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Telefoonnummer</Label>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            placeholder="+31 6 12345678"
+                            value={citizenForm.phone}
+                            onChange={(e) => setCitizenForm(prev => ({...prev, phone: e.target.value}))}
+                            data-testid="input-phone"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="city">Woonplaats</Label>
+                          <Input
+                            id="city"
+                            placeholder="bijv. Amsterdam"
+                            value={citizenForm.city}
+                            onChange={(e) => setCitizenForm(prev => ({...prev, city: e.target.value}))}
+                            data-testid="input-city"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="language">Gewenste Taal voor Communicatie</Label>
+                        <Select value={citizenForm.preferredLanguage} onValueChange={(value) => setCitizenForm(prev => ({...prev, preferredLanguage: value}))}>
+                          <SelectTrigger data-testid="select-language">
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="nederlands">Nederlands</SelectItem>
+                            <SelectItem value="arabisch">العربية (Arabisch)</SelectItem>
+                            <SelectItem value="turks">Türkçe (Turks)</SelectItem>
+                            <SelectItem value="frans">Français (Frans)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      
+                      <Separator />
+                      
+                      <div className="flex items-start space-x-2">
+                        <Checkbox 
+                          id="privacy" 
+                          checked={acceptPrivacyCitizen}
+                          onCheckedChange={(checked) => setAcceptPrivacyCitizen(checked === true)}
+                          data-testid="checkbox-privacy"
+                        />
+                        <div className="space-y-1 leading-none">
+                          <Label htmlFor="privacy" className="text-sm">
+                            Ik ga akkoord met de{" "}
+                            <a href="#privacy" className="text-primary hover:underline">
+                              privacyverklaring
+                            </a>{" "}
+                            en{" "}
+                            <a href="#terms" className="text-primary hover:underline">
+                              algemene voorwaarden
+                            </a>
+                          </Label>
+                          <p className="text-xs text-muted-foreground">
+                            Uw gegevens worden veilig opgeslagen volgens GDPR-richtlijnen
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <Button 
+                        type="submit" 
+                        className="w-full" 
+                        disabled={!acceptPrivacyCitizen || isSubmitting}
+                        data-testid="button-submit-citizen"
+                      >
+                        {isSubmitting ? "Bezig met Registreren..." : "Registreer als Burger"}
+                      </Button>
+                    </div>
                   </form>
                 </CardContent>
               </Card>
@@ -380,211 +334,169 @@ export default function RegistrationForms() {
                         <p className="text-sm text-muted-foreground mt-1">Word onderdeel van ons professionele netwerk</p>
                       </div>
                     </div>
-                    <Badge variant="outline" className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/25 text-primary px-4 py-1.5 text-sm font-medium">
-                      Stap {partnerStep} van 2
-                    </Badge>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
                   <form onSubmit={handlePartnerSubmit} className="space-y-8">
-                    {partnerStep === 1 && (
-                      <div className="space-y-8">
-                        <div className="mb-4">
-                          <h4 className="font-medium text-foreground mb-2">Bedrijfsgegevens</h4>
-                          <p className="text-sm text-muted-foreground">Basisinformatie over uw organisatie</p>
-                        </div>
-                        
-                        <div className="space-y-2">
-                          <Label htmlFor="companyName">Bedrijfsnaam *</Label>
-                          <Input
-                            id="companyName"
-                            placeholder="bijv. Uitvaart Van der Berg B.V."
-                            value={partnerForm.companyName}
-                            onChange={(e) => setPartnerForm(prev => ({...prev, companyName: e.target.value}))}
-                            required
-                            data-testid="input-company-name"
-                          />
-                        </div>
-                        
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="contactPerson">Contactpersoon *</Label>
-                            <Input
-                              id="contactPerson"
-                              placeholder="Voor- en achternaam"
-                              value={partnerForm.contactPerson}
-                              onChange={(e) => setPartnerForm(prev => ({...prev, contactPerson: e.target.value}))}
-                              required
-                              data-testid="input-contact-person"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="partnerType">Type Partner *</Label>
-                            <Select value={partnerForm.partnerType} onValueChange={(value) => setPartnerForm(prev => ({...prev, partnerType: value}))} required>
-                              <SelectTrigger data-testid="select-partner-type">
-                                <SelectValue placeholder="Selecteer type" />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectItem value="uitvaartondernemer">Uitvaartondernemer - Volledige uitvaartdiensten</SelectItem>
-                                <SelectItem value="moskee">Moskee - Religieuze begeleiding</SelectItem>
-                                <SelectItem value="verzekeraar">Verzekeraar - Uitvaartverzekeringen</SelectItem>
-                                <SelectItem value="gemeente">Gemeente - Burgerlijke stand</SelectItem>
-                                <SelectItem value="wasplaats">Wasplaats - Rituele wassing</SelectItem>
-                                <SelectItem value="andere">Andere - Gerelateerde diensten</SelectItem>
-                              </SelectContent>
-                            </Select>
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-2">
-                          <Label htmlFor="partnerEmail">E-mailadres *</Label>
-                          <Input
-                            id="partnerEmail"
-                            type="email"
-                            placeholder="contact@uwbedrijf.nl"
-                            value={partnerForm.email}
-                            onChange={(e) => setPartnerForm(prev => ({...prev, email: e.target.value}))}
-                            required
-                            data-testid="input-partner-email"
-                          />
-                        </div>
-                        
-                        <Button 
-                          type="button" 
-                          onClick={() => {
-                            // Basic validation before advancing
-                            if (!partnerForm.companyName.trim() || !partnerForm.contactPerson.trim() || !partnerForm.email.trim() || !partnerForm.partnerType) {
-                              alert('Vul alle verplichte velden in voordat u doorgaat.');
-                              return;
-                            }
-                            setPartnerStep(2);
-                          }}
-                          className="w-full gap-2" 
-                          data-testid="button-partner-next"
-                        >
-                          Volgende Stap
-                          <ArrowRight className="h-4 w-4" />
-                        </Button>
+                    <div className="space-y-8">
+                      <div className="text-center pb-4">
+                        <h4 className="text-xl font-bold text-foreground mb-2">Bedrijfsinformatie</h4>
+                        <p className="text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
                       </div>
-                    )}
-                    
-                    {partnerStep === 2 && (
-                      <div className="space-y-6">
-                        <div className="mb-4">
-                          <h4 className="font-medium text-foreground mb-2">Aanvullende Informatie</h4>
-                          <p className="text-sm text-muted-foreground">Details over uw dienstverlening</p>
-                        </div>
-                        
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div className="space-y-2">
-                            <Label htmlFor="partnerPhone">Telefoonnummer</Label>
-                            <Input
-                              id="partnerPhone"
-                              type="tel"
-                              placeholder="+31 20 1234567"
-                              value={partnerForm.phone}
-                              onChange={(e) => setPartnerForm(prev => ({...prev, phone: e.target.value}))}
-                              data-testid="input-partner-phone"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <Label htmlFor="partnerCity">Vestigingsplaats</Label>
-                            <Input
-                              id="partnerCity"
-                              placeholder="bijv. Rotterdam"
-                              value={partnerForm.city}
-                              onChange={(e) => setPartnerForm(prev => ({...prev, city: e.target.value}))}
-                              data-testid="input-partner-city"
-                            />
-                          </div>
-                        </div>
-                        
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="companyName">Bedrijfsnaam *</Label>
+                        <Input
+                          id="companyName"
+                          placeholder="bijv. Uitvaart Van der Berg B.V."
+                          value={partnerForm.companyName}
+                          onChange={(e) => setPartnerForm(prev => ({...prev, companyName: e.target.value}))}
+                          required
+                          data-testid="input-company-name"
+                        />
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="experience">Ervaring met Islamitische Uitvaarten</Label>
-                          <Select value={partnerForm.experience} onValueChange={(value) => setPartnerForm(prev => ({...prev, experience: value}))}>
-                            <SelectTrigger data-testid="select-experience">
-                              <SelectValue placeholder="Selecteer ervaring" />
+                          <Label htmlFor="contactPerson">Contactpersoon *</Label>
+                          <Input
+                            id="contactPerson"
+                            placeholder="Voor- en achternaam"
+                            value={partnerForm.contactPerson}
+                            onChange={(e) => setPartnerForm(prev => ({...prev, contactPerson: e.target.value}))}
+                            required
+                            data-testid="input-contact-person"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="partnerType">Type Partner *</Label>
+                          <Select value={partnerForm.partnerType} onValueChange={(value) => setPartnerForm(prev => ({...prev, partnerType: value}))} required>
+                            <SelectTrigger data-testid="select-partner-type">
+                              <SelectValue placeholder="Selecteer type" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="nieuw">Nieuw - Geen ervaring</SelectItem>
-                              <SelectItem value="beperkt">Beperkt - Enkele uitvaarten</SelectItem>
-                              <SelectItem value="ervaren">Ervaren - Meerdere jaren</SelectItem>
-                              <SelectItem value="specialist">Specialist - Islamitische focus</SelectItem>
+                              <SelectItem value="uitvaartondernemer">Uitvaartondernemer - Volledige uitvaartdiensten</SelectItem>
+                              <SelectItem value="moskee">Moskee - Religieuze begeleiding</SelectItem>
+                              <SelectItem value="verzekeraar">Verzekeraar - Uitvaartverzekeringen</SelectItem>
+                              <SelectItem value="gemeente">Gemeente - Burgerlijke stand</SelectItem>
+                              <SelectItem value="wasplaats">Wasplaats - Rituele wassing</SelectItem>
+                              <SelectItem value="andere">Andere - Gerelateerde diensten</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
-                        
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="partnerEmail">E-mailadres *</Label>
+                        <Input
+                          id="partnerEmail"
+                          type="email"
+                          placeholder="contact@uwbedrijf.nl"
+                          value={partnerForm.email}
+                          onChange={(e) => setPartnerForm(prev => ({...prev, email: e.target.value}))}
+                          required
+                          data-testid="input-partner-email"
+                        />
+                      </div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="description">Beschrijving van Diensten</Label>
-                          <Textarea
-                            id="description"
-                            value={partnerForm.description}
-                            onChange={(e) => setPartnerForm(prev => ({...prev, description: e.target.value}))}
-                            placeholder="Beschrijf welke diensten u aanbiedt en hoe u families kunt ondersteunen..."
-                            data-testid="textarea-description"
-                            className="min-h-[100px]"
+                          <Label htmlFor="partnerPhone">Telefoonnummer</Label>
+                          <Input
+                            id="partnerPhone"
+                            type="tel"
+                            placeholder="+31 20 1234567"
+                            value={partnerForm.phone}
+                            onChange={(e) => setPartnerForm(prev => ({...prev, phone: e.target.value}))}
+                            data-testid="input-partner-phone"
                           />
                         </div>
-                        
-                        <div className="bg-muted/50 p-4 rounded-lg">
-                          <div className="flex items-start gap-2">
-                            <AlertCircle className="h-4 w-4 text-primary mt-0.5" />
-                            <div className="text-sm">
-                              <p className="font-medium text-foreground mb-1">Verificatie Vereist</p>
-                              <p className="text-muted-foreground">
-                                Na registratie verifiëren we uw bedrijfsgegevens voordat uw account wordt geactiveerd.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <Separator />
-                        
-                        <div className="flex items-start space-x-2">
-                          <Checkbox 
-                            id="partnerPrivacy" 
-                            checked={acceptPrivacyPartner}
-                            onCheckedChange={(checked) => setAcceptPrivacyPartner(checked === true)}
-                            data-testid="checkbox-partner-privacy"
+                        <div className="space-y-2">
+                          <Label htmlFor="partnerCity">Vestigingsplaats</Label>
+                          <Input
+                            id="partnerCity"
+                            placeholder="bijv. Rotterdam"
+                            value={partnerForm.city}
+                            onChange={(e) => setPartnerForm(prev => ({...prev, city: e.target.value}))}
+                            data-testid="input-partner-city"
                           />
-                          <div className="space-y-1 leading-none">
-                            <Label htmlFor="partnerPrivacy" className="text-sm">
-                              Ik ga akkoord met de{" "}
-                              <a href="#privacy" className="text-primary hover:underline">
-                                privacyverklaring
-                              </a>,{" "}
-                              <a href="#terms" className="text-primary hover:underline">
-                                algemene voorwaarden
-                              </a>{" "}
-                              en{" "}
-                              <a href="#partner-terms" className="text-primary hover:underline">
-                                partnerovereenkomst
-                              </a>
-                            </Label>
-                          </div>
-                        </div>
-                        
-                        <div className="flex gap-3">
-                          <Button 
-                            type="button" 
-                            variant="outline"
-                            onClick={() => setPartnerStep(1)}
-                            className="flex-1" 
-                            data-testid="button-partner-back"
-                          >
-                            Vorige
-                          </Button>
-                          <Button 
-                            type="submit" 
-                            className="flex-1" 
-                            disabled={!acceptPrivacyPartner || isSubmitting}
-                            data-testid="button-submit-partner"
-                          >
-                            {isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
-                          </Button>
                         </div>
                       </div>
-                    )}
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="experience">Ervaring met Islamitische Uitvaarten</Label>
+                        <Select value={partnerForm.experience} onValueChange={(value) => setPartnerForm(prev => ({...prev, experience: value}))}>
+                          <SelectTrigger data-testid="select-experience">
+                            <SelectValue placeholder="Selecteer ervaring" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="nieuw">Nieuw - Geen ervaring</SelectItem>
+                            <SelectItem value="beperkt">Beperkt - Enkele uitvaarten</SelectItem>
+                            <SelectItem value="ervaren">Ervaren - Meerdere jaren</SelectItem>
+                            <SelectItem value="specialist">Specialist - Islamitische focus</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="description">Beschrijving van Diensten</Label>
+                        <Textarea
+                          id="description"
+                          value={partnerForm.description}
+                          onChange={(e) => setPartnerForm(prev => ({...prev, description: e.target.value}))}
+                          placeholder="Beschrijf welke diensten u aanbiedt en hoe u families kunt ondersteunen..."
+                          data-testid="textarea-description"
+                          className="min-h-[100px]"
+                        />
+                      </div>
+                      
+                      <div className="bg-muted/50 p-4 rounded-lg">
+                        <div className="flex items-start gap-2">
+                          <AlertCircle className="h-4 w-4 text-primary mt-0.5" />
+                          <div className="text-sm">
+                            <p className="font-medium text-foreground mb-1">Verificatie Vereist</p>
+                            <p className="text-muted-foreground">
+                              Na registratie verifiëren we uw bedrijfsgegevens voordat uw account wordt geactiveerd.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <Separator />
+                      
+                      <div className="flex items-start space-x-2">
+                        <Checkbox 
+                          id="partnerPrivacy" 
+                          checked={acceptPrivacyPartner}
+                          onCheckedChange={(checked) => setAcceptPrivacyPartner(checked === true)}
+                          data-testid="checkbox-partner-privacy"
+                        />
+                        <div className="space-y-1 leading-none">
+                          <Label htmlFor="partnerPrivacy" className="text-sm">
+                            Ik ga akkoord met de{" "}
+                            <a href="#privacy" className="text-primary hover:underline">
+                              privacyverklaring
+                            </a>,{" "}
+                            <a href="#terms" className="text-primary hover:underline">
+                              algemene voorwaarden
+                            </a>{" "}
+                            en{" "}
+                            <a href="#partner-terms" className="text-primary hover:underline">
+                              partnerovereenkomst
+                            </a>
+                          </Label>
+                        </div>
+                      </div>
+                      
+                      <Button 
+                        type="submit" 
+                        className="w-full" 
+                        disabled={!acceptPrivacyPartner || isSubmitting}
+                        data-testid="button-submit-partner"
+                      >
+                        {isSubmitting ? "Bezig met Registreren..." : "Registreer als Partner"}
+                      </Button>
+                    </div>
                   </form>
                 </CardContent>
               </Card>
