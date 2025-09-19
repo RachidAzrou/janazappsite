@@ -106,21 +106,14 @@ export default function Features() {
                       
                       <div className="relative p-8">
                         <CardHeader className="p-0 pb-6">
-                          {/* Icon and Badge Layout */}
-                          <div className="flex items-start justify-between mb-6">
-                            <div className="relative">
+                          {/* Icon Layout */}
+                          <div className="mb-6">
+                            <div className="relative w-fit">
                               <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
                                 <IconComponent className="h-7 w-7" data-testid={`icon-feature-${index}`} />
                               </div>
                               <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                             </div>
-                            <Badge 
-                              variant="outline" 
-                              className="text-xs bg-gradient-to-r from-primary/10 to-primary/5 border-primary/25 text-primary px-4 py-1.5 font-medium tracking-wide" 
-                              data-testid={`badge-feature-${index}`}
-                            >
-                              {feature.kicker}
-                            </Badge>
                           </div>
                           
                           <CardTitle className="text-xl lg:text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-500 leading-tight" data-testid={`text-feature-title-${index}`}>
