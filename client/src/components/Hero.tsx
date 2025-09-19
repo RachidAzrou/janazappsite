@@ -9,7 +9,7 @@ export default function Hero() {
   const { t } = useTranslation('landing');
   
   return (
-    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center py-8 sm:py-0">
+    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center py-8 sm:py-0 serene-surface serene-gradient serene-pattern">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
