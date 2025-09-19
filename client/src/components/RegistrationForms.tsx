@@ -301,11 +301,11 @@ export default function RegistrationForms() {
                         <div className="space-y-1 leading-none">
                           <Label htmlFor="privacy" className="text-sm">
                             Ik ga akkoord met de{" "}
-                            <a href="#privacy" className="text-primary hover:underline">
+                            <a href="/privacy" className="text-primary hover:underline">
                               privacyverklaring
                             </a>{" "}
                             en{" "}
-                            <a href="#terms" className="text-primary hover:underline">
+                            <a href="/algemene-voorwaarden" className="text-primary hover:underline">
                               algemene voorwaarden
                             </a>
                           </Label>
@@ -454,10 +454,10 @@ export default function RegistrationForms() {
                         <div className="space-y-1 leading-none">
                           <Label htmlFor="partnerPrivacy" className="text-sm">
                             Ik ga akkoord met de{" "}
-                            <a href="#privacy" className="text-primary hover:underline">
+                            <a href="/privacy" className="text-primary hover:underline">
                               privacyverklaring
                             </a>,{" "}
-                            <a href="#terms" className="text-primary hover:underline">
+                            <a href="/algemene-voorwaarden" className="text-primary hover:underline">
                               algemene voorwaarden
                             </a>{" "}
                             en{" "}
