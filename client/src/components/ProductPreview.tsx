@@ -56,34 +56,6 @@ export default function ProductPreview() {
                     data-testid="img-dashboard-mockup"
                   />
                 </div>
-                
-                {/* Interactive Video Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center z-20 opacity-0 md:hover:opacity-100 transition-all duration-500 bg-black/20 backdrop-blur-sm rounded-2xl group">
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="gap-3 px-8 py-4 rounded-full bg-background/90 backdrop-blur border-primary/30 text-primary shadow-2xl transition-all duration-500"
-                    onClick={handleVideoClick}
-                    data-testid="button-video-overlay"
-                  >
-                    <PlayCircle className="h-6 w-6" />
-                    Bekijk Live Demo
-                  </Button>
-                </div>
-                
-                {/* Mobile Play Button */}
-                <div className="md:hidden absolute bottom-4 right-4 z-20">
-                  <Button 
-                    size="sm"
-                    variant="outline"
-                    className="gap-2 rounded-full bg-background/90 backdrop-blur border-primary/30 text-primary shadow-lg"
-                    onClick={handleVideoClick}
-                    data-testid="button-mobile-video"
-                  >
-                    <PlayCircle className="h-4 w-4" />
-                    Demo
-                  </Button>
-                </div>
               </div>
             </CardContent>
           </Card>
