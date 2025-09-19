@@ -39,12 +39,12 @@ export default function CookiesPage() {
                   <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center">
                     <Cookie className="h-6 w-6" />
                   </div>
-                  <h1 className="text-4xl lg:text-5xl font-bold text-foreground" data-testid="text-cookies-title">
+                  <h1 className="text-3xl lg:text-4xl font-bold text-foreground" data-testid="text-cookies-title">
                     Cookiebeleid
                   </h1>
                 </div>
                 
-                <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-cookies-intro">
+                <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-cookies-intro">
                   JanazApp gebruikt cookies om uw ervaring te verbeteren en onze diensten te optimaliseren. Hieronder vindt u informatie over hoe en waarom wij cookies gebruiken.
                 </p>
               </div>
@@ -60,33 +60,33 @@ export default function CookiesPage() {
                 <CardContent className="p-8 space-y-8">
                   
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">1. Wat zijn cookies?</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">1. Wat zijn cookies?</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u onze website bezoekt. 
                       Ze helpen ons uw voorkeuren te onthouden en uw ervaring te personaliseren.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">2. Welke cookies gebruiken wij?</h2>
+                    <h2 className="text-xl font-bold text-foreground mb-4">2. Welke cookies gebruiken wij?</h2>
                     <div className="space-y-4">
                       <div>
-                        <h3 className="text-xl font-semibold text-foreground mb-2">Noodzakelijke cookies</h3>
-                        <p className="text-lg leading-relaxed text-muted-foreground">
+                        <h3 className="text-lg font-semibold text-foreground mb-2">Noodzakelijke cookies</h3>
+                        <p className="text-base leading-relaxed text-muted-foreground">
                           Deze cookies zijn essentieel voor het functioneren van onze website en kunnen niet worden uitgeschakeld. 
                           Ze worden gebruikt voor veiligheid, sessiemanagement en toegankelijkheid.
                         </p>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-foreground mb-2">Functionele cookies</h3>
-                        <p className="text-lg leading-relaxed text-muted-foreground">
+                        <h3 className="text-lg font-semibold text-foreground mb-2">Functionele cookies</h3>
+                        <p className="text-base leading-relaxed text-muted-foreground">
                           Deze cookies onthouden uw voorkeuren en instellingen om uw ervaring te verbeteren, 
                           zoals taalvoorkeuren en gebruikersinterface-instellingen.
                         </p>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-foreground mb-2">Analytische cookies</h3>
-                        <p className="text-lg leading-relaxed text-muted-foreground">
+                        <h3 className="text-lg font-semibold text-foreground mb-2">Analytische cookies</h3>
+                        <p className="text-base leading-relaxed text-muted-foreground">
                           We gebruiken deze cookies om te begrijpen hoe bezoekers onze website gebruiken, 
                           zodat we onze diensten kunnen verbeteren.
                         </p>
@@ -95,8 +95,8 @@ export default function CookiesPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">3. Waarom gebruiken wij cookies?</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">3. Waarom gebruiken wij cookies?</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• Om uw inloggegevens veilig te bewaren</li>
                       <li>• Om uw voorkeuren en instellingen te onthouden</li>
                       <li>• Om de prestaties van onze website te verbeteren</li>
@@ -106,8 +106,8 @@ export default function CookiesPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">4. Cookiebeheer</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">4. Cookiebeheer</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       U kunt cookies beheren via de instellingen van uw browser. Let op dat het uitschakelen van bepaalde cookies 
                       de functionaliteit van onze website kan beperken. Noodzakelijke cookies kunnen niet worden uitgeschakeld 
                       omdat ze essentieel zijn voor de werking van de website.
@@ -115,8 +115,8 @@ export default function CookiesPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">5. Bewaartermijn</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">5. Bewaartermijn</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Sessiecookies worden automatisch verwijderd wanneer u uw browser sluit. 
                       Permanente cookies blijven opgeslagen totdat ze verlopen of door u worden verwijderd. 
                       De bewaartermijn varieert van enkele uren tot maximaal één jaar.

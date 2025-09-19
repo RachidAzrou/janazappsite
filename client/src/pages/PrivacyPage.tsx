@@ -34,11 +34,11 @@ export default function PrivacyPage() {
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
               }`}>
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-8" data-testid="text-privacy-title">
+                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8" data-testid="text-privacy-title">
                   Privacybeleid
                 </h1>
                 
-                <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-privacy-intro">
+                <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-privacy-intro">
                   Uw privacy is van het grootste belang voor JanazApp. Dit beleid beschrijft hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.
                 </p>
               </div>
@@ -54,56 +54,56 @@ export default function PrivacyPage() {
                 <CardContent className="p-8 space-y-8">
                   
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">1. Gegevensverzameling</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">1. Gegevensverzameling</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Wij verzamelen alleen de gegevens die noodzakelijk zijn voor het verlenen van onze diensten in de overlijdenszorg. 
                       Dit omvat persoonlijke informatie van nabestaanden, uitvaartondernemers en andere betrokken partijen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">2. Gebruik van gegevens</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">2. Gebruik van gegevens</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Uw gegevens worden uitsluitend gebruikt voor het faciliteren van overlijdensprocedures, 
                       het coördineren tussen verschillende partijen en het naleven van wettelijke verplichtingen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">3. Beveiliging</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">3. Beveiliging</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Wij implementeren moderne beveiligingsmaatregelen om uw persoonlijke gegevens te beschermen tegen 
                       ongeoorloofde toegang, wijziging of openbaarmaking. Alle gegevens worden geëncrypteerd opgeslagen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">4. Delen van gegevens</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">4. Delen van gegevens</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Gegevens worden alleen gedeeld met partijen die direct betrokken zijn bij de overlijdensprocedure, 
                       zoals uitvaartondernemers, moskeeën en overheidsinstanties, en alleen met uw expliciete toestemming.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">5. Uw rechten</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">5. Uw rechten</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       U heeft het recht om uw gegevens in te zien, te corrigeren of te laten verwijderen. 
                       Neem contact met ons op via info@janazapp.com voor vragen over uw privacy.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">6. GDPR-compliance</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">6. GDPR-compliance</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       JanazApp voldoet volledig aan de Algemene Verordening Gegevensbescherming (AVG/GDPR). 
                       Wij respecteren uw privacy en hanteren strenge procedures voor gegevensbescherming.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">7. Contact</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">7. Contact</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Voor vragen over dit privacybeleid kunt u contact opnemen via:
                       <br />
                       E-mail: info@janazapp.com

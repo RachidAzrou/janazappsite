@@ -35,11 +35,11 @@ export default function AboutPage() {
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
               }`}>
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-8" data-testid="text-about-title">
+                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8" data-testid="text-about-title">
                   Over Ons
                 </h1>
                 
-                <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-about-intro">
+                <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-about-intro">
                   Bij JanazApp hebben we bewezen dat technologie en empathie perfect samengaan.
                   We hebben een digitaal platform ontwikkeld dat families, uitvaartondernemers en verzekeringsmaatschappijen met elkaar verbond, zodat alle administratieve en praktische stappen rondom een overlijden snel en correct geregeld werden.
                 </p>
@@ -60,16 +60,16 @@ export default function AboutPage() {
                       <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center group-hover:bg-primary/25 group-hover:scale-105 transition-all duration-300">
                         <Target className="h-6 w-6" />
                       </div>
-                      <h2 className="text-2xl lg:text-3xl font-bold text-foreground" data-testid="text-mission-title">
+                      <h2 className="text-xl lg:text-2xl font-bold text-foreground" data-testid="text-mission-title">
                         Onze missie
                       </h2>
                     </div>
                     <div className="space-y-4">
-                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-1">
+                      <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-mission-1">
                         We zorgden ervoor dat nabestaanden minder drempels ervaarden.
                         Met JanazApp kregen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.
                       </p>
-                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-2">
+                      <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-mission-2">
                         Professionals beheerden hun dossiers efficiënter, verifieerden documenten en werkten samen in één omgeving.
                       </p>
                     </div>
@@ -83,15 +83,15 @@ export default function AboutPage() {
                       <div className="w-12 h-12 rounded-md bg-primary/15 text-primary flex items-center justify-center group-hover:bg-primary/25 group-hover:scale-105 transition-all duration-300">
                         <Heart className="h-6 w-6" />
                       </div>
-                      <h2 className="text-2xl lg:text-3xl font-bold text-foreground" data-testid="text-promise-title">
+                      <h2 className="text-xl lg:text-2xl font-bold text-foreground" data-testid="text-promise-title">
                         Onze belofte
                       </h2>
                     </div>
                     <div className="space-y-4">
-                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-1">
+                      <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-promise-1">
                         We hebben technologie gekoppeld aan empathie.
                       </p>
-                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-2">
+                      <p className="text-base leading-relaxed text-muted-foreground" data-testid="text-promise-2">
                         JanazApp stond niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven.
                       </p>
                     </div>

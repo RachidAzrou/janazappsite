@@ -34,11 +34,11 @@ export default function TermsPage() {
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
               }`}>
-                <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-8" data-testid="text-terms-title">
+                <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-8" data-testid="text-terms-title">
                   Algemene Voorwaarden
                 </h1>
                 
-                <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-terms-intro">
+                <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-terms-intro">
                   Deze algemene voorwaarden zijn van toepassing op het gebruik van JanazApp en regelen de rechten en plichten van alle betrokken partijen.
                 </p>
               </div>
@@ -54,8 +54,8 @@ export default function TermsPage() {
                 <CardContent className="p-8 space-y-8">
                   
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">1. Definities</h2>
-                    <div className="space-y-3 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">1. Definities</h2>
+                    <div className="space-y-3 text-base leading-relaxed text-muted-foreground">
                       <p><strong>JanazApp:</strong> de aanbieder van het digitale platform voor overlijdenszorg.</p>
                       <p><strong>Gebruiker:</strong> iedere natuurlijke persoon of rechtspersoon die gebruikmaakt van JanazApp.</p>
                       <p><strong>Partner:</strong> ondernemers of verzekeraars die zich via JanazApp aansluiten.</p>
@@ -64,15 +64,15 @@ export default function TermsPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">2. Toepasselijkheid</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">2. Toepasselijkheid</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Deze voorwaarden zijn van toepassing op elk gebruik van JanazApp, zowel door particulieren (families) als door partners (uitvaartondernemers, verzekeraars).
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">3. Diensten van JanazApp</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">3. Diensten van JanazApp</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• JanazApp biedt een digitaal platform voor overlijdenszorg, waarmee families, ondernemers en verzekeraars met elkaar worden verbonden.</li>
                       <li>• JanazApp levert geen uitvaartdiensten zelf, maar faciliteert de communicatie en samenwerking tussen betrokken partijen.</li>
                       <li>• JanazApp kan functionaliteiten toevoegen, wijzigen of verwijderen.</li>
@@ -80,8 +80,8 @@ export default function TermsPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">4. Gebruik van het platform</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">4. Gebruik van het platform</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• De gebruiker is verplicht om juiste en actuele gegevens te verstrekken.</li>
                       <li>• Het is niet toegestaan het platform te gebruiken voor illegale, misleidende of schadelijke doeleinden.</li>
                       <li>• Accounts zijn persoonlijk en mogen niet worden gedeeld zonder toestemming van JanazApp.</li>
@@ -89,8 +89,8 @@ export default function TermsPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">5. Vergoedingen en betalingen</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">5. Vergoedingen en betalingen</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• Voor families is het gebruik van JanazApp kosteloos.</li>
                       <li>• Partners (ondernemers en verzekeraars) kunnen kosten verschuldigd zijn conform een aparte overeenkomst of abonnementsmodel.</li>
                       <li>• Alle bedragen zijn exclusief btw, tenzij anders vermeld.</li>
@@ -98,16 +98,16 @@ export default function TermsPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">6. Privacy en gegevensbescherming</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">6. Privacy en gegevensbescherming</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• JanazApp verwerkt persoonsgegevens in overeenstemming met de Privacyverklaring en de AVG/GDPR.</li>
                       <li>• Gebruikers blijven verantwoordelijk voor de juistheid van de gegevens die zij aanleveren.</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">7. Aansprakelijkheid</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">7. Aansprakelijkheid</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• JanazApp is niet aansprakelijk voor directe of indirecte schade die voortvloeit uit het gebruik van het platform, tenzij sprake is van opzet of grove nalatigheid.</li>
                       <li>• JanazApp is niet verantwoordelijk voor de dienstverlening van uitvaartondernemers, verzekeraars of andere externe partijen die via het platform actief zijn.</li>
                       <li>• De totale aansprakelijkheid van JanazApp is in alle gevallen beperkt tot het bedrag dat de gebruiker in de laatste 12 maanden aan JanazApp heeft betaald (indien van toepassing).</li>
@@ -115,8 +115,8 @@ export default function TermsPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">8. Intellectuele eigendom</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">8. Intellectuele eigendom</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• Alle rechten van intellectuele eigendom op het platform, de software, logo's en content berusten bij JanazApp.</li>
                       <li>• Het is niet toegestaan zonder toestemming materialen van JanazApp te kopiëren, verspreiden of openbaar te maken.</li>
                     </ul>
