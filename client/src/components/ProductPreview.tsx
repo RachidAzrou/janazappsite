@@ -45,7 +45,7 @@ export default function ProductPreview() {
           
           <Card className="relative overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm" data-testid="card-mockup">
             <CardContent className="p-8 lg:p-16">
-              <div className="relative">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 {/* Premium Image Container */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-muted/20 to-muted/40">
                   <img 
@@ -55,56 +55,54 @@ export default function ProductPreview() {
                     data-testid="img-dashboard-mockup"
                   />
                 </div>
+                
+                {/* Feature Cards */}
+                <div className="space-y-6">
+                  <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-dashboard">
+                    <CardContent className="p-6 text-center">
+                      <div className="relative mb-4">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
+                          <Monitor className="h-6 w-6" />
+                        </div>
+                        <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
+                      </div>
+                      <p className="text-sm font-bold text-foreground mb-1">Compleet Dashboard</p>
+                      <p className="text-xs text-muted-foreground">Alle procedures overzichtelijk</p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-mobile">
+                    <CardContent className="p-6 text-center">
+                      <div className="relative mb-4">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
+                          <Smartphone className="h-6 w-6" />
+                        </div>
+                        <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
+                      </div>
+                      <p className="text-sm font-bold text-foreground mb-1">Mobiel Optimaal</p>
+                      <p className="text-xs text-muted-foreground">24/7 toegankelijk platform</p>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-progress">
+                    <CardContent className="p-6 text-center">
+                      <div className="relative mb-4">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
+                          <div className="relative h-6 w-6">
+                            <div className="absolute inset-0 rounded-full border-2 border-primary/40"></div>
+                            <div className="absolute inset-0 rounded-full border-2 border-primary border-r-transparent animate-spin" style={{ animationDuration: '3s' }}></div>
+                          </div>
+                        </div>
+                        <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
+                      </div>
+                      <p className="text-sm font-bold text-foreground mb-1">Live Tracking</p>
+                      <p className="text-xs text-muted-foreground">Real-time status updates</p>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </CardContent>
           </Card>
-          
-          {/* Premium Floating Feature Cards */}
-          <div className="absolute -bottom-8 left-6 right-6 lg:left-12 lg:right-12 z-30">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-              <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-dashboard">
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
-                      <Monitor className="h-6 w-6" />
-                    </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
-                  </div>
-                  <p className="text-sm font-bold text-foreground mb-1">Compleet Dashboard</p>
-                  <p className="text-xs text-muted-foreground">Alle procedures overzichtelijk</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-mobile">
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
-                      <Smartphone className="h-6 w-6" />
-                    </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
-                  </div>
-                  <p className="text-sm font-bold text-foreground mb-1">Mobiel Optimaal</p>
-                  <p className="text-xs text-muted-foreground">24/7 toegankelijk platform</p>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-md border-0 shadow-xl hover-elevate" data-testid="card-feature-progress">
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary mx-auto w-fit shadow-lg">
-                      <div className="relative h-6 w-6">
-                        <div className="absolute inset-0 rounded-full border-2 border-primary/40"></div>
-                        <div className="absolute inset-0 rounded-full border-2 border-primary border-r-transparent animate-spin" style={{ animationDuration: '3s' }}></div>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 bg-primary/20 rounded-xl blur-lg opacity-60"></div>
-                  </div>
-                  <p className="text-sm font-bold text-foreground mb-1">Live Tracking</p>
-                  <p className="text-xs text-muted-foreground">Real-time status updates</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
         </div>
 
       </div>
