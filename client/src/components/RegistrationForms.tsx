@@ -161,40 +161,22 @@ export default function RegistrationForms() {
         {/* Form Container */}
         <div className="max-w-5xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-600 ease-out">
           <Tabs defaultValue="burger" className="w-full">
-            {/* Tab Navigation */}
-            <div className="relative mb-12">
-              <TabsList className="grid w-full grid-cols-2 h-auto p-2 bg-gradient-to-br from-background via-background to-muted/20 border-0 shadow-lg rounded-2xl backdrop-blur-sm">
+            {/* Simple Tab Navigation */}
+            <div className="mb-8">
+              <TabsList className="grid w-full grid-cols-2 bg-muted rounded-lg p-1">
                 <TabsTrigger 
                   value="burger" 
-                  className="group flex flex-col items-center gap-3 p-6 rounded-xl transition-all duration-500 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/15 data-[state=active]:to-primary/10 data-[state=active]:shadow-lg" 
+                  className="data-[state=active]:bg-background data-[state=active]:text-foreground"
                   data-testid="tab-citizen"
                 >
-                  <div className="relative">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
-                      <Users className="h-7 w-7" />
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold text-lg">Burger</div>
-                    <div className="text-sm text-muted-foreground">Familie & Individu</div>
-                  </div>
+                  Particulieren
                 </TabsTrigger>
                 <TabsTrigger 
                   value="partner" 
-                  className="group flex flex-col items-center gap-3 p-6 rounded-xl transition-all duration-500 data-[state=active]:bg-gradient-to-br data-[state=active]:from-primary/15 data-[state=active]:to-primary/10 data-[state=active]:shadow-lg" 
+                  className="data-[state=active]:bg-background data-[state=active]:text-foreground"
                   data-testid="tab-partner"
                 >
-                  <div className="relative">
-                    <div className="p-4 rounded-2xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary group-hover:scale-110 transition-all duration-500 shadow-lg">
-                      <Building2 className="h-7 w-7" />
-                    </div>
-                    <div className="absolute inset-0 rounded-2xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-bold text-lg">Partner</div>
-                    <div className="text-sm text-muted-foreground">Professioneel</div>
-                  </div>
+                  Professionals
                 </TabsTrigger>
               </TabsList>
             </div>
