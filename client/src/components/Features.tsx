@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Globe, CheckCircle } from "lucide-react";
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { MdOutlineSpeed, MdDevices } from "react-icons/md";
+import { MdOutlineSpeed, MdDevices, MdOutlineCircleNotifications } from "react-icons/md";
 import { PiMosqueBold } from "react-icons/pi";
 
 const features = [
@@ -44,7 +44,7 @@ const features = [
     benefit: "Naar land van herkomst"
   },
   {
-    icon: CheckCircle,
+    icon: MdOutlineCircleNotifications,
     title: "Transparante Voortgang",
     kicker: "Real-time updates",
     description: "Altijd op de hoogte van de status van procedures.",
