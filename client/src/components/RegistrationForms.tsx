@@ -91,35 +91,32 @@ export default function RegistrationForms() {
 
   if (showSuccess) {
     return (
-      <section className="relative py-12 lg:py-16 bg-gradient-to-br from-primary/5 via-background to-primary/10 overflow-hidden islamic-pattern" id="registratie">
-        {/* Premium Background */}
+      <section className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
+        {/* Clean Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-16 left-12 w-64 h-64 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl animate-pulse opacity-70"></div>
-          <div className="absolute bottom-16 right-12 w-48 h-48 bg-gradient-to-tl from-primary/6 to-primary/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
         </div>
         
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-lg mx-auto text-center">
-            <Card className="border-0 shadow-2xl bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-12">
-                {/* Success Animation */}
-                <div className="relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/30 rounded-full blur-2xl opacity-60 animate-pulse"></div>
-                  <div className="relative p-6 rounded-full bg-gradient-to-br from-primary/15 to-primary/10 w-fit mx-auto">
-                    <CheckCircle2 className="h-16 w-16 text-primary animate-pulse" data-testid="icon-success" />
+            <Card className="border border-border shadow-sm bg-background overflow-hidden">
+              <CardContent className="p-6">
+                {/* Success Icon */}
+                <div className="mb-8">
+                  <div className="p-6 w-fit mx-auto">
+                    <CheckCircle2 className="h-16 w-16 text-primary" data-testid="icon-success" />
                   </div>
                 </div>
                 
-                <h3 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent" data-testid="text-success-title">
+                <h3 className="text-xl font-semibold mb-6 text-foreground" data-testid="text-success-title">
                   Registratie Succesvol!
                 </h3>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed" data-testid="text-success-message">
+                <p className="text-base text-muted-foreground mb-6 leading-relaxed" data-testid="text-success-message">
                   Welkom bij JanazApp! We nemen binnen 24 uur contact met u op om uw account te activeren en u te begeleiden door het platform.
                 </p>
                 
                 <Button 
+                  variant="default"
                   size="lg"
-                  className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-semibold text-lg shadow-xl transition-all duration-500 border-0"
                   onClick={() => setShowSuccess(false)} 
                   data-testid="button-success-ok"
                 >
@@ -134,16 +131,9 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section ref={sectionRef} className="relative py-12 lg:py-16 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern" id="registratie">
+    <section ref={sectionRef} className="relative py-12 lg:py-16 bg-background overflow-hidden islamic-pattern" id="registratie">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Refined Grid Pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(var(--primary))_0.5px,_transparent_0.5px)] bg-[length:24px_24px] opacity-[0.15] animate-pulse"></div>
-        
-        {/* Elegant Geometric Shapes */}
-        <div className="absolute top-16 left-8 w-64 h-64 bg-gradient-to-br from-primary/8 to-primary/3 rounded-full blur-3xl animate-pulse opacity-70"></div>
-        <div className="absolute bottom-32 right-12 w-48 h-48 bg-gradient-to-tl from-primary/6 to-primary/2 rounded-full blur-2xl animate-pulse delay-1000 opacity-80"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-primary/4 to-primary/8 rounded-full blur-xl animate-pulse delay-500"></div>
       </div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,7 +144,7 @@ export default function RegistrationForms() {
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
           }`}>
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-registration-subtitle">
+            <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="text-registration-subtitle">
               Ervaar zelf hoe digitalisering de overlijdenszorg kan verbeteren en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
             </p>
@@ -190,7 +180,7 @@ export default function RegistrationForms() {
 
             {/* Citizen Registration */}
             <TabsContent value="burger">
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
+              <Card className="border border-border shadow-sm bg-background overflow-hidden" data-testid="card-citizen-form">
                 <CardHeader className="p-6">
                   <CardTitle className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
@@ -202,11 +192,11 @@ export default function RegistrationForms() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <form onSubmit={handleCitizenSubmit} className="space-y-8">
-                    <div className="space-y-8">
+                  <form onSubmit={handleCitizenSubmit} className="space-y-6">
+                    <div className="space-y-6">
                       <div className="text-center pb-4">
-                        <h4 className="text-xl font-bold text-foreground mb-2">Persoonlijke Gegevens</h4>
-                        <p className="text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
+                        <h4 className="text-xl font-semibold text-foreground mb-2">Persoonlijke Gegevens</h4>
+                        <p className="text-base text-muted-foreground">Vul uw gegevens in voor een persoonlijke service</p>
                       </div>
                       
                       <div className="grid md:grid-cols-2 gap-4">
@@ -332,7 +322,7 @@ export default function RegistrationForms() {
             {/* Premium Partner Registration */}
             {/* Partner Registration */}
             <TabsContent value="partner">
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
+              <Card className="border border-border shadow-sm bg-background overflow-hidden" data-testid="card-partner-form">
                 <CardHeader className="p-6">
                   <CardTitle className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-md bg-primary/15 text-primary flex items-center justify-center">
@@ -344,11 +334,11 @@ export default function RegistrationForms() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <form onSubmit={handlePartnerSubmit} className="space-y-8">
-                    <div className="space-y-8">
+                  <form onSubmit={handlePartnerSubmit} className="space-y-6">
+                    <div className="space-y-6">
                       <div className="text-center pb-4">
-                        <h4 className="text-xl font-bold text-foreground mb-2">Bedrijfsinformatie</h4>
-                        <p className="text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
+                        <h4 className="text-xl font-semibold text-foreground mb-2">Bedrijfsinformatie</h4>
+                        <p className="text-base text-muted-foreground">Vul uw bedrijfsgegevens in voor registratie</p>
                       </div>
                       
                       <div className="space-y-2">
