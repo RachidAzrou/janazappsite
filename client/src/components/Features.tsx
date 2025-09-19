@@ -158,27 +158,6 @@ export default function Features() {
             </div>
           </div>
         </div>
-
-        {/* Premium Call to Action */}
-        <div className="text-center animate-in slide-in-from-bottom-8 duration-1000 delay-1200 ease-out">
-          <div className="inline-flex flex-col items-center gap-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20 rounded-full blur-lg animate-pulse opacity-60"></div>
-              <Button 
-                size="lg"
-                className="relative gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground font-semibold text-lg shadow-xl transition-all duration-500 border-0"
-                onClick={() => console.log('Learn more about process clicked')}
-                data-testid="button-learn-process"
-              >
-                <ExternalLink className="h-5 w-5" />
-                Ontdek het Complete Proces
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground font-medium tracking-wide">
-              Bekijk hoe we complexe procedures vereenvoudigen
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
