@@ -272,16 +272,6 @@ export default function RegistrationForms() {
                   <Form {...citizenForm}>
                     <form onSubmit={citizenForm.handleSubmit(handleCitizenSubmit)} className="space-y-6">
                       <div className="space-y-8">
-                        <div className={`pb-6 ${isRTL ? 'text-right' : 'text-center'} bg-muted/30 -mx-6 px-6 py-4 mb-6`}>
-                          <div className="flex items-center justify-center gap-3 mb-3">
-                            <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center">
-                              <IoPeopleOutline className="h-4 w-4" />
-                            </div>
-                            <h4 className="text-xl font-semibold text-foreground">{t('sections.personalData')}</h4>
-                          </div>
-                          <p className="text-base text-muted-foreground">{t('sections.personalDataSubtitle')}</p>
-                        </div>
-                        
                         <div className="grid md:grid-cols-2 gap-4">
                           <FormField
                             control={citizenForm.control}
@@ -465,16 +455,6 @@ export default function RegistrationForms() {
                   <Form {...partnerForm}>
                     <form onSubmit={partnerForm.handleSubmit(handlePartnerSubmit)} className="space-y-6">
                       <div className="space-y-8">
-                        <div className={`pb-6 ${isRTL ? 'text-right' : 'text-center'} bg-muted/30 -mx-6 px-6 py-4 mb-6`}>
-                          <div className="flex items-center justify-center gap-3 mb-3">
-                            <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center">
-                              <IoBusinessOutline className="h-4 w-4" />
-                            </div>
-                            <h4 className="text-xl font-semibold text-foreground">{t('sections.companyInfo')}</h4>
-                          </div>
-                          <p className="text-base text-muted-foreground">{t('sections.companyInfoSubtitle')}</p>
-                        </div>
-                        
                         <FormField
                           control={partnerForm.control}
                           name="companyName"
