@@ -34,12 +34,24 @@ export default function ProductPreview() {
         <div className="relative max-w-5xl mx-auto mb-16">
           <Card className="overflow-hidden border-0 shadow-2xl bg-gradient-to-br from-primary/5 to-primary/10" data-testid="card-mockup">
             <CardContent className="p-8 md:p-12">
-              <img 
-                src={mockupImage} 
-                alt="JanazApp Dashboard Preview - Desktop en Mobiel" 
-                className="w-full h-auto rounded-lg"
-                data-testid="img-dashboard-mockup"
-              />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4">
+                  <img 
+                    src={mockupImage} 
+                    alt="JanazApp Dashboard Preview - Desktop en Mobiel" 
+                    className="w-full h-auto rounded-lg"
+                    data-testid="img-dashboard-mockup"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <img 
+                    src="/attached_assets/image_1758288626690.png"
+                    alt="JanazApp Platform Preview - Dashboard Interface"
+                    className="w-full h-auto rounded-lg"
+                    data-testid="img-platform-mockup"
+                  />
+                </div>
+              </div>
             </CardContent>
           </Card>
           
