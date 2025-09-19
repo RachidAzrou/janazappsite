@@ -143,40 +143,34 @@ export default function Features() {
                   return (
                     <div
                       key={index}
-                      className="group cursor-pointer animate-in slide-in-from-right-8 duration-600 opacity-0"
-                      style={{ 
-                        animationDelay: `${index * 100 + 600}ms`,
-                        animationFillMode: 'both'
-                      }}
+                      className="group cursor-pointer"
                       data-testid={`feature-item-${index}`}
                     >
-                      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-background/80 via-muted/30 to-background/80 backdrop-blur-sm border border-muted/40 p-5 transition-all duration-500 group-hover:border-primary/30 group-hover:shadow-xl group-hover:-translate-y-1">
+                      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-background via-muted/20 to-background border border-muted/30 p-5 transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-lg group-hover:-translate-y-1 hover-elevate">
                         {/* Animated background on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-primary/8 via-primary/12 to-primary/8 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         
                         <div className="relative flex items-start gap-4">
                           <div className="flex-shrink-0">
-                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 text-primary flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                              <IconComponent className="h-5 w-5" />
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/8 text-primary flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                              <IconComponent className="h-6 w-6" />
                             </div>
                           </div>
                           
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors duration-300">
+                            <h4 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                               {feature.title}
                             </h4>
-                            <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+                            <p className="text-muted-foreground leading-relaxed mb-3">
                               {feature.description}
                             </p>
-                            <div className="text-xs font-medium text-primary opacity-75 group-hover:opacity-100 transition-opacity duration-300">
-                              ✓ {feature.benefit}
-                            </div>
-                          </div>
-                          
-                          {/* Subtle arrow indicator */}
-                          <div className="flex-shrink-0 opacity-0 group-hover:opacity-60 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                            <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                              <div className="w-2 h-2 border-r-2 border-t-2 border-primary rotate-45"></div>
+                            <div className="flex items-center gap-2">
+                              <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
+                                <CheckCircle className="w-2.5 h-2.5 text-primary" />
+                              </div>
+                              <span className="text-sm font-medium text-primary">
+                                {feature.benefit}
+                              </span>
                             </div>
                           </div>
                         </div>
