@@ -13,7 +13,9 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logoUrl} alt="JanazApp" className="h-8 w-auto" data-testid="img-logo" />
+            <Link href="/">
+              <img src={logoUrl} alt="JanazApp" className="h-8 w-auto cursor-pointer" data-testid="img-logo" />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -24,8 +26,8 @@ export default function Header() {
             <a href="#diensten" className="text-foreground hover:text-primary transition-colors" data-testid="link-services">
               Diensten
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors" data-testid="link-contact">
-              Contact
+            <a href="#registratie" className="text-foreground hover:text-primary transition-colors" data-testid="link-register">
+              Registreren
             </a>
             <Button variant="outline" size="sm" data-testid="button-login">
               Inloggen
@@ -58,8 +60,8 @@ export default function Header() {
               <a href="#diensten" className="block text-foreground hover:text-primary transition-colors" data-testid="link-services-mobile">
                 Diensten
               </a>
-              <a href="#contact" className="block text-foreground hover:text-primary transition-colors" data-testid="link-contact-mobile">
-                Contact
+              <a href="#registratie" className="block text-foreground hover:text-primary transition-colors" data-testid="link-register-mobile">
+                Registreren
               </a>
               <Button variant="outline" size="sm" className="w-full" data-testid="button-login-mobile">
                 Inloggen

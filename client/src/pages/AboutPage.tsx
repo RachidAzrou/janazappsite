@@ -1,11 +1,11 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function AboutPage() {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
-  const { ref: missionRef, isVisible: missionVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
-  const { ref: promiseRef, isVisible: promiseVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -45,50 +45,47 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Mission Section */}
-            <div ref={missionRef} className="mb-16">
-              <div className={`transition-all duration-1000 ease-out ${
-                missionVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-8'
-              }`}>
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center" data-testid="text-mission-title">
-                    Onze missie
-                  </h2>
-                  <div className="space-y-6">
-                    <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-1">
-                      We zorgden ervoor dat nabestaanden minder drempels ervaarden.
-                      Met JanazApp kregen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.
-                    </p>
-                    <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-2">
-                      Professionals beheerden hun dossiers efficiënter, verifieerden documenten en werkten samen in één omgeving.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Content Cards */}
+            <div ref={contentRef} className={`max-w-5xl mx-auto transition-all duration-1000 ease-out ${
+              contentVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}>
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Mission Card */}
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden">
+                  <CardContent className="p-8">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6" data-testid="text-mission-title">
+                      Onze missie
+                    </h2>
+                    <div className="space-y-4">
+                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-1">
+                        We zorgden ervoor dat nabestaanden minder drempels ervaarden.
+                        Met JanazApp kregen families een duidelijk overzicht van documenten, stappen en statussen — zonder rompslomp, zonder onduidelijkheden.
+                      </p>
+                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-mission-2">
+                        Professionals beheerden hun dossiers efficiënter, verifieerden documenten en werkten samen in één omgeving.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            {/* Promise Section */}
-            <div ref={promiseRef}>
-              <div className={`transition-all duration-1000 ease-out ${
-                promiseVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-8'
-              }`}>
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8 text-center" data-testid="text-promise-title">
-                    Onze belofte
-                  </h2>
-                  <div className="space-y-6">
-                    <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-1">
-                      We hebben technologie gekoppeld aan empathie.
-                    </p>
-                    <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-2">
-                      JanazApp stond niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven.
-                    </p>
-                  </div>
-                </div>
+                {/* Promise Card */}
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-background via-background to-muted/20 backdrop-blur-sm overflow-hidden">
+                  <CardContent className="p-8">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6" data-testid="text-promise-title">
+                      Onze belofte
+                    </h2>
+                    <div className="space-y-4">
+                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-1">
+                        We hebben technologie gekoppeld aan empathie.
+                      </p>
+                      <p className="text-lg leading-relaxed text-muted-foreground" data-testid="text-promise-2">
+                        JanazApp stond niet enkel voor software, maar voor een betrouwbare partner op een van de meest kwetsbare momenten in het leven.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ const features = [
   },
   {
     icon: Plane,
-    title: "Repatriering",
+    title: "Repatriëring",
     kicker: "Repatriëring mogelijk",
     description: "Ondersteuning voor consulaire procedures en repatriëring.",
     benefit: "Naar land van herkomst"
