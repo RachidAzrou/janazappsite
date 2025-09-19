@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import logoUrl from "@assets/Logo H@2x_1758276388954.png";
 
 export default function Footer() {
+  const { ref: footerRef, isVisible: footerVisible } = useScrollAnimation();
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Newsletter subscription submitted');
@@ -17,12 +19,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-background via-muted/30 to-accent/20 border-t border-border/50 backdrop-blur-sm" id="contact">
+    <footer ref={footerRef} className="relative bg-gradient-to-br from-background via-muted/30 to-accent/20 border-t border-border/50 backdrop-blur-sm" id="contact">
       {/* Elegant background pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.1),transparent_50%)] pointer-events-none" />
       
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className={`relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 transition-all duration-1000 ease-out ${
+        footerVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-8'
+      }`}>
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
           {/* Company Info */}

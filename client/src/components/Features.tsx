@@ -7,6 +7,7 @@ import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { MdOutlineSpeed, MdDevices, MdOutlineCircleNotifications } from "react-icons/md";
 import { PiMosqueBold } from "react-icons/pi";
 import mockupImage from "@assets/2_1758294099667.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const features = [
   {
@@ -55,8 +56,11 @@ const features = [
 
 
 export default function Features() {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
+
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="diensten">
+    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="diensten">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Sophisticated Grid Pattern */}
@@ -75,7 +79,11 @@ export default function Features() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
         <div className="text-center mb-24 lg:mb-32">
-          <div className="animate-in slide-in-from-bottom-8 duration-900 delay-400 ease-out">
+          <div className={`transition-all duration-1000 ease-out ${
+            sectionVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}>
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
               Een digitale oplossing die religieuze waarden respecteert en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
@@ -86,7 +94,11 @@ export default function Features() {
         {/* Platform Preview with Features */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Mockup Links */}
-          <div>
+          <div className={`transition-all duration-1000 ease-out ${
+            sectionVisible 
+              ? 'opacity-100 translate-x-0' 
+              : 'opacity-0 -translate-x-8'
+          }`}>
             <img 
               src={mockupImage} 
               alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
@@ -95,16 +107,20 @@ export default function Features() {
           </div>
 
           {/* Features Rechts */}
-          <div>
+          <div ref={featuresRef}>
             <div className="space-y-6">
               {features.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
                   <div
                     key={index}
-                    className="flex items-start gap-4 group hover-elevate animate-in slide-in-from-right-8 duration-700"
+                    className={`flex items-start gap-4 group hover-elevate transition-all duration-700 ease-out ${
+                      featuresVisible 
+                        ? 'opacity-100 translate-x-0' 
+                        : 'opacity-0 translate-x-8'
+                    }`}
                     style={{ 
-                      animationDelay: `${index * 150 + 400}ms`
+                      transitionDelay: featuresVisible ? `${index * 150}ms` : '0ms'
                     }}
                     data-testid={`feature-item-${index}`}
                   >

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -12,6 +13,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { AlertCircle, Users, Building2, Phone, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function RegistrationForms() {
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [acceptPrivacyCitizen, setAcceptPrivacyCitizen] = useState(false);
@@ -131,7 +134,7 @@ export default function RegistrationForms() {
   }
 
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="registratie">
+    <section ref={sectionRef} className="relative py-24 lg:py-32 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden" id="registratie">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Refined Grid Pattern */}
@@ -146,7 +149,11 @@ export default function RegistrationForms() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-24 lg:mb-32">
-          <div className="animate-in slide-in-from-bottom-8 duration-900 delay-400 ease-out">
+          <div className={`transition-all duration-1000 ease-out ${
+            sectionVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}>
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-registration-subtitle">
               Ervaar hoe digitalisering de overlijdenszorg kan verbeteren en
               <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
@@ -155,7 +162,11 @@ export default function RegistrationForms() {
         </div>
 
         {/* Form Container */}
-        <div className="max-w-5xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-600 ease-out">
+        <div ref={formRef} className={`max-w-5xl mx-auto transition-all duration-1000 ease-out ${
+          formVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-8'
+        }`}>
           <Tabs defaultValue="burger" className="w-full">
             {/* Simple Tab Navigation */}
             <div className="mb-8">
