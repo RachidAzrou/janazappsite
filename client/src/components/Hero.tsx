@@ -9,7 +9,7 @@ export default function Hero() {
   const { t } = useTranslation('landing');
   
   return (
-    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center py-8 sm:py-0 serene-surface serene-gradient serene-pattern">
+    <section className="relative min-h-[100svh] sm:min-h-screen flex items-center justify-center py-8 sm:py-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -19,19 +19,6 @@ export default function Hero() {
           data-testid="img-hero-background"
         />
         <div className="absolute inset-0 bg-black/40"></div>
-        
-        {/* Bewegende groene animaties */}
-        <div className="floating-orbs">
-          <div className="orb orb-1"></div>
-          <div className="orb orb-2"></div>
-          <div className="orb orb-3"></div>
-          <div className="orb orb-4"></div>
-        </div>
-        <div className="aurora-waves">
-          <div className="wave wave-1"></div>
-          <div className="wave wave-2"></div>
-          <div className="wave wave-3"></div>
-        </div>
       </div>
 
       {/* Content */}
