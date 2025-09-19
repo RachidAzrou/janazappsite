@@ -55,7 +55,7 @@ export default function Features() {
       {/* Dynamic Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated Grid */}
-        <div className="absolute inset-0 bg-grid-white/10 bg-grid-16 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] animate-grid-float"></div>
+        <div className="absolute inset-0 bg-grid-white/10 bg-grid-16 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] animate-grid-breathe"></div>
         
         {/* Floating Orbs */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-float-slow"></div>

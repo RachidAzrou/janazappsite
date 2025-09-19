@@ -386,6 +386,25 @@
     }
   }
 
+  @keyframes grid-breathe {
+    0%, 100% {
+      opacity: 0.1;
+      transform: scale(1) translateX(0) translateY(0);
+    }
+    25% {
+      opacity: 0.15;
+      transform: scale(1.002) translateX(1px) translateY(-0.5px);
+    }
+    50% {
+      opacity: 0.2;
+      transform: scale(1.004) translateX(-0.5px) translateY(1px);
+    }
+    75% {
+      opacity: 0.15;
+      transform: scale(1.002) translateX(0.5px) translateY(0.5px);
+    }
+  }
+
   @keyframes slide-right {
     0% {
       transform: translateX(-100%);
@@ -435,6 +454,10 @@
 
   .animate-grid-float {
     animation: grid-float 20s ease-in-out infinite;
+  }
+
+  .animate-grid-breathe {
+    animation: grid-breathe 18s ease-in-out infinite;
   }
 
   .animate-slide-right {
