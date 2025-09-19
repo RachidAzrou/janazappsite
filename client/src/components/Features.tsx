@@ -72,12 +72,23 @@ export default function Features() {
         <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-primary/4 to-primary/8 rounded-full blur-xl animate-pulse delay-500"></div>
         
         {/* Subtle Line Accents */}
-        <div className="absolute top-24 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
         <div className="absolute bottom-24 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
       </div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Header Section */}
+        <div className="text-center mb-12 lg:mb-16">
+          <div className={`transition-all duration-1000 ease-out ${
+            sectionVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}>
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
+              Een digitale oplossing die religieuze waarden respecteert en
+              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
+            </p>
+          </div>
+        </div>
 
         {/* Platform Preview with Features */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
