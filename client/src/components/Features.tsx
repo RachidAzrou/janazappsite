@@ -86,13 +86,11 @@ export default function Features() {
         {/* Platform Preview */}
         <div className="mb-16">
           <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden shadow-lg bg-gradient-to-br from-background via-muted/20 to-background">
-              <img 
-                src={mockupImage} 
-                alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
-                className="w-full h-auto"
-              />
-            </Card>
+            <img 
+              src={mockupImage} 
+              alt="JanazApp Platform Preview - Desktop en Mobiel Interface" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
