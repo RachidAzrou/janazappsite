@@ -52,8 +52,27 @@ const features = [
 export default function Features() {
   return (
     <section className="relative py-20 bg-gradient-to-br from-muted/30 via-muted/20 to-background overflow-hidden" id="diensten">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-white/10 bg-grid-16 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+      {/* Dynamic Background Pattern */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated Grid */}
+        <div className="absolute inset-0 bg-grid-white/10 bg-grid-16 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] animate-grid-float"></div>
+        
+        {/* Floating Orbs */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-float-slow"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-primary/7 rounded-full blur-lg animate-float-reverse"></div>
+        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-primary/3 rounded-full blur-2xl animate-float-slow delay-1000"></div>
+        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-primary/8 rounded-full blur-md animate-float-reverse delay-500"></div>
+        
+        {/* Animated Gradient Lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-slide-right"></div>
+        <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent animate-slide-left delay-700"></div>
+        <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent animate-slide-right delay-1400"></div>
+        
+        {/* Pulsing Dots */}
+        <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-primary/40 rounded-full animate-pulse-soft"></div>
+        <div className="absolute top-3/4 left-1/3 w-1.5 h-1.5 bg-primary/30 rounded-full animate-pulse-soft delay-300"></div>
+        <div className="absolute top-1/2 right-1/6 w-1 h-1 bg-primary/50 rounded-full animate-pulse-soft delay-600"></div>
+      </div>
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
