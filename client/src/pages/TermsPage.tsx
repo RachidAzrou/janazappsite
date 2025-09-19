@@ -129,31 +129,31 @@ export default function TermsPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">9. Duur en beëindiging</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">9. Duur en beëindiging</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• Gebruikers kunnen hun account op elk moment beëindigen.</li>
                       <li>• JanazApp kan de toegang tot het platform beëindigen bij misbruik of overtreding van deze voorwaarden.</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">10. Overmacht</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">10. Overmacht</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       JanazApp is niet verplicht om verplichtingen na te komen indien dit onmogelijk is door overmacht, zoals storingen in internetverbinding, stroomuitval, of overheidsmaatregelen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">11. Toepasselijk recht en geschillen</h2>
-                    <ul className="space-y-2 text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">11. Toepasselijk recht en geschillen</h2>
+                    <ul className="space-y-2 text-base leading-relaxed text-muted-foreground">
                       <li>• Op deze voorwaarden is uitsluitend Nederlands recht van toepassing.</li>
                       <li>• Geschillen zullen worden voorgelegd aan de bevoegde rechter in het arrondissement waar JanazApp gevestigd is.</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">12. Wijzigingen</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">12. Wijzigingen</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       JanazApp kan deze algemene voorwaarden wijzigen. De meest actuele versie staat altijd op de website.
                     </p>
                   </section>
