@@ -1,0 +1,133 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+// Import translations
+import nlCommon from '../locales/nl/common.json';
+import nlHeader from '../locales/nl/header.json';
+import nlLanding from '../locales/nl/landing.json';
+import nlForms from '../locales/nl/forms.json';
+import nlLegal from '../locales/nl/legal.json';
+
+import enCommon from '../locales/en/common.json';
+import enHeader from '../locales/en/header.json';
+import enLanding from '../locales/en/landing.json';
+import enForms from '../locales/en/forms.json';
+import enLegal from '../locales/en/legal.json';
+
+import frCommon from '../locales/fr/common.json';
+import frHeader from '../locales/fr/header.json';
+import frLanding from '../locales/fr/landing.json';
+import frForms from '../locales/fr/forms.json';
+import frLegal from '../locales/fr/legal.json';
+
+import deCommon from '../locales/de/common.json';
+import deHeader from '../locales/de/header.json';
+import deLanding from '../locales/de/landing.json';
+import deForms from '../locales/de/forms.json';
+import deLegal from '../locales/de/legal.json';
+
+import arCommon from '../locales/ar/common.json';
+import arHeader from '../locales/ar/header.json';
+import arLanding from '../locales/ar/landing.json';
+import arForms from '../locales/ar/forms.json';
+import arLegal from '../locales/ar/legal.json';
+
+import trCommon from '../locales/tr/common.json';
+import trHeader from '../locales/tr/header.json';
+import trLanding from '../locales/tr/landing.json';
+import trForms from '../locales/tr/forms.json';
+import trLegal from '../locales/tr/legal.json';
+
+const resources = {
+  nl: {
+    common: nlCommon,
+    header: nlHeader,
+    landing: nlLanding,
+    forms: nlForms,
+    legal: nlLegal,
+  },
+  en: {
+    common: enCommon,
+    header: enHeader,
+    landing: enLanding,
+    forms: enForms,
+    legal: enLegal,
+  },
+  fr: {
+    common: frCommon,
+    header: frHeader,
+    landing: frLanding,
+    forms: frForms,
+    legal: frLegal,
+  },
+  de: {
+    common: deCommon,
+    header: deHeader,
+    landing: deLanding,
+    forms: deForms,
+    legal: deLegal,
+  },
+  ar: {
+    common: arCommon,
+    header: arHeader,
+    landing: arLanding,
+    forms: arForms,
+    legal: arLegal,
+  },
+  tr: {
+    common: trCommon,
+    header: trHeader,
+    landing: trLanding,
+    forms: trForms,
+    legal: trLegal,
+  },
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: 'nl', // Dutch as fallback
+    lng: 'nl', // Default to Dutch
+    
+    // Language detection settings
+    detection: {
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+      lookupLocalStorage: 'janazapp-language',
+    },
+
+    interpolation: {
+      escapeValue: false, // React already escapes
+    },
+
+    // Namespace settings
+    defaultNS: 'common',
+    ns: ['common', 'header', 'landing', 'forms', 'legal'],
+
+    // Debug in development
+    debug: import.meta.env.DEV,
+    
+    react: {
+      useSuspense: false,
+    },
+  });
+
+export default i18n;
+
+// Helper function to check if language is RTL
+export const isRTL = (language: string): boolean => {
+  return ['ar'].includes(language);
+};
+
+// Available languages with their display names and flags
+export const languages = [
+  { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+] as const;

@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "readMore": "Devamını Oku",
+    "getStarted": "Başla",
+    "submit": "Gönder",
+    "register": "Kayıt Ol",
+    "login": "Giriş Yap",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "back": "Geri",
+    "next": "İleri",
+    "close": "Kapat"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "aboutUs": "Hakkımızda",
+    "services": "Hizmetler",
+    "register": "Kayıt Ol",
+    "login": "Giriş Yap"
+  },
+  "general": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "success": "Başarılı",
+    "required": "Gerekli",
+    "optional": "İsteğe Bağlı",
+    "yes": "Evet",
+    "no": "Hayır",
+    "or": "veya",
+    "and": "ve"
+  },
+  "location": {
+    "antwerpen": "Antwerp, Belçika"
+  }
+}

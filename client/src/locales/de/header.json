@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "aboutUs": "Über Uns",
+    "services": "Dienstleistungen",
+    "register": "Registrieren",
+    "login": "Anmelden"
+  },
+  "mobileMenu": {
+    "toggle": "Menü öffnen/schließen"
+  }
+}

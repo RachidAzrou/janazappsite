@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "title": "Digital Funeral Care",
+    "subtitle": "Tailored to people, ritual and reality",
+    "description": "From family to government, everything connected in one platform. Simplify complex death administration for the Islamic community.",
+    "citizensCard": {
+      "title": "For Citizens",
+      "description": "Register as family or individual for access to our services",
+      "buttonText": "Register as Citizen"
+    },
+    "partnersCard": {
+      "title": "For Partners",
+      "description": "Funeral directors, mosques and other partners",
+      "buttonText": "Register as Partner"
+    }
+  },
+  "features": {
+    "subtitle": "A digital solution that respects religious values and simplifies complex processes",
+    "items": [
+      {
+        "title": "Fast Procedures",
+        "kicker": "24-48 hours faster",
+        "description": "Reduce waiting times through streamlined digital processes.",
+        "benefit": "No more missed deadlines"
+      },
+      {
+        "title": "Digital Documentation",
+        "kicker": "Everything in one place",
+        "description": "From death certificate to laissez-passer, fully organized.",
+        "benefit": "No more lost documents"
+      },
+      {
+        "title": "Secure & Reliable",
+        "kicker": "GDPR compliant",
+        "description": "Modern encryption and complete privacy protection.",
+        "benefit": "Your data is safe"
+      },
+      {
+        "title": "Culturally Aware",
+        "kicker": "Islamic-focused",
+        "description": "Taking into account religious requirements and traditions.",
+        "benefit": "Respectful treatment"
+      },
+      {
+        "title": "Repatriation",
+        "kicker": "Repatriation possible",
+        "description": "Support for consular procedures and repatriation.",
+        "benefit": "To country of origin"
+      },
+      {
+        "title": "Transparent Progress",
+        "kicker": "Real-time updates",
+        "description": "Always informed about the status of procedures.",
+        "benefit": "No more uncertainty"
+      }
+    ]
+  }
+}

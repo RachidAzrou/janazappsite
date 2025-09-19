@@ -1,0 +1,55 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp digitalizes funeral care for the Islamic community in Western Europe. Our platform connects families, funeral directors, mosques and government institutions.",
+    "contact": {
+      "address": "Antwerp, Belgium",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. All rights reserved.",
+    "links": {
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "terms": "Terms and Conditions"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Your privacy is of the utmost importance to JanazApp. This policy describes how we collect, use and protect your personal data.",
+    "sections": [
+      {
+        "title": "1. Data Collection",
+        "content": "We only collect data that is necessary for providing our funeral care services. This includes personal information from bereaved families, funeral directors and other involved parties."
+      },
+      {
+        "title": "2. Use of Data",
+        "content": "Your data is used exclusively for facilitating death procedures, coordinating between different parties and complying with legal obligations."
+      },
+      {
+        "title": "3. Security",
+        "content": "We implement modern security measures to protect your personal data against unauthorized access, modification or disclosure. All data is stored encrypted."
+      },
+      {
+        "title": "4. Data Sharing",
+        "content": "Data is only shared with parties directly involved in the death procedure, such as funeral directors, mosques and government agencies, and only with your explicit consent."
+      },
+      {
+        "title": "5. Your Rights",
+        "content": "You have the right to view, correct or delete your data. Contact us at info@janazapp.com for questions about your privacy."
+      },
+      {
+        "title": "6. GDPR Compliance",
+        "content": "JanazApp fully complies with the General Data Protection Regulation (GDPR). We respect your privacy and maintain strict data protection procedures."
+      },
+      {
+        "title": "7. Contact",
+        "content": "For questions about this privacy policy you can contact us at:\nEmail: info@janazapp.com\nPhone: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Last updated: January 2025"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "intro": "These terms and conditions apply to the use of JanazApp services. By using our services, you agree to these terms."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "readMore": "Lees Meer",
+    "getStarted": "Aan de Slag",
+    "submit": "Verzenden",
+    "register": "Registreren",
+    "login": "Inloggen",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "back": "Terug",
+    "next": "Volgende",
+    "close": "Sluiten"
+  },
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "Over Ons",
+    "services": "Diensten",
+    "register": "Registreren",
+    "login": "Inloggen"
+  },
+  "general": {
+    "loading": "Bezig met laden...",
+    "error": "Er is een fout opgetreden",
+    "success": "Succesvol",
+    "required": "Verplicht",
+    "optional": "Optioneel",
+    "yes": "Ja",
+    "no": "Nee",
+    "or": "of",
+    "and": "en"
+  },
+  "location": {
+    "antwerpen": "Antwerpen, België"
+  }
+}

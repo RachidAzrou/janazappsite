@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "title": "Soins Funéraires Numériques",
+    "subtitle": "Adapté à l'humain, au rituel et à la réalité",
+    "description": "De la famille au gouvernement, tout connecté sur une seule plateforme. Simplifiez l'administration complexe des décès pour la communauté islamique.",
+    "citizensCard": {
+      "title": "Pour les Citoyens",
+      "description": "Inscrivez-vous en tant que famille ou individu pour accéder à nos services",
+      "buttonText": "S'inscrire comme Citoyen"
+    },
+    "partnersCard": {
+      "title": "Pour les Partenaires",
+      "description": "Pompes funèbres, mosquées et autres partenaires",
+      "buttonText": "S'inscrire comme Partenaire"
+    }
+  },
+  "features": {
+    "subtitle": "Une solution numérique qui respecte les valeurs religieuses et simplifie les processus complexes",
+    "items": [
+      {
+        "title": "Procédures Rapides",
+        "kicker": "24-48 heures plus rapide",
+        "description": "Réduisez les temps d'attente grâce aux processus numériques simplifiés.",
+        "benefit": "Plus de délais manqués"
+      },
+      {
+        "title": "Documentation Numérique",
+        "kicker": "Tout en un seul endroit",
+        "description": "Du certificat de décès au laissez-passer, entièrement organisé.",
+        "benefit": "Plus de documents perdus"
+      },
+      {
+        "title": "Sûr & Fiable",
+        "kicker": "Conforme RGPD",
+        "description": "Cryptage moderne et protection complète de la vie privée.",
+        "benefit": "Vos données sont sécurisées"
+      },
+      {
+        "title": "Sensibilisé Culturellement",
+        "kicker": "Orienté islamique",
+        "description": "Tenant compte des exigences religieuses et des traditions.",
+        "benefit": "Traitement respectueux"
+      },
+      {
+        "title": "Rapatriement",
+        "kicker": "Rapatriement possible",
+        "description": "Support pour les procédures consulaires et le rapatriement.",
+        "benefit": "Vers le pays d'origine"
+      },
+      {
+        "title": "Progrès Transparent",
+        "kicker": "Mises à jour en temps réel",
+        "description": "Toujours informé du statut des procédures.",
+        "benefit": "Plus d'incertitude"
+      }
+    ]
+  }
+}

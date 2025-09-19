@@ -1,0 +1,55 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp numérise les soins funéraires pour la communauté islamique d'Europe occidentale. Notre plateforme connecte les familles, les pompes funèbres, les mosquées et les institutions gouvernementales.",
+    "contact": {
+      "address": "Anvers, Belgique",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. Tous droits réservés.",
+    "links": {
+      "privacy": "Confidentialité",
+      "cookies": "Cookies",
+      "terms": "Conditions Générales"
+    }
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "intro": "Votre vie privée est de la plus haute importance pour JanazApp. Cette politique décrit comment nous collectons, utilisons et protégeons vos données personnelles.",
+    "sections": [
+      {
+        "title": "1. Collecte de Données",
+        "content": "Nous ne collectons que les données nécessaires à la fourniture de nos services de soins funéraires. Cela inclut les informations personnelles des familles endeuillées, des pompes funèbres et d'autres parties impliquées."
+      },
+      {
+        "title": "2. Utilisation des Données",
+        "content": "Vos données sont utilisées exclusivement pour faciliter les procédures de décès, coordonner entre différentes parties et se conformer aux obligations légales."
+      },
+      {
+        "title": "3. Sécurité",
+        "content": "Nous mettons en place des mesures de sécurité modernes pour protéger vos données personnelles contre l'accès non autorisé, la modification ou la divulgation. Toutes les données sont stockées de manière cryptée."
+      },
+      {
+        "title": "4. Partage de Données",
+        "content": "Les données ne sont partagées qu'avec les parties directement impliquées dans la procédure de décès, comme les pompes funèbres, les mosquées et les agences gouvernementales, et seulement avec votre consentement explicite."
+      },
+      {
+        "title": "5. Vos Droits",
+        "content": "Vous avez le droit de consulter, corriger ou supprimer vos données. Contactez-nous à info@janazapp.com pour des questions sur votre vie privée."
+      },
+      {
+        "title": "6. Conformité RGPD",
+        "content": "JanazApp se conforme entièrement au Règlement Général sur la Protection des Données (RGPD). Nous respectons votre vie privée et maintenons des procédures strictes de protection des données."
+      },
+      {
+        "title": "7. Contact",
+        "content": "Pour des questions sur cette politique de confidentialité, vous pouvez nous contacter à :\nE-mail : info@janazapp.com\nTéléphone : +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Dernière mise à jour : janvier 2025"
+  },
+  "terms": {
+    "title": "Conditions Générales",
+    "intro": "Ces conditions générales s'appliquent à l'utilisation des services JanazApp. En utilisant nos services, vous acceptez ces conditions."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp, Batı Avrupa'daki İslam topluluğu için cenaze bakımını dijitalleştiriyor. Platformumuz aileleri, cenaze müdürlerini, camileri ve devlet kurumlarını bağlıyor.",
+    "contact": {
+      "address": "Antwerp, Belçika",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. Tüm hakları saklıdır.",
+    "links": {
+      "privacy": "Gizlilik",
+      "cookies": "Çerezler",
+      "terms": "Şartlar ve Koşullar"
+    }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "intro": "Gizliliğiniz JanazApp için son derece önemlidir. Bu politika kişisel verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
+    "sections": [
+      {
+        "title": "1. Veri Toplama",
+        "content": "Sadece cenaze bakım hizmetlerimizi sağlamak için gerekli olan verileri topluyoruz. Bu, yas tutan ailelerden, cenaze müdürlerinden ve diğer ilgili taraflardan gelen kişisel bilgileri içerir."
+      },
+      {
+        "title": "2. Veri Kullanımı",
+        "content": "Verileriniz yalnızca ölüm prosedürlerini kolaylaştırmak, farklı taraflar arasında koordinasyon sağlamak ve yasal yükümlülüklere uymak için kullanılır."
+      },
+      {
+        "title": "3. Güvenlik",
+        "content": "Kişisel verilerinizi yetkisiz erişim, değişiklik veya ifşaya karşı korumak için modern güvenlik önlemleri uyguluyoruz. Tüm veriler şifreli olarak saklanır."
+      },
+      {
+        "title": "4. Veri Paylaşımı",
+        "content": "Veriler yalnızca cenaze müdürleri, camiler ve devlet kurumları gibi ölüm prosedürüne doğrudan dahil olan taraflarla ve sadece açık onayınızla paylaşılır."
+      },
+      {
+        "title": "5. Haklarınız",
+        "content": "Verilerinizi görüntüleme, düzeltme veya silme hakkına sahipsiniz. Gizliliğinizle ilgili sorular için info@janazapp.com adresinden bize ulaşın."
+      },
+      {
+        "title": "6. GDPR Uyumluluğu",
+        "content": "JanazApp, Genel Veri Koruma Yönetmeliği'ne (GDPR) tam olarak uygundur. Gizliliğinize saygı duyuyor ve sıkı veri koruma prosedürleri uyguluyoruz."
+      },
+      {
+        "title": "7. İletişim",
+        "content": "Bu gizlilik politikası hakkındaki sorularınız için bizimle iletişime geçebilirsiniz:\nE-posta: info@janazapp.com\nTelefon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Son güncelleme: Ocak 2025"
+  },
+  "terms": {
+    "title": "Şartlar ve Koşullar",
+    "intro": "Bu şartlar ve koşullar JanazApp hizmetlerinin kullanımı için geçerlidir. Hizmetlerimizi kullanarak bu şartları kabul etmiş olursunuz."
+  }
+}

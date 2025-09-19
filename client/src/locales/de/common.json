@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "readMore": "Weiterlesen",
+    "getStarted": "Loslegen",
+    "submit": "Senden",
+    "register": "Registrieren",
+    "login": "Anmelden",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "back": "Zurück",
+    "next": "Weiter",
+    "close": "Schließen"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "aboutUs": "Über Uns",
+    "services": "Dienstleistungen",
+    "register": "Registrieren",
+    "login": "Anmelden"
+  },
+  "general": {
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "success": "Erfolgreich",
+    "required": "Erforderlich",
+    "optional": "Optional",
+    "yes": "Ja",
+    "no": "Nein",
+    "or": "oder",
+    "and": "und"
+  },
+  "location": {
+    "antwerpen": "Antwerpen, Belgien"
+  }
+}

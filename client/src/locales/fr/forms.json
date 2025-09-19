@@ -1,0 +1,149 @@
+{
+  "tabs": {
+    "citizens": "Particuliers",
+    "partners": "Professionnels"
+  },
+  "sections": {
+    "personalData": "Informations Personnelles",
+    "personalDataSubtitle": "Remplissez vos informations pour un service personnalisé",
+    "companyInfo": "Informations sur l'Entreprise",
+    "companyInfoSubtitle": "Remplissez les informations de votre entreprise pour l'inscription"
+  },
+  "citizenForm": {
+    "title": "Inscription pour les Citoyens",
+    "subtitle": "Pour les particuliers et les familles",
+    "fields": {
+      "firstName": {
+        "label": "Prénom *",
+        "placeholder": "p.ex. Fatima"
+      },
+      "lastName": {
+        "label": "Nom de famille *",
+        "placeholder": "p.ex. Benali"
+      },
+      "email": {
+        "label": "Adresse e-mail *",
+        "placeholder": "nom@exemple.be",
+        "helpText": "Nous l'utilisons pour les mises à jour importantes"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "+32 472 12 34 56"
+      },
+      "city": {
+        "label": "Lieu de résidence",
+        "placeholder": "p.ex. Anvers"
+      },
+      "preferredLanguage": {
+        "label": "Langue de communication préférée"
+      }
+    },
+    "languageOptions": {
+      "nederlands": "Néerlandais",
+      "engels": "Anglais",
+      "duits": "Allemand",
+      "arabisch": "Arabe",
+      "turks": "Turc",
+      "frans": "Français"
+    },
+    "privacy": {
+      "label": "J'accepte la politique de confidentialité et les conditions générales",
+      "helpText": "Vos données sont stockées en sécurité selon les directives RGPD"
+    },
+    "submitButton": "S'inscrire comme Citoyen",
+    "submittingButton": "Inscription en cours..."
+  },
+  "partnerForm": {
+    "title": "Inscription pour les Partenaires",
+    "subtitle": "Pour les professionnels et les organisations",
+    "fields": {
+      "companyName": {
+        "label": "Nom de l'entreprise *",
+        "placeholder": "p.ex. Mosquée Al-Nour Anvers"
+      },
+      "contactPerson": {
+        "label": "Personne de contact *",
+        "placeholder": "Omar El Moussaoui"
+      },
+      "partnerType": {
+        "label": "Type de partenaire *",
+        "placeholder": "Sélectionner le type"
+      },
+      "email": {
+        "label": "Adresse e-mail *",
+        "placeholder": "info@mosquee-alnour.be"
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "+32 3 234 56 78"
+      },
+      "city": {
+        "label": "Lieu d'établissement",
+        "placeholder": "p.ex. Bruxelles"
+      },
+      "description": {
+        "label": "Description des services",
+        "placeholder": "Décrivez les services que vous offrez et comment vous pouvez soutenir les familles..."
+      }
+    },
+    "partnerTypes": {
+      "uitvaartondernemer": "Pompes funèbres - Services funéraires complets",
+      "moskee": "Mosquée - Accompagnement religieux",
+      "verzekeraar": "Assurance - Assurances funéraires",
+      "wasplaats": "Lieu de lavage - Lavage rituel",
+      "andere": "Autre - Services connexes"
+    },
+    "privacy": {
+      "label": "J'accepte la politique de confidentialité et les conditions générales"
+    },
+    "submitButton": "S'inscrire comme Partenaire",
+    "submittingButton": "Inscription en cours..."
+  },
+  "validation": {
+    "firstNameRequired": "Le prénom est obligatoire",
+    "firstNameMinLength": "Le prénom doit contenir au moins 2 caractères",
+    "lastNameRequired": "Le nom de famille est obligatoire",
+    "lastNameMinLength": "Le nom de famille doit contenir au moins 2 caractères",
+    "emailRequired": "L'adresse e-mail est obligatoire",
+    "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+    "phoneInvalid": "Veuillez saisir un numéro de téléphone valide (p.ex. +31 6 12345678)",
+    "phoneInvalidPartner": "Veuillez saisir un numéro de téléphone valide (p.ex. +31 20 1234567)",
+    "languageRequired": "Veuillez sélectionner une langue préférée",
+    "privacyRequired": "Vous devez accepter la politique de confidentialité pour continuer",
+    "companyNameRequired": "Le nom de l'entreprise est obligatoire",
+    "companyNameMinLength": "Le nom de l'entreprise doit contenir au moins 2 caractères",
+    "contactPersonRequired": "La personne de contact est obligatoire",
+    "contactPersonMinLength": "La personne de contact doit contenir au moins 2 caractères",
+    "partnerTypeRequired": "Veuillez sélectionner un type de partenaire"
+  },
+  "success": {
+    "citizen": {
+      "title": "Inscription Terminée",
+      "subtitle": "Merci de vous être inscrit chez JanazApp",
+      "message": "Votre demande a été reçue en bonne et due forme. Nous comprenons que cela peut être une période difficile pour vous et apprécions votre confiance en nos services.",
+      "nextStepsTitle": "Étapes suivantes:",
+      "nextSteps": [
+        "Dans les 24 heures, l'un de nos collaborateurs vous contactera personnellement",
+        "Nous vous guiderons à travers le processus d'activation et expliquerons la plateforme",
+        "Notre support est disponible quand vous en avez besoin"
+      ],
+      "supportQuestion": "Avez-vous des questions ou avez-vous besoin d'un support immédiat?",
+      "backButton": "Retour à l'inscription",
+      "contactButton": "Nous contacter"
+    },
+    "partner": {
+      "title": "Demande de Partenariat Reçue",
+      "subtitle": "Merci pour votre intérêt pour la collaboration",
+      "message": "Votre demande de partenariat avec JanazApp a été reçue. Nous apprécions votre dévouement à soutenir les familles en période difficile.",
+      "nextStepsTitle": "Étapes suivantes:",
+      "nextSteps": [
+        "Dans les 48 heures, nous examinerons soigneusement votre demande",
+        "Un de nos gestionnaires de partenariat vous contactera",
+        "Ensemble, nous discuterons des opportunités de collaboration"
+      ],
+      "supportQuestion": "Avez-vous des questions ou avez-vous besoin d'un support immédiat?",
+      "backButton": "Retour à l'inscription",
+      "contactButton": "Nous contacter"
+    }
+  }
+}

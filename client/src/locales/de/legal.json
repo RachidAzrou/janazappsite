@@ -1,0 +1,55 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp digitalisiert die Bestattungsbetreuung für die islamische Gemeinschaft in Westeuropa. Unsere Plattform verbindet Familien, Bestattungsunternehmer, Moscheen und Regierungsinstitutionen.",
+    "contact": {
+      "address": "Antwerpen, Belgien",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. Alle Rechte vorbehalten.",
+    "links": {
+      "privacy": "Datenschutz",
+      "cookies": "Cookies",
+      "terms": "Allgemeine Geschäftsbedingungen"
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "intro": "Ihre Privatsphäre ist für JanazApp von größter Bedeutung. Diese Richtlinie beschreibt, wie wir Ihre persönlichen Daten sammeln, verwenden und schützen.",
+    "sections": [
+      {
+        "title": "1. Datensammlung",
+        "content": "Wir sammeln nur Daten, die für die Bereitstellung unserer Bestattungsdienstleistungen erforderlich sind. Dazu gehören persönliche Informationen von trauernden Familien, Bestattungsunternehmern und anderen beteiligten Parteien."
+      },
+      {
+        "title": "2. Datenverwendung",
+        "content": "Ihre Daten werden ausschließlich zur Erleichterung von Sterbeverfahren, zur Koordinierung zwischen verschiedenen Parteien und zur Erfüllung gesetzlicher Verpflichtungen verwendet."
+      },
+      {
+        "title": "3. Sicherheit",
+        "content": "Wir implementieren moderne Sicherheitsmaßnahmen zum Schutz Ihrer persönlichen Daten vor unbefugtem Zugriff, Änderung oder Offenlegung. Alle Daten werden verschlüsselt gespeichert."
+      },
+      {
+        "title": "4. Datenweitergabe",
+        "content": "Daten werden nur mit Parteien geteilt, die direkt am Sterbeverfahren beteiligt sind, wie Bestattungsunternehmer, Moscheen und Regierungsbehörden, und nur mit Ihrer ausdrücklichen Zustimmung."
+      },
+      {
+        "title": "5. Ihre Rechte",
+        "content": "Sie haben das Recht, Ihre Daten einzusehen, zu korrigieren oder zu löschen. Kontaktieren Sie uns unter info@janazapp.com für Fragen zu Ihrer Privatsphäre."
+      },
+      {
+        "title": "6. DSGVO-Konformität",
+        "content": "JanazApp entspricht vollständig der Datenschutz-Grundverordnung (DSGVO). Wir respektieren Ihre Privatsphäre und halten strenge Datenschutzverfahren ein."
+      },
+      {
+        "title": "7. Kontakt",
+        "content": "Für Fragen zu dieser Datenschutzerklärung können Sie uns kontaktieren unter:\nE-Mail: info@janazapp.com\nTelefon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Zuletzt aktualisiert: Januar 2025"
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "intro": "Diese allgemeinen Geschäftsbedingungen gelten für die Nutzung der JanazApp-Dienste. Durch die Nutzung unserer Dienste stimmen Sie diesen Bedingungen zu."
+  }
+}

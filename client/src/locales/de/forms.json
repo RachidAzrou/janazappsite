@@ -1,0 +1,149 @@
+{
+  "tabs": {
+    "citizens": "Privatpersonen",
+    "partners": "Fachkräfte"
+  },
+  "sections": {
+    "personalData": "Persönliche Daten",
+    "personalDataSubtitle": "Geben Sie Ihre Daten für einen persönlichen Service ein",
+    "companyInfo": "Unternehmensinformationen",
+    "companyInfoSubtitle": "Geben Sie Ihre Unternehmensdaten für die Registrierung ein"
+  },
+  "citizenForm": {
+    "title": "Registrierung für Bürger",
+    "subtitle": "Für Privatpersonen und Familien",
+    "fields": {
+      "firstName": {
+        "label": "Vorname *",
+        "placeholder": "z.B. Fatima"
+      },
+      "lastName": {
+        "label": "Nachname *",
+        "placeholder": "z.B. Benali"
+      },
+      "email": {
+        "label": "E-Mail-Adresse *",
+        "placeholder": "name@beispiel.de",
+        "helpText": "Wir verwenden diese für wichtige Updates"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "+32 472 12 34 56"
+      },
+      "city": {
+        "label": "Wohnort",
+        "placeholder": "z.B. Antwerpen"
+      },
+      "preferredLanguage": {
+        "label": "Bevorzugte Kommunikationssprache"
+      }
+    },
+    "languageOptions": {
+      "nederlands": "Niederländisch",
+      "engels": "Englisch",
+      "duits": "Deutsch",
+      "arabisch": "Arabisch",
+      "turks": "Türkisch",
+      "frans": "Französisch"
+    },
+    "privacy": {
+      "label": "Ich stimme der Datenschutzerklärung und den allgemeinen Geschäftsbedingungen zu",
+      "helpText": "Ihre Daten werden gemäß DSGVO-Richtlinien sicher gespeichert"
+    },
+    "submitButton": "Als Bürger registrieren",
+    "submittingButton": "Registrierung läuft..."
+  },
+  "partnerForm": {
+    "title": "Registrierung für Partner",
+    "subtitle": "Für Fachkräfte und Organisationen",
+    "fields": {
+      "companyName": {
+        "label": "Firmenname *",
+        "placeholder": "z.B. Moschee Al-Nour Antwerpen"
+      },
+      "contactPerson": {
+        "label": "Ansprechpartner *",
+        "placeholder": "Omar El Moussaoui"
+      },
+      "partnerType": {
+        "label": "Partner-Typ *",
+        "placeholder": "Typ auswählen"
+      },
+      "email": {
+        "label": "E-Mail-Adresse *",
+        "placeholder": "info@moschee-alnour.be"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "+32 3 234 56 78"
+      },
+      "city": {
+        "label": "Standort",
+        "placeholder": "z.B. Brüssel"
+      },
+      "description": {
+        "label": "Dienstleistungsbeschreibung",
+        "placeholder": "Beschreiben Sie die Dienstleistungen, die Sie anbieten und wie Sie Familien unterstützen können..."
+      }
+    },
+    "partnerTypes": {
+      "uitvaartondernemer": "Bestattungsunternehmer - Vollständige Bestattungsdienstleistungen",
+      "moskee": "Moschee - Religiöse Betreuung",
+      "verzekeraar": "Versicherung - Bestattungsversicherungen",
+      "wasplaats": "Waschplatz - Rituelle Waschung",
+      "andere": "Andere - Verwandte Dienstleistungen"
+    },
+    "privacy": {
+      "label": "Ich stimme der Datenschutzerklärung und den allgemeinen Geschäftsbedingungen zu"
+    },
+    "submitButton": "Als Partner registrieren",
+    "submittingButton": "Registrierung läuft..."
+  },
+  "validation": {
+    "firstNameRequired": "Vorname ist erforderlich",
+    "firstNameMinLength": "Vorname muss mindestens 2 Zeichen enthalten",
+    "lastNameRequired": "Nachname ist erforderlich",
+    "lastNameMinLength": "Nachname muss mindestens 2 Zeichen enthalten",
+    "emailRequired": "E-Mail-Adresse ist erforderlich",
+    "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "phoneInvalid": "Bitte geben Sie eine gültige Telefonnummer ein (z.B. +31 6 12345678)",
+    "phoneInvalidPartner": "Bitte geben Sie eine gültige Telefonnummer ein (z.B. +31 20 1234567)",
+    "languageRequired": "Bitte wählen Sie eine bevorzugte Sprache",
+    "privacyRequired": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren",
+    "companyNameRequired": "Firmenname ist erforderlich",
+    "companyNameMinLength": "Firmenname muss mindestens 2 Zeichen enthalten",
+    "contactPersonRequired": "Ansprechpartner ist erforderlich",
+    "contactPersonMinLength": "Ansprechpartner muss mindestens 2 Zeichen enthalten",
+    "partnerTypeRequired": "Bitte wählen Sie einen Partner-Typ"
+  },
+  "success": {
+    "citizen": {
+      "title": "Registrierung Abgeschlossen",
+      "subtitle": "Vielen Dank für Ihre Registrierung bei JanazApp",
+      "message": "Ihr Antrag wurde ordnungsgemäß erhalten. Wir verstehen, dass dies eine schwierige Zeit für Sie sein kann und schätzen Ihr Vertrauen in unsere Dienstleistungen.",
+      "nextStepsTitle": "Nächste Schritte:",
+      "nextSteps": [
+        "Innerhalb von 24 Stunden wird sich einer unserer Mitarbeiter persönlich mit Ihnen in Verbindung setzen",
+        "Wir führen Sie durch den Aktivierungsprozess und erklären die Plattform",
+        "Unser Support steht zur Verfügung, wann immer Sie uns brauchen"
+      ],
+      "supportQuestion": "Haben Sie Fragen oder benötigen Sie sofortige Unterstützung?",
+      "backButton": "Zurück zur Registrierung",
+      "contactButton": "Kontakt aufnehmen"
+    },
+    "partner": {
+      "title": "Partnerschaftsantrag Erhalten",
+      "subtitle": "Vielen Dank für Ihr Interesse an einer Zusammenarbeit",
+      "message": "Ihr Antrag auf Partnerschaft mit JanazApp wurde erhalten. Wir schätzen Ihr Engagement bei der Unterstützung von Familien in schwierigen Zeiten.",
+      "nextStepsTitle": "Nächste Schritte:",
+      "nextSteps": [
+        "Innerhalb von 48 Stunden werden wir Ihren Antrag sorgfältig prüfen",
+        "Einer unserer Partnership-Manager wird sich mit Ihnen in Verbindung setzen",
+        "Gemeinsam werden wir Kooperationsmöglichkeiten besprechen"
+      ],
+      "supportQuestion": "Haben Sie Fragen oder benötigen Sie sofortige Unterstützung?",
+      "backButton": "Zurück zur Registrierung",
+      "contactButton": "Kontakt aufnehmen"
+    }
+  }
+}

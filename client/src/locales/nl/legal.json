@@ -1,0 +1,55 @@
+{
+  "footer": {
+    "companyDescription": "JanazApp digitaliseert de overlijdenszorg voor de islamitische gemeenschap in West-Europa. Ons platform verbindt families, uitvaartondernemers, moskeeën en overheidsinstellingen.",
+    "contact": {
+      "address": "Antwerpen, België",
+      "email": "info@janazapp.com",
+      "phone": "+32 2 123 4567"
+    },
+    "copyright": "© 2025 JanazApp. Alle rechten voorbehouden.",
+    "links": {
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "terms": "Algemene Voorwaarden"
+    }
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "intro": "Uw privacy is van het grootste belang voor JanazApp. Dit beleid beschrijft hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
+    "sections": [
+      {
+        "title": "1. Gegevensverzameling",
+        "content": "Wij verzamelen alleen de gegevens die noodzakelijk zijn voor het verlenen van onze diensten in de overlijdenszorg. Dit omvat persoonlijke informatie van nabestaanden, uitvaartondernemers en andere betrokken partijen."
+      },
+      {
+        "title": "2. Gebruik van gegevens",
+        "content": "Uw gegevens worden uitsluitend gebruikt voor het faciliteren van overlijdensprocedures, het coördineren tussen verschillende partijen en het naleven van wettelijke verplichtingen."
+      },
+      {
+        "title": "3. Beveiliging",
+        "content": "Wij implementeren moderne beveiligingsmaatregelen om uw persoonlijke gegevens te beschermen tegen ongeoorloofde toegang, wijziging of openbaarmaking. Alle gegevens worden geëncrypteerd opgeslagen."
+      },
+      {
+        "title": "4. Delen van gegevens",
+        "content": "Gegevens worden alleen gedeeld met partijen die direct betrokken zijn bij de overlijdensprocedure, zoals uitvaartondernemers, moskeeën en overheidsinstanties, en alleen met uw expliciete toestemming."
+      },
+      {
+        "title": "5. Uw rechten",
+        "content": "U heeft het recht om uw gegevens in te zien, te corrigeren of te laten verwijderen. Neem contact met ons op via info@janazapp.com voor vragen over uw privacy."
+      },
+      {
+        "title": "6. GDPR-compliance",
+        "content": "JanazApp voldoet volledig aan de Algemene Verordening Gegevensbescherming (AVG/GDPR). Wij respecteren uw privacy en hanteren strenge procedures voor gegevensbescherming."
+      },
+      {
+        "title": "7. Contact",
+        "content": "Voor vragen over dit privacybeleid kunt u contact opnemen via:\nE-mail: info@janazapp.com\nTelefoon: +32 2 123 4567"
+      }
+    ],
+    "lastUpdated": "Laatst bijgewerkt: januari 2025"
+  },
+  "terms": {
+    "title": "Algemene Voorwaarden",
+    "intro": "Deze algemene voorwaarden zijn van toepassing op het gebruik van de JanazApp-diensten. Door gebruik te maken van onze diensten gaat u akkoord met deze voorwaarden."
+  }
+}

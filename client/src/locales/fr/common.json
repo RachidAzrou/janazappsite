@@ -1,0 +1,35 @@
+{
+  "buttons": {
+    "readMore": "Lire Plus",
+    "getStarted": "Commencer",
+    "submit": "Envoyer",
+    "register": "S'inscrire",
+    "login": "Connexion",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "back": "Retour",
+    "next": "Suivant",
+    "close": "Fermer"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "aboutUs": "À Propos",
+    "services": "Services",
+    "register": "S'inscrire",
+    "login": "Connexion"
+  },
+  "general": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Réussi",
+    "required": "Obligatoire",
+    "optional": "Optionnel",
+    "yes": "Oui",
+    "no": "Non",
+    "or": "ou",
+    "and": "et"
+  },
+  "location": {
+    "antwerpen": "Anvers, Belgique"
+  }
+}
