@@ -124,16 +124,16 @@ export default function CookiesPage() {
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">6. Wijzigingen in dit cookiebeleid</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">6. Wijzigingen in dit cookiebeleid</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       We kunnen dit cookiebeleid van tijd tot tijd bijwerken. 
                       Wijzigingen worden op deze pagina gepubliceerd en zijn onmiddellijk van kracht.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-bold text-foreground mb-4">7. Contact</h2>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <h2 className="text-xl font-bold text-foreground mb-4">7. Contact</h2>
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       Voor vragen over ons cookiebeleid kunt u contact opnemen via:
                       <br />
                       E-mail: info@janazapp.com
