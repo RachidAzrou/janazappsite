@@ -96,15 +96,6 @@ export default function Features() {
 
           {/* Features Rechts */}
           <div>
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Waarom JanazApp?
-              </h3>
-              <p className="text-muted-foreground">
-                Ontdek hoe onze digitale oplossing islamitische begrafenisprocessen vereenvoudigt
-              </p>
-            </div>
-            
             <div className="space-y-6">
               {features.map((feature, index) => {
                 const IconComponent = feature.icon;
