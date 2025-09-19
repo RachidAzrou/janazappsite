@@ -29,7 +29,7 @@ export default function Header() {
             <a href="#registratie" className="text-foreground hover:text-primary transition-colors" data-testid="link-register">
               Registreren
             </a>
-            <Button variant="default" size="sm" data-testid="button-login">
+            <Button variant="default" size="default" className="font-semibold" data-testid="button-login">
               Inloggen
             </Button>
           </nav>
@@ -63,7 +63,7 @@ export default function Header() {
               <a href="#registratie" className="block text-foreground hover:text-primary transition-colors" data-testid="link-register-mobile">
                 Registreren
               </a>
-              <Button variant="default" size="sm" className="w-full" data-testid="button-login-mobile">
+              <Button variant="default" size="default" className="w-full font-semibold" data-testid="button-login-mobile">
                 Inloggen
               </Button>
             </div>

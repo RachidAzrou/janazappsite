@@ -54,7 +54,7 @@ export default function Footer() {
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
                     <MapPin className="h-4 w-4 text-primary-foreground" />
                   </div>
-                  <span data-testid="text-address" className="font-medium">Brussels, Belgium & Amsterdam, Netherlands</span>
+                  <span data-testid="text-address" className="font-medium">Antwerpen, België</span>
                 </div>
                 <div className="group flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200">
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
