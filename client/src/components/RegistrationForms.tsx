@@ -15,6 +15,7 @@ import { AlertCircle, Users, Building2, Phone, CheckCircle2, ArrowRight } from "
 import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslation } from "react-i18next";
 import * as z from "zod";
 
 // Zod validation schemas
@@ -51,10 +52,11 @@ type CitizenFormData = z.infer<typeof citizenFormSchema>;
 type PartnerFormData = z.infer<typeof partnerFormSchema>;
 
 export default function RegistrationForms() {
+  const { t, i18n } = useTranslation();
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
   const [showSuccess, setShowSuccess] = useState(false);
-  const [isRTL, setIsRTL] = useState(false);
+  const [isRTL, setIsRTL] = useState(i18n.language === 'ar');
   const [successType, setSuccessType] = useState<'citizen' | 'partner'>('citizen');
 
   // Form hook instances

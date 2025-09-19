@@ -676,4 +676,56 @@
       0 0,
       20px 20px;
   }
+
+  /* RTL Support for Arabic */
+  .rtl {
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', 'Noto Naskh Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .rtl .rtl-support {
+    text-align: right;
+  }
+
+  .rtl .checkbox-wrapper {
+    flex-direction: row-reverse;
+  }
+
+  .rtl .checkbox-label {
+    text-align: right;
+  }
+
+  .rtl .select-trigger {
+    text-align: right;
+  }
+
+  .rtl .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  /* Make sure Arabic text renders properly */
+  [lang="ar"], [dir="rtl"] {
+    font-family: 'Noto Sans Arabic', 'Noto Naskh Arabic', sans-serif;
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Fix text alignment for RTL languages */
+  html.rtl, html[dir="rtl"] {
+    direction: rtl;
+  }
+
+  html.rtl *, html[dir="rtl"] * {
+    direction: inherit;
+  }
+
+  /* Responsive RTL adjustments */
+  @media (max-width: 768px) {
+    .rtl .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+      margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+      margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
 }

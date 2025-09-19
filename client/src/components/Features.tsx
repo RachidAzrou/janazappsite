@@ -6,58 +6,49 @@ import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import { MdOutlineSpeed, MdDevices, MdOutlineCircleNotifications } from "react-icons/md";
 import { PiMosqueBold } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 import mockupImage from "@assets/2_1758294099667.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const features = [
-  {
-    icon: MdOutlineSpeed,
-    title: "Snelle Procedures",
-    kicker: "24-48 uur sneller",
-    description: "Verminder wachttijden door gestroomlijnde digitale processen.",
-    benefit: "Geen gemiste termijnen meer"
-  },
-  {
-    icon: MdDevices,
-    title: "Digitale Documentatie",
-    kicker: "Alles op één plek",
-    description: "Van overlijdensakte tot laissez-passer, volledig georganiseerd.",
-    benefit: "Geen verdwaalde documenten"
-  },
-  {
-    icon: AiOutlineSafetyCertificate,
-    title: "Veilig & Betrouwbaar",
-    kicker: "GDPR compliant",
-    description: "Moderne encryptie en volledige privacy-bescherming.",
-    benefit: "Uw gegevens zijn veilig"
-  },
-  {
-    icon: PiMosqueBold,
-    title: "Cultureel Bewust",
-    kicker: "Islamitisch gericht",
-    description: "Rekening houdend met religieuze vereisten en tradities.",
-    benefit: "Respectvolle behandeling"
-  },
-  {
-    icon: Plane,
-    title: "Repatriëring",
-    kicker: "Repatriëring mogelijk",
-    description: "Ondersteuning voor consulaire procedures en repatriëring.",
-    benefit: "Naar land van herkomst"
-  },
-  {
-    icon: MdOutlineCircleNotifications,
-    title: "Transparante Voortgang",
-    kicker: "Real-time updates",
-    description: "Altijd op de hoogte van de status van procedures.",
-    benefit: "Geen onzekerheid meer"
-  }
-];
 
 
 export default function Features() {
+  const { t } = useTranslation();
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
+
+  const features = [
+    {
+      icon: MdOutlineSpeed,
+      title: t('features.digital.title'),
+      description: t('features.digital.description')
+    },
+    {
+      icon: MdDevices,
+      title: t('features.community.title'),
+      description: t('features.community.description')
+    },
+    {
+      icon: AiOutlineSafetyCertificate,
+      title: t('features.support.title'),
+      description: t('features.support.description')
+    },
+    {
+      icon: PiMosqueBold,
+      title: t('features.cultural.title'),
+      description: t('features.cultural.description')
+    },
+    {
+      icon: Plane,
+      title: t('features.international.title'),
+      description: t('features.international.description')
+    },
+    {
+      icon: MdOutlineCircleNotifications,
+      title: t('features.legal.title'),
+      description: t('features.legal.description')
+    }
+  ];
 
   return (
     <section ref={sectionRef} className="relative py-12 lg:py-16 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden islamic-pattern" id="diensten">
@@ -84,8 +75,7 @@ export default function Features() {
               : 'opacity-0 translate-y-8'
           }`}>
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light" data-testid="text-features-subtitle">
-              Een digitale oplossing die religieuze waarden respecteert en
-              <span className="text-foreground font-medium"> complexe processen vereenvoudigt</span>
+              {t('features.subtitle')}
             </p>
           </div>
         </div>

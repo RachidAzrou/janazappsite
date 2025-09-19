@@ -25,14 +25,21 @@ export default function LanguageSwitcher() {
     // Store in localStorage for persistence
     localStorage.setItem('i18nextLng', languageCode);
     
-    // Update document direction for RTL languages
+    // Update document direction and classes for RTL languages
     if (languageCode === 'ar') {
       document.documentElement.dir = 'rtl';
       document.documentElement.classList.add('rtl');
+      document.documentElement.lang = 'ar';
     } else {
       document.documentElement.dir = 'ltr';
       document.documentElement.classList.remove('rtl');
+      document.documentElement.lang = languageCode;
     }
+    
+    // Trigger a small delay to allow CSS to apply
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 100);
   };
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
