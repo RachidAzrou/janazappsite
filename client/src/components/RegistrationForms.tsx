@@ -268,17 +268,6 @@ export default function RegistrationForms() {
             {/* Citizen Registration */}
             <TabsContent value="burger">
               <Card className="border border-border shadow-md bg-background/95 backdrop-blur-sm overflow-hidden" data-testid="card-citizen-form">
-                <CardHeader className="p-6 bg-gradient-to-r from-primary/5 to-primary/10 border-b border-border/50">
-                  <CardTitle className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
-                      <IoPeopleOutline className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground">{t('citizenForm.title')}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{t('citizenForm.subtitle')}</p>
-                    </div>
-                  </CardTitle>
-                </CardHeader>
                 <CardContent className={`p-8 ${isRTL ? 'rtl-support' : ''}`}>
                   <Form {...citizenForm}>
                     <form onSubmit={citizenForm.handleSubmit(handleCitizenSubmit)} className="space-y-6">
@@ -472,17 +461,6 @@ export default function RegistrationForms() {
             {/* Partner Registration */}
             <TabsContent value="partner">
               <Card className="border border-border shadow-md bg-background/95 backdrop-blur-sm overflow-hidden" data-testid="card-partner-form">
-                <CardHeader className="p-6 bg-gradient-to-r from-primary/5 to-primary/10 border-b border-border/50">
-                  <CardTitle className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/20 text-primary flex items-center justify-center">
-                      <IoBusinessOutline className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground">{t('partnerForm.title')}</h3>
-                      <p className="text-sm text-muted-foreground mt-1">{t('partnerForm.subtitle')}</p>
-                    </div>
-                  </CardTitle>
-                </CardHeader>
                 <CardContent className={`p-8 ${isRTL ? 'rtl-support' : ''}`}>
                   <Form {...partnerForm}>
                     <form onSubmit={partnerForm.handleSubmit(handlePartnerSubmit)} className="space-y-6">
