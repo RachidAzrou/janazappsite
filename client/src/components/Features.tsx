@@ -1,32 +1,36 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Clock, Shield, Users, Globe, CheckCircle, ExternalLink } from "lucide-react";
+import { Globe, CheckCircle } from "lucide-react";
+import { IoPeopleOutline, IoBusinessOutline } from "react-icons/io5";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import { MdOutlineSpeed, MdDevices } from "react-icons/md";
+import { PiMosqueBold } from "react-icons/pi";
 
 const features = [
   {
-    icon: Clock,
+    icon: MdOutlineSpeed,
     title: "Snelle Procedures",
     kicker: "24-48 uur sneller",
     description: "Verminder wachttijden door gestroomlijnde digitale processen.",
     benefit: "Geen gemiste termijnen meer"
   },
   {
-    icon: FileText,
+    icon: MdDevices,
     title: "Digitale Documentatie",
     kicker: "Alles op één plek",
     description: "Van overlijdensakte tot laissez-passer, volledig georganiseerd.",
     benefit: "Geen verdwaalde documenten"
   },
   {
-    icon: Shield,
+    icon: AiOutlineSafetyCertificate,
     title: "Veilig & Betrouwbaar",
     kicker: "GDPR compliant",
     description: "Moderne encryptie en volledige privacy-bescherming.",
     benefit: "Uw gegevens zijn veilig"
   },
   {
-    icon: Users,
+    icon: PiMosqueBold,
     title: "Cultureel Bewust",
     kicker: "Islamitisch gericht",
     description: "Rekening houdend met religieuze vereisten en tradities.",
